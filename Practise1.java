@@ -124,6 +124,12 @@ public class Practise1 {
             System.out.println("Not a prime no.");
         }
 
+         
+        
+
+
+
+
       }
      }
     }
