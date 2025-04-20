@@ -1,4 +1,5 @@
 import java.util.*;
+
 class Recursion {
 
     public static int fact(int n) {
@@ -66,34 +67,70 @@ class Recursion {
         return total;
     }
 
-    public static void RemoveDuplicates(String str, int idx,StringBuilder newStr,boolean map[]) {//remove duplicates
-          if(idx==str.length()){
+    public static void RemoveDuplicates(String str, int idx, StringBuilder newStr, boolean map[]) {// remove duplicates
+        if (idx == str.length()) {
             System.err.println(newStr);
             return;
-          }
-          char currChar = str.charAt(idx);
-          if(map[currChar-'a'] == true){
-             RemoveDuplicates(str, idx+1, newStr, map);
-          }
-          else{
-            map[currChar -'a']= true;
+        }
+        char currChar = str.charAt(idx);
+        if (map[currChar - 'a'] == true) {
+            RemoveDuplicates(str, idx + 1, newStr, map);
+        } else {
+            map[currChar - 'a'] = true;
             RemoveDuplicates(str, idx, newStr.append(currChar), map);
-          }
+        }
     }
+
+    public static int friendsPairing(int n) { // friends pairing problem
+        if (n == 1 || n == 2) {
+            return n;
+        }
+        int frn1 = friendsPairing(n - 1);
+        int frn2 = friendsPairing(n - 1) * friendsPairing(n - 2);
+
+        int totalways = frn1 + frn2;
+        return totalways;
+    }
+
+
+    public static int powerOf(int a,int n){   //power of x^n
+      if(n == 0){
+        return 1;
+      }
+        return a * powerOf(a,n-1);
+    }
+     
+    public static void TowerOfHanoi(int n,char A,char B,char C){    //Tower of hanoi
+         if(n ==0){
+            return;
+         }
+         TowerOfHanoi(n-1, A, C, B);
+         System.out.println("Move disk"+ n+ "from"+ A+ "to"+ B);
+         TowerOfHanoi(n-1, B, A, C);
+         System.out.println("Move disk"+ n+ "from"+ B+ "to"+ C);
+    }
+
+
+    
 
     public static void main(String[] args) {
 
-        System.out.println(fact(7));
-        System.out.println(sum(10));
-        System.out.println(fibbonaci(25));
-        int arr[] = { 1, 2, 3, 4, 5 };
-        System.out.println(isSorted(arr, 0));
+        // System.out.println(fact(7));
+        // System.out.println(sum(10));
+        // System.out.println(fibbonaci(25));
+        // int arr[] = { 1, 2, 3, 4, 5 };
+        // System.out.println(isSorted(arr, 0));
 
-        int[] arr1 = { 1, 2, 9, 0, 5, 8, 5, 4 };
-        System.out.println(FirstOccurance(arr1, 2, 0));
+        // int[] arr1 = { 1, 2, 9, 0, 5, 8, 5, 4 };
+        // System.out.println(FirstOccurance(arr1, 2, 0));
 
-        System.out.println(Tiling(4));
-        String str = "aabbccdd";
-        RemoveDuplicates(str, 0, new StringBuilder(""), new boolean[26]);
+
+        // System.out.println(Tiling(4));
+        // String str = "aabbccdd";
+        // RemoveDuplicates(str, 0, new StringBuilder(""), new boolean[26]);
+
+        // System.out.println(friendsPairing(3));
+        TowerOfHanoi(3, 'A', 'B', 'C');
+       
     }
 }
