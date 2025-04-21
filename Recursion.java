@@ -92,45 +92,64 @@ class Recursion {
         return totalways;
     }
 
-
-    public static int powerOf(int a,int n){   //power of x^n
-      if(n == 0){
-        return 1;
-      }
-        return a * powerOf(a,n-1);
+    public static int powerOf(int a, int n) { // power of x^n
+        if (n == 0) {
+            return 1;
+        }
+        return a * powerOf(a, n - 1);
     }
-     
-    public static void TowerOfHanoi(int n,char A,char B,char C){    //Tower of hanoi
-         if(n ==0){
+
+    public static void TowerOfHanoi(int n, char A, char B, char C) { // Tower of hanoi
+        if (n == 0) {
             return;
-         }
-         TowerOfHanoi(n-1, A, C, B);
-         System.out.println("Move disk"+ n+ "from"+ A+ "to"+ B);
-         TowerOfHanoi(n-1, B, A, C);
-         System.out.println("Move disk"+ n+ "from"+ B+ "to"+ C);
+        }
+        TowerOfHanoi(n - 1, A, C, B);
+        System.out.println("Move disk" + n + "from" + A + "to" + B);
+        TowerOfHanoi(n - 1, B, A, C);
+        System.out.println("Move disk" + n + "from" + B + "to" + C);
     }
 
+    public static void BinaryString(int n, int lastidx, String str) { // Print binary string
+        if (n == 0) {
+            System.out.println(str);
+            return;
+        }
+        BinaryString(n - 1, 0, str + "0");
+        if (lastidx == 0) {
+            BinaryString(n - 1, 1, str + "1");
+        }
 
-    
+    }
+
+    public static int StringLength(String str1, int idx) {// print length of the string
+        if (idx == str1.length()) {
+            return -1;
+        }
+
+        return 1 + StringLength(str1, idx + 1);
+    }
 
     public static void main(String[] args) {
 
-        // System.out.println(fact(7));
-        // System.out.println(sum(10));
-        // System.out.println(fibbonaci(25));
-        // int arr[] = { 1, 2, 3, 4, 5 };
-        // System.out.println(isSorted(arr, 0));
+        System.out.println(fact(7));
+        System.out.println(sum(10));
+        System.out.println(fibbonaci(25));
+        int arr[] = { 1, 2, 3, 4, 5 };
+        System.out.println(isSorted(arr, 0));
 
-        // int[] arr1 = { 1, 2, 9, 0, 5, 8, 5, 4 };
-        // System.out.println(FirstOccurance(arr1, 2, 0));
+        int[] arr1 = { 1, 2, 9, 0, 5, 8, 5, 4 };
+        System.out.println(FirstOccurance(arr1, 2, 0));
 
+        System.out.println(Tiling(4));
+        String str = "aabbccdd";
+        RemoveDuplicates(str, 0, new StringBuilder(""), new boolean[26]);
 
-        // System.out.println(Tiling(4));
-        // String str = "aabbccdd";
-        // RemoveDuplicates(str, 0, new StringBuilder(""), new boolean[26]);
-
-        // System.out.println(friendsPairing(3));
+        System.out.println(friendsPairing(3));
         TowerOfHanoi(3, 'A', 'B', 'C');
-       
+
+        BinaryString(4, 0, "");
+        String str1 = "xxywsed";
+        System.out.println(StringLength(str, 0));
+
     }
 }

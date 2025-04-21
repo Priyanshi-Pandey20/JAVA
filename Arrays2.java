@@ -67,6 +67,9 @@ public class Arrays2 {
             System.out.print(w[j]);
         }
 
+         
+      
+
         
 
          
