@@ -1,6 +1,6 @@
 public class Patterns {
 
-    public static void main(String args[]) {
+    public static void main(Demo args[]) {
         for (int i = 1; i <= 5; i++) { // left upper half traingle
             for (int j = 1; j <= i; j++) {
                 System.out.print("*");

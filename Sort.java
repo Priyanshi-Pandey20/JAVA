@@ -52,7 +52,7 @@ public class Sort {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(Demo[] args) {
         int[] arr = { 5, 9, 8, 2, 1 };
         MergeSort(arr, 0, arr.length-1);
         PrintArr(arr);

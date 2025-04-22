@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Arrays {
-    public static void main(String[] args) {
+    public static void main(Demo[] args) {
 //         int[] numbers = new int[5]; // creates an array of size 5
 
 //         // Assign values

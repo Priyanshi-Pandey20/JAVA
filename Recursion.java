@@ -137,15 +137,19 @@ class Recursion {
         int arr[] = { 1, 2, 3, 4, 5 };
         System.out.println(isSorted(arr, 0));
 
+
         int[] arr1 = { 1, 2, 9, 0, 5, 8, 5, 4 };
         System.out.println(FirstOccurance(arr1, 2, 0));
+
 
         System.out.println(Tiling(4));
         String str = "aabbccdd";
         RemoveDuplicates(str, 0, new StringBuilder(""), new boolean[26]);
 
+
         System.out.println(friendsPairing(3));
         TowerOfHanoi(3, 'A', 'B', 'C');
+
 
         BinaryString(4, 0, "");
         String str1 = "xxywsed";

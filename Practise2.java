@@ -53,7 +53,7 @@ public class Practise2 {
 
       System.out.println(isEqual);
     }
-    public static void main(String args[]) {
+    public static void main(Demo args[]) {
        
          int[] arr1 = {5,4,3,2,1,0};
           SortArrayInAsending(arr1);
