@@ -33,28 +33,28 @@ public class Demo {
       String str2 = "hiiii";
       ComapreString(str, str2);
 
-      // String s = "racecar"; // Count given char
-      // int target ='e';
-      // char[] arr = s.toCharArray();
-      // int count =0;
-      // for(int i =0;i<arr.length;i++){
-      // if(arr[i]==target){
-      // count++;
-      // }
+      String s = "racecar"; // Count given char
+      int target ='e';
+      char[] arr = s.toCharArray();
+      int count =0;
+      for(int i =0;i<arr.length;i++){
+      if(arr[i]==target){
+      count++;
+      }
 
-      // }
-      // System.out.println(count);
+      }
+      System.out.println(count);
 
       String str3 = "racecarjhdgahaha"; // count vowel
 
-      int count = 0;
+      int ct = 0;
       for (int i = 0; i < str3.length(); i++) {
          char ch = str3.charAt(i);
          if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
-            count++;
+            ct++;
          }
       }
-      System.out.println(count);
+      System.out.println(ct);
 
       String str4 = "happy"; // remove duplicate
       for (int i = 0; i < str4.length(); i++) {
@@ -70,11 +70,30 @@ public class Demo {
             System.out.println(str.charAt(i));
          }
 
-            
       }
 
-     
+      String str5 = "hhlloo"; // optimized code of remove duplicate
+      String str6 = "";
+      for (int i = 0; i < str5.length(); i++) {
+         char c = str5.charAt(i);
+         if (str6.indexOf(c) == -1) {
+            str6 = str6 + c;
+         }
+      }
+      System.out.println(str6);
 
+      String str7 = "helolo"; // print first repeated charater
+      char[] arr5 = str7.toCharArray();
+      for (int i = 0; i < arr5.length; i++) {
+         for (int j = i + 1; j < arr5.length; j++) {
+            if (arr5[i] == arr5[j]) {
+               System.out.print(arr5[j]);
+               return;
+            }
+         }
+      }
+
+    
    }
 
-}
+} 

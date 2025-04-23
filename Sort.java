@@ -1,6 +1,5 @@
-
+import java.util.*;
 public class Sort {
-
     public static void MergeSort(int[] arr, int l, int h) {
 
         if (l >= h) {
@@ -33,16 +32,46 @@ public class Sort {
         }
 
         while (i <= mid) {
-           temp[k++] = arr[i++];
+            temp[k++] = arr[i++];
         }
 
         while (j <= h) {
             temp[k++] = arr[j++];
-         }
+        }
 
-        for ( k = 0, i = l; k < temp.length; k++, i++) {
+        for (k = 0, i = l; k < temp.length; k++, i++) {
             arr[i] = temp[k];
         }
+
+    }
+
+    public static void QuickSort(int[] arr, int lb, int ub) {        
+        int x, l, r;
+        if (lb >= ub) {
+            return;
+        }
+        l = lb;
+        r = ub;
+        x = arr[lb];
+
+        while (l < r) {
+            while (arr[l] <= x && l < r) {
+                l++;
+            }
+            while (arr[r] > x) {
+                r--;
+            }
+            if (l < r) {
+                int temp = arr[l];
+                arr[l] = arr[r];
+                arr[r] = temp;
+            }
+
+        }
+        arr[lb] = arr[r];
+        arr[r] = x;
+        QuickSort(arr, lb, r - 1);
+        QuickSort(arr, r + 1, ub);
 
     }
 
@@ -52,9 +81,13 @@ public class Sort {
         }
     }
 
-    public static void main(Demo[] args) {
+    public static void main(String[] args) {
         int[] arr = { 5, 9, 8, 2, 1 };
-        MergeSort(arr, 0, arr.length-1);
+        MergeSort(arr, 0, arr.length - 1);
         PrintArr(arr);
+        System.out.println();
+        QuickSort(arr, 0, arr.length - 1);
+        PrintArr(arr);
+
     }
 }
