@@ -72,26 +72,9 @@ public class Demo {
 
       }
 
-      String str5 = "hhlloo"; // optimized code of remove duplicate
-      String str6 = "";
-      for (int i = 0; i < str5.length(); i++) {
-         char c = str5.charAt(i);
-         if (str6.indexOf(c) == -1) {
-            str6 = str6 + c;
-         }
-      }
-      System.out.println(str6);
+     
+      
 
-      String str7 = "helolo"; // print first repeated charater
-      char[] arr5 = str7.toCharArray();
-      for (int i = 0; i < arr5.length; i++) {
-         for (int j = i + 1; j < arr5.length; j++) {
-            if (arr5[i] == arr5[j]) {
-               System.out.print(arr5[j]);
-               return;
-            }
-         }
-      }
 
     
    }
