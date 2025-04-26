@@ -2,7 +2,8 @@ import java.util.*;
 
 class Recursion {
 
-    public static int fact(int n) {
+    public static int fact(int n) {  //  O(n) - time compelexicity ,space complexicity
+                                    
         if (n == 0) { // factorial of a no.
             return 1;
         }
@@ -11,7 +12,7 @@ class Recursion {
 
     }
 
-    public static int sum(int n) { // sum of no.
+    public static int sum(int n) { // sum of no.     O(n)-time and space 
         if (n == 1) {
             return 1;
         }
@@ -19,7 +20,7 @@ class Recursion {
 
     }
 
-    public static int fibbonaci(int n) { // fibbonaci series
+    public static int fibbonaci(int n) { // fibbonaci series   2^n - time and O(n) - space
         if (n == 0) {
             return 0;
 
@@ -92,7 +93,7 @@ class Recursion {
         return totalways;
     }
 
-    public static int powerOf(int a, int n) { // power of x^n
+    public static int powerOf(int a, int n) { // power of x^n   //O(n) - time and space
         if (n == 0) {
             return 1;
         }

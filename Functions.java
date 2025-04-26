@@ -53,22 +53,21 @@ public class Functions {
                 largest = arr3[i];
             }
         }
-        System.out.println(largest); // finding largest no.in array
+        System.out.println(largest);
 
         int sum = 0;
         for (int j = 1; j <= largest; j++) {
             sum += j;
         }
-        System.out.println(sum);//calcute sum till largest
-
+        System.out.println(sum);
         int sum2 = 0;
         for (int k = 0; k < arr3.length; k++) {
             sum2 += arr3[k];
         }
-        System.out.println(sum2);//calculate sum of elements in array
+        System.out.println(sum2);
 
         int output = sum - sum2;
-        System.out.println(output);// difference of both the sum
+        System.out.println(output);
 
     }
 

@@ -1,7 +1,7 @@
 import java.util.*;
 
-public class Sort {
-    public static void MergeSort(int[] arr, int l, int h) {
+public class Sorting {
+    public static void MergeSort(int[] arr, int l, int h) {// merge sort  //O(n) 
 
         if (l >= h) {
             return;
@@ -46,7 +46,7 @@ public class Sort {
 
     }
 
-    public static void QuickSort(int[] arr, int lb, int ub) {
+    public static void QuickSort(int[] arr, int lb, int ub) { // Quick sort
         int x, l, r;
         if (lb >= ub) {
             return;
@@ -76,9 +76,22 @@ public class Sort {
 
     }
 
+    public static void BubbleSort(int[] arr) { // Bubble Sort   O(n^2)
+        for (int turn = 0; turn < arr.length; turn++) {
+            for (int j = 0; j < arr.length - 1 - turn; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+            System.out.println(arr[turn]);
+        }
+    }
+
     public static void PrintArr(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
+            System.out.print(arr[i]);
         }
     }
 
@@ -133,6 +146,7 @@ public class Sort {
 
     public static String[] mergeSort(String[] a, int lo, int hi) { // To sort a string array according to starting
                                                                    // character
+
         if (lo == hi) { // base case
             String[] A = { a[lo] };
             return A;
@@ -207,26 +221,45 @@ public class Sort {
 
     }
 
-    public static void main(String[] args) {
-        int[] arr = { 5, 9, 8, 2, 1 };
-        MergeSort(arr, 0, arr.length - 1);
-        PrintArr(arr);
-        System.out.println();
-        QuickSort(arr, 0, arr.length - 1);
-        PrintArr(arr);
-        int[] nums = { 5, 6, 7, 0, 1, 2, 3 };
-        System.out.println(SearchInRoatedArray(nums, 0, 0, nums.length));
-
-        System.out.println(search(nums, 0, 0, nums.length - 1));
-
-        String[] a = { "sum", "earth", "mercury", "mars" };
-        String[] b = mergeSort(a, 0, a.length - 1);
-        for (int i = 0; i < b.length; i++) {
-            System.out.println(b[i]);
+    public static int InversionCount(int[] arr2) { // Iversion count
+        int count = 0;
+        for (int i = 0; i < arr2.length - 1; i++) {
+            for (int j = i + 1; j < arr2.length; j++) {
+                if (arr2[i] > arr2[j]) {
+                    count++;
+                }
+            }
         }
+        return count;
+    }
 
-        int arr1[] = { 2, 2, 1, 1, 1, 2, 2 };
-        System.out.println(MajorityElement(arr1));
+    public static void main(String[] args) {
+        // int[] arr = { 5, 9, 8, 2, 1 };
+        // MergeSort(arr, 0, arr.length - 1);
+        // PrintArr(arr);
+        // System.out.println();
+        // QuickSort(arr, 0, arr.length - 1);
+        // PrintArr(arr);
+        int[] arr = { 5, 9, 8, 2, 1 };
+        BubbleSort(arr);
+        PrintArr(arr);
+
+        // int[] nums = { 5, 6, 7, 0, 1, 2, 3 };
+        // System.out.println(SearchInRoatedArray(nums, 0, 0, nums.length));
+
+        // System.out.println(search(nums, 0, 0, nums.length - 1));
+
+        // String[] a = { "sum", "earth", "mercury", "mars" };
+        // String[] b = mergeSort(a, 0, a.length - 1);
+        // for (int i = 0; i < b.length; i++) {
+        // System.out.println(b[i]);
+        // }
+
+        // int arr1[] = { 2, 2, 1, 1, 1, 2, 2 };
+        // System.out.println(MajorityElement(arr1));
+
+        // int[] arr2 = {7,9,12,5,6,8,10};
+        // System.out.println(InversionCount(arr2));
 
     }
 

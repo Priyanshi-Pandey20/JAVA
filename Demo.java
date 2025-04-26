@@ -24,28 +24,23 @@ public class Demo {
 
    }
 
-   public static void main(String[] args) {
-
-      String str1 = "happy";
-      System.out.println(Palindrome(str1));
-
-      String str = "happy";
-      String str2 = "hiiii";
-      ComapreString(str, str2);
-
-      String s = "racecar"; // Count given char
-      int target ='e';
+   public static void CountCharacter() {
+      String s = "racecar"; // Count given character in string
+      int target = 'r';
       char[] arr = s.toCharArray();
-      int count =0;
-      for(int i =0;i<arr.length;i++){
-      if(arr[i]==target){
-      count++;
-      }
+      int count = 0;
+      for (int i = 0; i < arr.length; i++) {
+         if (arr[i] == target) {
+            count++;
+         }
 
       }
       System.out.println(count);
 
-      String str3 = "racecarjhdgahaha"; // count vowel
+   }
+
+   public static void CountVowel() {
+      String str3 = "racecarjhdgahaha"; // count no.of vowels in string
 
       int ct = 0;
       for (int i = 0; i < str3.length(); i++) {
@@ -55,7 +50,9 @@ public class Demo {
          }
       }
       System.out.println(ct);
+   }
 
+   public static void RemoveDuplicates() {
       String str4 = "happy"; // remove duplicate
       for (int i = 0; i < str4.length(); i++) {
          boolean flag = true;
@@ -67,16 +64,58 @@ public class Demo {
 
          }
          if (flag) {
-            System.out.println(str.charAt(i));
+            System.out.println(str4.charAt(i));
          }
 
       }
-
-     
-      
-
-
-    
    }
 
-} 
+   public static void ReverseString() {
+      String str = "coding";// revere a string
+      String rev = "";
+      for (int i = str.length() - 1; i >= 0; i--) {
+         rev = rev + str.charAt(i);
+      }
+      System.out.println(rev);
+   }
+
+   public static void RepeatedString() {
+      String str8 = "hellooooo"; // print second repeated charater in string
+      String newStr = "";
+
+      int count1 = 0;
+      char[] arr1 = str8.toCharArray();
+      for (int i = 0; i < arr1.length; i++) {
+         for (int j = i + 1; j < arr1.length; j++) {
+            if (arr1[i] == arr1[j]) {
+               count1++;
+               if (count1 == 2) {
+                  newStr = newStr + arr1[i];
+                  System.out.println(newStr);
+
+               }
+            }
+         }
+      }
+   }
+
+   public static void main(String[] args) {
+
+      String str1 = "happy";
+      System.out.println(Palindrome(str1));
+
+      String str = "happy";
+      String str2 = "hiiii";
+      ComapreString(str, str2);
+
+      CountCharacter();
+      CountVowel();
+      RemoveDuplicates();
+
+      RepeatedString();
+      ReverseString();
+
+
+   }
+
+}
