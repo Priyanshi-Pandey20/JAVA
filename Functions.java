@@ -1,3 +1,4 @@
+import java.util.*;
 
 public class Functions {
     public static int sum(int a, int b) { // print the sum of digits
@@ -18,7 +19,7 @@ public class Functions {
 
     }
 
-    public static void print(int a) {    
+    public static void print(int a) {
         a = 12;
         System.out.println(a);
     }
@@ -71,6 +72,147 @@ public class Functions {
 
     }
 
+    public static void NaturalNo(int n) { // print natural no.
+        for (int i = 0; i <= n; i++) {
+            System.out.println(i);
+        }
+    }
+
+    public static void ReverseNaturalNo(int n) {
+        for (int i = n; i >= 0; i--) {
+            System.out.print(i);
+        }
+    }
+
+    public static void PrintEvenNo(int n) {
+        for (int i = 0; i < n; i++) {
+            if (i % 2 == 0) {
+                System.out.println("even no." + i);
+            }
+
+        }
+    }
+
+    public static void SumOfNaturalNo(int n) {
+        int sum = 0;
+        for (int i = 0; i <= n; i++) {
+            sum += i;
+
+        }
+        System.out.println(sum);
+    }
+
+    public static void ProductOfNaturalNo(int n) {
+        int product = 1;
+        for (int i = 1; i <= n; i++) {
+            product *= i;
+        }
+        System.out.println(product);
+    }
+
+    public static void printNumber(int n) {
+        for (int i = 0; i < n; i++) {
+            System.out.println(i);
+        }
+    }
+
+    public static void SumOfDigits(int n) {
+        int sum = 0;
+        while (n != 0) {
+            sum += n % 10;
+            n /= 10;
+        }
+        System.out.println(sum);
+    }
+
+    public static void CountAllDigits(int n) {
+        int count = 0;
+        while (n != 0) {
+            n /= 10;
+            count++;
+
+        }
+        System.out.println(count);
+    }
+
+    public static void PrintReverseNo(int n) {
+        int rev = 0;
+        while (n != 0) {
+            int digit = n % 10;
+            rev = rev * 10 + digit;
+            n /= 10;
+        }
+        System.out.println(rev);
+    }
+
+    public static void Palindrome(int n) {// palindrome
+        int original = n;
+        int rev = 0;
+        while (n != 0) {
+            int digit = n % 10;
+            rev = rev * 10 + digit;
+            n /= 10;
+        }
+        if (original == rev) {
+            System.out.println("palindrome");
+        } else {
+            System.out.println("not palindrome");
+        }
+
+    }
+    public static void PrintPrimeNoAlternatively(){
+        int count=0;
+        for(int n= 2;n<=100;n++){
+            boolean isPrime = true;
+           for(int i =2;i<=n/2;i++){
+            if(n%i==0){
+                isPrime = false;
+                break;
+            }
+
+        }
+        if(isPrime){
+            count++;
+            if(count%2!=0){
+            System.out.println(n);
+        }
+    }
+       
+    }
+       
+    }
+    public static void PrintPrimeNoInRange(int st,int end){
+      for(int n=st;n<=end;n++){
+        boolean isPrime = true;
+        for(int i =2;i<=n/2;i++){
+            if(n%i==0){
+                isPrime = false;
+                break;
+            }
+
+        }
+        if(isPrime){
+            System.out.println(n);
+        }
+       
+    }
+      }
+
+      public static int Fibbonacci(int n){
+        if(n==0){
+           return 0;
+        }
+        if(n==1){
+            return 1;
+        }
+        int fb1 =Fibbonacci(n-1);
+        int fb2 = Fibbonacci(n-2);
+        int fb = fb1+fb2;
+        return fb;
+      }
+
+
+    
     public static void main(String[] args) {
 
         System.out.println(sum(202, 7));
@@ -81,10 +223,30 @@ public class Functions {
         System.out.println(SmallestNo(arr));
 
         int[] arr1 = { 1, 2, 3, 4, 5 };
+
         printCopies(arr1);
 
         int[] arr3 = { 1, 2, 3, 5, 6 };
         FindMissing(arr3);
+        NaturalNo(5);
+        ReverseNaturalNo(5);
+        PrintEvenNo(5);
+        SumOfNaturalNo(7);
+        ProductOfNaturalNo(5);
+
+        Scanner scn = new Scanner(System.in);
+        // System.out.println("enter your no.");
+        // int n = scn.nextInt();
+        // printNumber(n);
+        SumOfDigits(123);
+        CountAllDigits(123);
+        PrintReverseNo(894);
+        Palindrome(125);
+        
+        //PrintPrimeNoAlternatively();
+      // PrintPrimeNoInRange(20,150);
+      System.out.println(Fibbonacci(7));
+        
 
     }
 }

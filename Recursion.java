@@ -134,7 +134,7 @@ class Recursion {
 
         System.out.println(fact(7));
         System.out.println(sum(10));
-        System.out.println(fibbonaci(25));
+        System.out.println(fibbonaci(7));
         int arr[] = { 1, 2, 3, 4, 5 };
         System.out.println(isSorted(arr, 0));
 

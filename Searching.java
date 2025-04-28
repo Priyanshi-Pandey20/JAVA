@@ -1,13 +1,13 @@
  import java .util.*;
     public class Searching {
-    public static int linearSearch(int[] numbers, int key) {   // O(n)
-        for (int i = 0; i < numbers.length; i++) {
-            if (numbers[i] == key) {
-                return i; // Key found at index i
+        public static int linearSearch(int[] numbers, int key) {   // O(n)
+            for (int i = 0; i < numbers.length; i++) {
+                if (numbers[i] == key) {
+                    return i; // Key found at index i
+                }
             }
+            return -1; // Key not found
         }
-        return -1; // Key not found
-    }
 
     public static int BinarySearch(int[] arr,int key){  // O(log n)
         int start = 0; 
@@ -27,13 +27,14 @@
         }
         return -1;
     }
+     
     
     public static void main(String[] args) {
-        int[] numbers = {10, 20, 30, 40, 50};
+        int[] numbers = {10,20,30,40,50};
         int key = 30;
 
-       // int result = linearSearch(numbers, key);
-       int result = BinarySearch(numbers, key);
+        int result = linearSearch(numbers, key);
+      // int result = BinarySearch(numbers, key);
 
         if (result == -1) {
             System.out.println("Element not found in the array.");
