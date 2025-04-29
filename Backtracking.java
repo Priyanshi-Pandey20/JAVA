@@ -1,4 +1,5 @@
 import java.util.*;
+
 public class Backtracking {
 
     public static void changeArr(int[] arr, int i, int val) { // O(n) traverse the array andbacktrack it
@@ -116,73 +117,199 @@ public class Backtracking {
         return w1 + w2;
     }
 
+    public static boolean isSafe(int[][] sudoku, int row, int col, int digit) {
+        for (int i = 0; i <= 8; i++) {
+            if (sudoku[i][col] == digit) {
+                return false;
+            }
+        }
 
-        public static boolean isSafe(int[][] sudoku, int row, int col, int digit) {
-            for (int i = 0; i <= 8; i++) {
-                if (sudoku[i][col] == digit) {
+        for (int j = 0; j <= 8; j++) {
+            if (sudoku[row][j] == digit) {
+                return false;
+            }
+        }
+
+        int sr = (row / 3) * 3;
+        int sc = (col / 3) * 3;
+
+        for (int i = sr; i < sr + 3; i++) {
+            for (int j = sc; j < sc + 3; j++) {
+                if (sudoku[i][j] == digit) {
                     return false;
                 }
             }
-    
-            for (int j = 0; j <= 8; j++) {
-                if (sudoku[row][j] == digit) {
-                    return false;
-                }
-            }
-    
-            int sr = (row / 3) * 3;
-            int sc = (col / 3) * 3;
-    
-            for (int i = sr; i < sr + 3; i++) {
-                for (int j = sc; j < sc + 3; j++) {
-                    if (sudoku[i][j] == digit) {
-                        return false;
-                    }
-                }
-            }
+        }
+        return true;
+    }
+
+    public static boolean solveSudoku(int[][] sudoku, int row, int col) {
+
+        if (row == 9 && col == 0) {
             return true;
         }
-    
-        public static boolean solveSudoku(int[][] sudoku, int row, int col) {
-    
-            if (row == 9 && col == 0) {
-                return true;
-            } 
-    
-            int nextRow = row, nextCol = col + 1;
-            if (col + 1 == 9) {
-                nextRow = row + 1;
-                nextCol = 0;
-            }
-    
-            if (sudoku[row][col] != 0) {
-                return solveSudoku(sudoku, nextRow, nextCol);
-            }
-    
-            for (int digit = 1; digit <= 9; digit++) {  // corrected here (1 to 9)
-                if (isSafe(sudoku, row, col, digit)) {
-                    sudoku[row][col] = digit;
-                    if (solveSudoku(sudoku, nextRow, nextCol)) {
-                        return true;
-                    }
-                    sudoku[row][col] = 0; // backtrack
+
+        int nextRow = row, nextCol = col + 1;
+        if (col + 1 == 9) {
+            nextRow = row + 1;
+            nextCol = 0;
+        }
+
+        if (sudoku[row][col] != 0) {
+            return solveSudoku(sudoku, nextRow, nextCol);
+        }
+
+        for (int digit = 1; digit <= 9; digit++) { // corrected here (1 to 9)
+            if (isSafe(sudoku, row, col, digit)) {
+                sudoku[row][col] = digit;
+                if (solveSudoku(sudoku, nextRow, nextCol)) {
+                    return true;
                 }
+                sudoku[row][col] = 0; // backtrack
             }
+        }
+        return false;
+    }
+
+    public static void printSudoku(int[][] sudoku) {
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                System.out.print(sudoku[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void printSolution(int sol[][]) { // Rat in maze problem
+        for (int i = 0; i < sol.length; i++) {
+            for (int j = 0; j < sol.length; j++) {
+                System.out.print(" " + sol[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static boolean isSafe(int[][] maze, int x, int y) {
+        return (x >= 0 && x < maze.length && y >= 0 && y < maze.length && maze[x][y] == 1);
+    }
+
+    public static boolean solveMaze(int[][] maze) {
+        int N = maze.length;
+        int[][] sol = new int[N][N];
+        if (solveMazeUtil(maze, 0, 0, sol) == false) {
+            System.out.println("sol doesn't exsits");
             return false;
         }
-    
-        public static void printSudoku(int[][] sudoku) {
-            for (int i = 0; i < 9; i++) {
-                for (int j = 0; j < 9; j++) {
-                    System.out.print(sudoku[i][j] + " ");
-                }
+        printSolution(sol);
+        return true;
+    }
+
+    public static boolean solveMazeUtil(int[][] maze, int x, int y, int sol[][]) {
+        if (x == maze.length - 1 && y == maze.length - 1 && maze[x][y] == 1) {
+            sol[x][y] = 1;
+            return true;
+        }
+
+        if (isSafe(maze, x, y) == true) {
+            if (sol[x][y] == 1)
+                return false;
+            sol[x][y] = 1;
+
+            if (solveMazeUtil(maze, x + 1, y, sol))
+                return true;
+
+            if (solveMazeUtil(maze, x, y + 1, sol))
+                return true;
+
+            sol[x][y] = 0;
+            return false;
+
+        }
+        return false;
+    }
+
+    // keypad combinations
+
+    final static char[][] L = { {}, {}, { 'a', 'b', 'c' }, { 'd', 'e', 'f' }, { 'g', 'h', 'i' }, { 'j', 'k', 'l' },
+            { 'm', 'n', 'o' }, { 'p', 'q', 'r', 's' },
+            { 't', 'u', 'v' }, { 'w', 'x', 'y', 'z' } };
+
+    public static void letterCombinations(String D) {
+        int len = D.length();
+        if (len == 0) {
+            System.out.println("");
+            return;
+        }
+        bfs(0, len, new StringBuilder(), D);
+    }
+
+    public static void bfs(int pos, int len, StringBuilder sb, String D) {
+        if (pos == len) {
+            System.out.println(sb.toString());
+        } else {
+            char[] letters = L[Character.getNumericValue(D.charAt(pos))];
+            for (int i = 0; i < letters.length; i++) {
+                bfs(pos + 1, len, new StringBuilder(sb).append(letters[i]), D);
+            }
+        }
+    }
+
+    static int N = 8;
+
+    public static boolean IsSafe(int x, int y, int sol[][]) {
+        return (x >= 0 && x < N && y >= 0 && y < N && sol[x][y] == -1);
+    }
+
+    public static void printKnightSolution(int[][] sol) {
+        for (int x = 0; x < N; x++) {
+            for (int y = 0; y < N; y++) {
+                System.out.println(sol[x][y] + " ");
                 System.out.println();
             }
         }
-    
-      
-    
-    
+    }
+
+    public static boolean solveKT() {
+        int[][] sol = new int[8][8];
+        for (int x = 0; x < N; x++)
+            for (int y = 0; y < N; y++)
+                sol[x][y] = -1;
+
+        int[] xMove = { 2, 1, -1, -2, -2, -1, 1, 2 };
+        int[] yMove = { 1, 2, 2, 1, -1, -2, -2, -1 };
+
+        sol[0][0] = 1;
+
+        if (!solveKTUtil(0, 0, 1, sol, xMove, yMove)) {
+            System.out.println("solution does not exists");
+        } 
+        else 
+            printSolution(sol);
+            return true;
+        
+        
+
+    }
+
+    public static boolean solveKTUtil(int x, int y, int movei, int sol[][], int[] xMove, int[] yMove) {
+        int k, next_x, next_y;
+        if (movei == N * N)
+            return true;
+
+        for (k = 0; k < 8; k++) {
+            next_x = x + xMove[k];
+            next_y = y + yMove[k];
+           if( IsSafe(next_x,next_y ,sol)){
+            sol[next_x][next_y] = movei;
+            if(solveKTUtil(next_x, next_y, movei +1, sol, xMove, yMove))
+            return true;
+            else
+            sol[next_x][next_y] =-1;
+           }
+
+        }
+        return false;
+    }
 
     public static void main(String[] args) {
         // int n = 4;
@@ -200,8 +327,6 @@ public class Backtracking {
         // System.out.println("solution is not possible");
         // }
 
-      
-
         int[][] sudoku = { { 0, 0, 8, 0, 0, 0, 0, 0, 0 },
                 { 4, 9, 0, 1, 5, 7, 0, 0, 2 },
                 { 0, 0, 3, 0, 0, 4, 1, 9, 0 },
@@ -210,16 +335,24 @@ public class Backtracking {
                 { 9, 6, 0, 4, 0, 5, 3, 0, 0 },
                 { 0, 3, 0, 0, 7, 2, 0, 0, 4 },
                 { 0, 4, 9, 0, 3, 0, 0, 5, 7 },
-                { 8, 2, 7, 0, 0, 9, 0, 1, 3 }};        
-        
-        if(solveSudoku(sudoku,0,0)){
+                { 8, 2, 7, 0, 0, 9, 0, 1, 3 } };
+
+        if (solveSudoku(sudoku, 0, 0)) {
             System.out.println("solution exists");
             printSudoku(sudoku);
-        }
-        else{
+        } else {
             System.out.println("solution does not exists");
         }
-    }
 
+        int[][] maze = { { 1, 0, 0, 0 },
+                { 1, 1, 0, 1 },
+                { 0, 1, 0, 0 },
+                { 1, 1, 1, 1 }
+
+        };
+        solveMaze(maze);
+        letterCombinations("56");
+        solveKT();
+    }
 
 }

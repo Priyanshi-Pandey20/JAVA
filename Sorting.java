@@ -233,6 +233,8 @@ public class Sorting {
         return count;
     }
 
+    
+
     public static void main(String[] args) {
         // int[] arr = { 5, 9, 8, 2, 1 };
         // MergeSort(arr, 0, arr.length - 1);
@@ -260,6 +262,10 @@ public class Sorting {
 
         // int[] arr2 = {7,9,12,5,6,8,10};
         // System.out.println(InversionCount(arr2));
+
+      
+
+        }
 
     }
 

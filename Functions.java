@@ -160,59 +160,97 @@ public class Functions {
         }
 
     }
-    public static void PrintPrimeNoAlternatively(){
-        int count=0;
-        for(int n= 2;n<=100;n++){
+
+    public static void PrintPrimeNoAlternatively() {
+        int count = 0;
+        for (int n = 2; n <= 100; n++) {
             boolean isPrime = true;
-           for(int i =2;i<=n/2;i++){
-            if(n%i==0){
-                isPrime = false;
-                break;
+            for (int i = 2; i <= n / 2; i++) {
+                if (n % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+
+            }
+            if (isPrime) {
+                count++;
+                if (count % 2 != 0) {
+                    System.out.println(n);
+                }
             }
 
         }
-        if(isPrime){
-            count++;
-            if(count%2!=0){
-            System.out.println(n);
-        }
+
     }
-       
-    }
-       
-    }
-    public static void PrintPrimeNoInRange(int st,int end){
-      for(int n=st;n<=end;n++){
-        boolean isPrime = true;
-        for(int i =2;i<=n/2;i++){
-            if(n%i==0){
-                isPrime = false;
-                break;
+
+    public static void PrintPrimeNoInRange(int st, int end) {
+        for (int n = st; n <= end; n++) {
+            boolean isPrime = true;
+            for (int i = 2; i <= n / 2; i++) {
+                if (n % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+
+            }
+            if (isPrime) {
+                System.out.println(n);
             }
 
         }
-        if(isPrime){
-            System.out.println(n);
-        }
-       
     }
-      }
 
-      public static int Fibbonacci(int n){
-        if(n==0){
-           return 0;
+    public static int Fibbonacci(int n) {
+        if (n == 0) {
+            return 0;
         }
-        if(n==1){
+        if (n == 1) {
             return 1;
         }
-        int fb1 =Fibbonacci(n-1);
-        int fb2 = Fibbonacci(n-2);
-        int fb = fb1+fb2;
+        int fb1 = Fibbonacci(n - 1);
+        int fb2 = Fibbonacci(n - 2);
+        int fb = fb1 + fb2;
         return fb;
-      }
+    }
 
+    public static void SortString(String[] str) {
+
+        for (int i = 0; i < str.length - 1; i++) {
+            for (int j = 0; j < str.length - i - 1; j++) {
+                if ((int) str[j].charAt(0) > (int) str[j + 1].charAt(0)) {
+                    String temp = str[j];
+                    str[j] = str[j + 1];
+                    str[j + 1] = temp;
+                }
+
+            }
+        }
+        for (String c : str) {
+            System.out.println(c);
+        }
+
+    }
+
+    public static void ConvertStringToSmall(String[] str) {
+
+        for (int i = 0; i < str.length; i++) {
+            String small = "";
+            for (int j = 0; j < str[i].length(); j++) {
+                char ch = str[i].charAt(j);
+                if (ch >= 'A' && ch <= 'Z') {
+                    ch = (char) (ch + 32);
+                }
+                small += ch;
+            }
+            str[i] = small;
+        }
+        for (String s : str) {
+            System.out.println(s);
+        }
+    }
 
     
+
     public static void main(String[] args) {
 
         System.out.println(sum(202, 7));
@@ -226,27 +264,9 @@ public class Functions {
 
         printCopies(arr1);
 
-        int[] arr3 = { 1, 2, 3, 5, 6 };
-        FindMissing(arr3);
-        NaturalNo(5);
-        ReverseNaturalNo(5);
-        PrintEvenNo(5);
-        SumOfNaturalNo(7);
-        ProductOfNaturalNo(5);
-
-        Scanner scn = new Scanner(System.in);
-        // System.out.println("enter your no.");
-        // int n = scn.nextInt();
-        // printNumber(n);
-        SumOfDigits(123);
-        CountAllDigits(123);
-        PrintReverseNo(894);
-        Palindrome(125);
-        
-        //PrintPrimeNoAlternatively();
-      // PrintPrimeNoInRange(20,150);
-      System.out.println(Fibbonacci(7));
-        
+        String[] str = { "B", "A", "C" };
+        SortString(str);
+        ConvertStringToSmall(str);
 
     }
 }
