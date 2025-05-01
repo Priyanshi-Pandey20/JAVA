@@ -69,7 +69,17 @@
                 System.out.println(2*3.14*radius*radius);
             }
           }
+           
+          class Book {
+            String title;
+            String author;
+            int price;
 
+            void Discount(int price){
+              price = price -10%price;
+              System.out.println(price);
+            }
+          }
         
      
 
@@ -103,6 +113,8 @@
         Circle ci = new Circle();
         ci.Area(4);
         ci.Circumference(5);
+        Book b = new Book();
+        b.Discount(250);
 
 
     }
