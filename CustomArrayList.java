@@ -132,7 +132,7 @@ public class CustomArrayList {
       return false;
    }
 
-   public static ArrayList<Integer> BeautifulArrayList(int n) { // Beautiful Arraylist
+   public static ArrayList<Integer> BeautifulArrayList(int n) { // Beautiful Arraylist 
       ArrayList<Integer> ans = new ArrayList<>();
       divideConqure(1, 1, ans, n);
       return ans;
