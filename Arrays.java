@@ -1,109 +1,220 @@
-import java.util.*;
+import java.util.Arrays;
 
 public class Arrays {
-    public static void main(String[] args) {
-  //       int[] numbers = new int[5]; // creates an array of size 5
+    public static void CompareTwoArray() {
+        int[] a = { 1, 2, 3, 4, 5 }; // compare two array
+        int[] b = { 1, 2, 3, 4, 5 };
 
-  //       // Assign values
-  //       numbers[0] = 10;
-  //       numbers[1] = 20;
-  //       numbers[2] = 30;
-  //       numbers[3] = 40;
-  //       numbers[4] = 50;
-
-        
-  //       for (int i = 0; i < numbers.length; i++) {
-  //       System.out.println("Element at index " + i + ": " + numbers[i]);
-  //       }
-
-  //       int a = 123; // sum of digits
-  //       int original = a;
-  //       int sum = 0;
-
-  //       while (a > 0) {
-  //       int digit = a % 10;
-  //       sum = sum + digit;
-  //       a = a / 10;
-
-  //       }
-  //       System.out.println(sum);
-
-  //      Scanner scn = new Scanner(System.in);
-  //       System.out.println("Enter the size of array ");
-  //       int n = scn.nextInt();
-  //       int [] arr = new int[n];
-
-    
-  //       int max = arr[0];                         // calculate the maximum element in array
-  //       System.out.println("Enter the elements of array");
-
-  //       for(int i = 0;i<n;i++){
-  //       arr[i] = scn.nextInt();
-  //       }
-
-  //       System.out.print("Your array max element is : ");
-  //       int i =0 ;
-  //       for(int j= 1;j<arr.length;j++){
-  //       if(arr[j]>max){
-  //       max= arr[j];
-
-  //       }
-
-                                               
-  //       int[] arr = { 1, 2, 3, 4, 5 };      // 2 sum
-  //       int target = 5;
-  //       boolean flag = false;
-  //       int[] arr1 = { 0, 0, 0, 0, 0 };
-  //       for (int i = 0; i < arr.length; i++) {
-  //       for (int j = i + 1; j < arr.length; j++) {
-  //       if (arr[i] + arr[j] == target) {
-  //       arr1[0] = i;
-  //       arr1[1] = j;
-  //       flag = true;
-  //       System.out.println(arr1[0]);
-  //       System.out.println(arr1[1]);
-  //       break;
-  //       }
-  //       }
-  //       if (flag == true) {
-
-  //       break;
-  //       }
-
-
-
-    
-
-  //       int[] x = { 1, 2, 3, 4, 5 };     // sum of  two arrays
-  //       int[] y = { 1, 2, 3, 4, 5 };
-  //       int sum = 0;
-  //       for (int i = 0; i < x.length; i++) {
-  //           sum = sum + arr1[i];
-  //       }
-  //       for (int j = 0; j < y.length; j++) {
-
-  //           sum = sum + y[j];
-
-  //       }
-  //       System.out.println(sum);
-       
-
-
-  //       int[] a = {1,2,3,4,5};   //sum of two array and store in another
-  //       int[] b = {1,2,3,4,5};
-  //       int[] c = new int[5];
-
-  //       for(int i = 0; i<5;i++){
-  //           c[i] = a[i] + b[i];
-  //       }
-
-  //       for(int k = 0;k<5;k++)
-  //           System.out.println(c[k]+"");
-  //       }
-
-
-  //  }
- }
+        System.out.println(Arrays.equals(a, b));
     }
 
-    
+    public static void MergeTwoArray() { // merge two array
+        int[] s = { 2, 3 };
+        int[] p = { 5, 4 };
+        int[] merge = new int[s.length + p.length];
+        int index = 0;
+        for (int i = 0; i < s.length; i++) {
+            merge[index++] = s[i];
+        }
+
+        for (int j = 0; j < s.length; j++) {
+            merge[index++] = p[j];
+        }
+
+        for (int num : merge) {
+            System.out.print(num + " ");
+
+        }
+    }
+
+    public static void isEqual(int[] arr2, int[] arr3) { // check whether two arrays are equal or not
+        boolean isEqual = true;
+
+        if (arr2.length != arr3.length) {
+            isEqual = false;
+        }
+        for (int i = 0; i < arr2.length; i++) {
+            for (int j = 0; j < arr3.length; j++) {
+                if (arr2[i] != arr3[j]) {
+                    isEqual = false;
+                    break;
+
+                }
+            }
+        }
+
+        System.out.println(isEqual);
+    }
+
+    public static void CommonElementInArray() {
+        int[] d = { 3, 6, 0, 1, 4 }; // find common elements in two array
+        int[] e = { 13, 6, 7, 9, 2 };
+        for (int i = 0; i < d.length; i++) {
+            for (int j = 0; j < e.length; j++) {
+                if (d[i] == e[j]) {
+                    System.out.println(d[i]);
+                    break;
+                }
+
+            }
+        }
+    }
+
+    public static void UniqueElement() {
+        int[] y = { 1, 2, 3, 2, 0 }; // search unique element in two array
+        int[] z = { 5, 9, 4, 1, 0 };
+        boolean found = false;
+        for (int i = 0; i < y.length; i++) {
+            for (int j = 0; j < z.length; j++) {
+                if (y[i] == z[j]) {
+                    System.out.println(y[i]);
+                    found = true;
+                    break;
+                }
+
+                if (!found) {
+                    System.out.println(z[j]);
+                }
+
+            }
+        }
+    }
+
+    public static void CopyArrayToOther() {
+
+        int[] o = { 1, 2, 3, 4, 5 }; // copy elements of one array into another
+        int[] w = new int[5];
+
+        for (int i = 0; i < o.length; i++) {
+            w[i] = o[i];
+        }
+
+        for (int j = 0; j < w.length; j++) {
+            System.out.print(w[j]);
+        }
+    }
+
+    public static void CheckPrime() {
+        int[] arr = { 1, 2, 3, 3, 4, 56, 67, 7, 8, 9 }; // print the prime no.in array
+        for (int i = 0; i < arr.length; i++) {
+            int n = arr[i];
+            for (int j = 2; j < n / 2; i++) {
+                if (arr[i] % j == 0) {
+                    System.out.println("not prime" + arr[i]);
+                } else {
+                    System.out.println("prime");
+                }
+            }
+
+        }
+
+    }
+
+    public static void SortArrayInAsending(int[] arr1) { // Sort an array in ascending order
+
+        for (int i = 0; i < arr1.length; i++) {
+            for (int j = i + 1; j < arr1.length; j++) {
+                if (arr1[i] > arr1[j]) {
+                    int temp = arr1[i];
+                    arr1[i] = arr1[j];
+                    arr1[j] = temp;
+                }
+            }
+
+        }
+        for (int j = 0; j < arr1.length; j++) {
+            System.out.println(arr1[j]);
+        }
+
+    }
+
+    public static void EvenOddSum(int[] arr) { // calculate even no. and odd no. sum
+        int evensum = 0;
+        int oddsum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 == 0) {
+                evensum++;
+            } else {
+
+                oddsum++;
+            }
+
+        }
+        System.out.println(evensum);
+        System.out.println(oddsum);
+    }
+
+    public static void FindMaximum(int[] arr3) {// calculate the maximum element in array
+        int max = arr3[0];
+        for (int j = 1; j < arr3.length; j++) {
+            if (arr3[j] > max) {
+                max = arr3[j];
+
+            }
+        }
+        System.out.println(max);
+    }
+
+    public static void TwoSum() {
+        int[] arr = { 1, 2, 3, 4, 5 }; // 2 sum
+        int target = 5;
+        boolean flag = false;
+        int[] arr1 = { 0, 0, 0, 0, 0 };
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] + arr[j] == target) {
+                    arr1[0] = i;
+                    arr1[1] = j;
+                    flag = true;
+                    System.out.println(arr1[0]);
+                    System.out.println(arr1[1]);
+                    break;
+                }
+            }
+            if (flag == true) {
+
+                break;
+            }
+
+        }
+    }
+
+    public static void SumOfTwoArray() { // sum of two arrays
+        int[] x = { 1, 2, 3, 4, 5 };
+        int[] y = { 1, 2, 3, 4, 5 };
+        int sum = 0;
+        for (int i = 0; i < x.length; i++) {
+            sum = sum + x[i];
+        }
+        for (int j = 0; j < y.length; j++) {
+
+            sum = sum + y[j];
+
+        }
+        System.out.println(sum);
+    }
+
+    public static void SumOfDigits() {  // sum of digits
+        int a = 123;
+        int original = a;
+        int sum = 0;
+
+        while (a > 0) {
+            int digit = a % 10;
+            sum = sum + digit;
+            a = a / 10;
+
+        }
+        System.out.println(sum);
+    }
+
+    public static void main(String[] args) {
+
+        int[] arr3 = { 3, 5, 6, 7, 0 };
+        FindMaximum(arr3);
+        TwoSum();
+        SumOfTwoArray();
+        SumOfDigits();
+
+    }
+}
