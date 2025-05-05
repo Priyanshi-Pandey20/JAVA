@@ -306,7 +306,7 @@ public class LinkedList {
 
     }
 
-    public void ZigZag() {  //print ll in zig zag pattern (add from last)
+    public void ZigZagPattern() { // print ll in zig zag pattern (add from last)
         Node slow = head;
         Node fast = head.next;
         while (fast != null && fast.next != null) {
@@ -343,7 +343,33 @@ public class LinkedList {
 
     }
 
+    public Node oddevenLL(Node head) { // print even nodes first and then odd nodes 
+        if (head == null || head.next == null) {
+            return head;
+        }
 
+        Node oddHead = new Node(-1);
+        Node evenHead = new Node(-1);
+        Node odd = oddHead;
+        Node even = evenHead;
+        Node temp = head;
+
+        while (temp != null) {
+            if (temp.data % 2 == 0) {
+                even.next = temp;
+                even = even.next;
+            } else {
+                odd.next = temp;
+                odd = odd.next;
+            }
+            temp = temp.next;
+        }
+        even.next = null;
+        even.next = oddHead.next;
+
+        return evenHead.next;
+
+    }
 
     public void Print() {
         Node temp = head;
@@ -354,8 +380,6 @@ public class LinkedList {
         System.out.println("null");
     }
 
-
-    
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
         // head = new Node(1);
@@ -374,7 +398,7 @@ public class LinkedList {
         ll.addLast(4);
         ll.addLast(5);
         ll.Print();
-        ll.ZigZag();
+        head = ll.oddevenLL(head);
         ll.Print();
 
     }
