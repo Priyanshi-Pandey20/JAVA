@@ -40,6 +40,7 @@ public class StackB {
             this.next = null;
         }
     }
+
     public static Node head;
 
     static class LL {
@@ -139,19 +140,84 @@ public class StackB {
         }
     }
 
-   
+    public static void NextGreaterElement(int[] arr, Stack<Integer> s, int[] nextGreater) { // find next greater element
+        for (int i = arr.length - 1; i >= 0; i--) {
+            while (!s.isEmpty() && arr[s.peek()] <= arr[i]) {
+                s.pop();
+            }
 
-
-    
-    public static void main(String[] args) {
-        int[] stocks = { 100, 80, 60, 70, 60, 85, 100 };
-        int[] span = new int[stocks.length];
-        stockSpan(stocks, span);
-
-        for (int i = 0; i < span.length; i++) {
-            System.out.println(span[i] + "");
+            if (s.isEmpty()) {
+                nextGreater[i] = -1;
+            } else {
+                nextGreater[i] = arr[s.peek()];
+            }
+            s.push(i);
         }
-        
+        for (int i = 0; i < nextGreater.length; i++) {
+            System.out.print(nextGreater[i] + " ");
+        }
+        System.out.println();
+
+    }
+
+    public static boolean ValidParentheses(String str) {
+        Stack<Character> s = new Stack<>();
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if (ch == '(' || ch == '{' || ch == '[') {
+                s.push(ch);
+            } else {
+                if (s.isEmpty()) {
+                    return false;
+                }
+                if ((s.peek() == '(' && ch == ')')
+                        || (s.peek() == '{' && ch == '}')
+                        || (s.peek() == '[' && ch == ']')) {
+                    s.pop();
+                } else {
+                    return false;
+                }
+            }
+        }
+        if (s.isEmpty()) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    public static boolean DuplicateParentheses(String str) {// duplicate parentheses
+        Stack<Character> s = new Stack<>();
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            if (ch == ')') {
+                int count = 0;
+                while (s.peek() != '(') {
+                    count++;
+                }
+                if (count < 1) {
+                    return true;
+                } else {
+                    s.pop();
+                }
+            } else {
+                s.push(ch);
+            }
+        }
+        return false;
+
+    }
+
+    public static void LargestRectangleArea(){
+       
+    }
+
+    public static void main(String[] args) {
+    int[] height = {2,1,5,6,2,3};
+    
 
     }
 }
