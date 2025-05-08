@@ -211,13 +211,73 @@ public class StackB {
 
     }
 
-    public static void LargestRectangleArea(){
-       
+    public static void LargestRectangleInHistogram(int[] arr) { // O(n) largest area in histogram
+        int maxArea = 0;
+        int[] nsr = new int[arr.length];
+        int[] nsl = new int[arr.length];
+
+        Stack<Integer> s = new Stack<>();
+        for (int i = arr.length - 1; i >= 0; i--) {
+            while (!s.isEmpty() && arr[s.peek()] >= arr[i]) {
+                s.pop();
+            }
+            if (s.isEmpty()) {
+                nsr[i] = arr.length;
+            } else {
+                nsr[i] = s.peek();
+            }
+            s.push(i);
+        }
+
+        s = new Stack<>();
+        for (int i = 0; i < arr.length - 1; i++) {
+            while (!s.isEmpty() && arr[s.peek()] >= arr[i]) {
+                s.pop();
+            }
+            if (s.isEmpty()) {
+                nsl[i] = -1;
+            } else {
+                nsl[i] = s.peek();
+            }
+            s.push(i);
+        }
+
+        for (int i = 0; i < arr.length - 1; i++) {
+            int height = arr[i];
+            int width = nsr[i] - nsl[i] - 1;
+            int currArea = height * width;
+            maxArea = Math.max(currArea, maxArea);
+        }
+        System.out.println("maximum area in histogram:  " + maxArea);
+
+    }
+
+    public static int TrappingRainWater(int[] height) { // trapping rainwater problem
+        Stack<Integer> stack = new Stack<>();
+        int n = height.length;
+
+        int ans = 0;
+        for (int i = 0; i < n; i++) {
+            while (!stack.isEmpty() && (height[stack.peek()] < height[i])) {
+                int pop_height = height[stack.peek()];
+                stack.pop();
+                if (stack.isEmpty())
+                    break;
+                int distance = i - stack.peek() - 1;
+                int min_height = Math.min(height[stack.peek()], height[i]) - pop_height;
+
+                ans += distance * min_height;
+
+            }
+            stack.push(i);
+
+        }
+        return ans;
     }
 
     public static void main(String[] args) {
-    int[] height = {2,1,5,6,2,3};
-    
+        int[] height = { 7, 0, 4, 2, 5, 0, 6, 4, 0, 6 };
+        System.out.println(TrappingRainWater(height));
 
     }
 }
