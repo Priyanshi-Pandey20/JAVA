@@ -1,4 +1,7 @@
-public class QueueS {
+import java.util.*;
+
+
+public class Queue1 {
   static class Node {
     int data;
     Node next;
@@ -155,15 +158,15 @@ public class QueueS {
     }
   }
 
-    
+   
 
+ 
   public static void main(String[] args) {
-    QueueLL q = new QueueLL();
+    Queue q = new Queue(5);
     q.add(1);
     q.add(2);
     q.add(3);
 
-    
     while (!q.isEmpty()) {
       System.out.println(q.peek());
       q.remove();
