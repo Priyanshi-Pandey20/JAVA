@@ -210,4 +210,9 @@ public class Arrays {
         SumOfDigits();
 
     }
+
+    public static void fill(char[] res, char c) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'fill'");
+    }
 }

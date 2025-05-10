@@ -1,5 +1,5 @@
 import java.util.*;
-
+import java.util.LinkedList;
 
 public class Queue1 {
   static class Node {
@@ -51,6 +51,22 @@ public class Queue1 {
         return -1;
       }
       return head.data;
+    }
+  }
+
+  static class DequeB { // implement queue using deque
+    Deque<Integer> deque = new LinkedList<>();
+
+    public void add(int data) {
+      deque.addLast(data);
+    }
+
+    public int remove() {
+      return deque.removeFirst();
+    }
+
+    public int peek() {
+      return deque.getFirst();
     }
   }
 
@@ -158,18 +174,70 @@ public class Queue1 {
     }
   }
 
-   
+  public static void PrintFirstNonRepeating(String str) {// print first repeating element
+    int[] freq = new int[26];
 
- 
-  public static void main(String[] args) {
-    Queue q = new Queue(5);
-    q.add(1);
-    q.add(2);
-    q.add(3);
+    java.util.Queue<Character> q = new LinkedList<>();
 
-    while (!q.isEmpty()) {
-      System.out.println(q.peek());
-      q.remove();
+    for (int i = 0; i < str.length(); i++) {
+      char ch = str.charAt(i);
+      q.add(ch);
+      freq[ch - 'a']++;
+
+      while (!q.isEmpty() && freq[q.peek() - 'a'] > 1) {
+        q.remove();
+      }
+      if (q.isEmpty()) {
+        System.out.println(-1 + " ");
+      } else {
+        System.out.println(q.peek() + " ");
+      }
     }
+    System.out.println();
+  }
+
+  public static void interLeave(java.util.Queue<Integer> q) { // interLeave
+    java.util.Queue<Integer> firsthalf = new LinkedList<>();
+    int size = q.size();
+    for (int i = 0; i < size / 2; i++) {
+      firsthalf.add(q.remove());
+    }
+    while (!firsthalf.isEmpty()) {
+      q.add(firsthalf.remove());
+      q.add(q.remove());
+    }
+  }
+
+  public static void reverseQueue(java.util.Queue<Integer> q) { // reverse queue
+    Stack<Integer> s = new Stack<>();
+    while (!q.isEmpty()) {
+      s.push(q.remove());
+    }
+    while (!s.isEmpty()) {
+      q.add(s.pop());
+    }
+  }
+
+  public static void GenerateBinaryNo(int n) { // generate binary number of given string
+    for (int i = 1; i <= n; i++) {
+      String s = Integer.toBinaryString(i);
+      System.out.println(s);
+    }
+    System.out.println();
+
+  }
+
+  public static void main(String[] args) {
+    // java.util.Queue<Integer> q = new LinkedList<>();
+    // q.add(1);
+    // q.add(2);
+    // q.add(3);
+
+    // System.out.println(q.peek());
+    // System.out.println(q.remove());
+    // System.out.println(q.remove());
+    // System.out.println(q.remove());
+    GenerateBinaryNo(5);
+
   }
 }
