@@ -227,17 +227,62 @@ public class Queue1 {
 
   }
 
-  public static void main(String[] args) {
-    // java.util.Queue<Integer> q = new LinkedList<>();
-    // q.add(1);
-    // q.add(2);
-    // q.add(3);
+  public static int minCost(int[] arr, int n) { // minimum cost to find n ropes
+    PriorityQueue<Integer> pq = new PriorityQueue<>();
+    for (int i = 0; i < n; i++) {
+      pq.add(arr[i]);
+    }
+    int res = 0;
+    while (pq.size() > 1) {
+      int first = pq.poll();
+      int second = pq.poll();
+      res += first + second;
 
-    // System.out.println(q.peek());
-    // System.out.println(q.remove());
-    // System.out.println(q.remove());
-    // System.out.println(q.remove());
-    GenerateBinaryNo(5);
+      pq.add(first + second);
+    }
+    return res;
+  }
+
+  public static java.util.Queue<Integer> reverseTheFirstKElement(java.util.Queue<Integer> q, int k) { // reverse k elements
+    if (q == null || k <= 0 || k >= q.size()) {
+      return q;
+    }
+    Stack<Integer> s = new Stack<>();
+
+    for (int i = 0; i < k; i++) {
+      s.push(q.remove());
+    }
+
+    while (!s.isEmpty()) {
+      q.add(s.pop());
+    }
+    int size = q.size();
+    for (int i = 0; i < size - k; i++) {
+      q.add(q.poll());
+    }
+    return q;
+  }
+
+  
+
+  public static void main(String[] args) {
+      java.util.Queue<Integer>q = new LinkedList<>();
+      q.add(10);
+      q.add(20);
+      q.add(30);
+      q.add(40);
+      q.add(50);
+      q.add(60);
+      q.add(70);
+      q.add(80);
+
+     reverseTheFirstKElement(q, 3);
+     while(!q.isEmpty()){
+      System.out.println(q.remove() + "");
+     }
+     System.out.println();
+
+    
 
   }
 }
