@@ -1,3 +1,4 @@
+import java.io.CharArrayWriter;
 import java.util.*;
 import java.util.Arrays;
 
@@ -134,7 +135,7 @@ public class GreedyAlogrithms {
 
   }
 
-  public static void IndianCoin(Integer[] coins, int amount) { // keeping adding coin
+  public static void IndianCoin(Integer[] coins, int amount) { // keeping adding coins
     Arrays.sort(coins, Comparator.reverseOrder());
     int countOfCoins = 0;
 
@@ -155,9 +156,152 @@ public class GreedyAlogrithms {
     }
   }
 
+  static class Job {// Job Sequencing problem
+    int deadline;
+    int profit;
+    int id;
+
+    public Job(int i, int d, int p) {
+      id = i;
+      deadline = d;
+      profit = p;
+    }
+  }
+
+  public static void JobSequencing(int[][] jobsInfo) {
+
+    ArrayList<Job> jobs = new ArrayList<>();
+
+    for (int i = 0; i < jobsInfo.length; i++) {
+      jobs.add(new Job(i, jobsInfo[i][0], jobsInfo[i][1]));
+    }
+
+    Collections.sort(jobs, (obj1, obj2) -> obj2.profit - obj1.profit);// to sort objects in descending order
+
+    ArrayList<Integer> seq = new ArrayList<>();
+    int time = 0;
+    for (int i = 0; i < jobs.size(); i++) {
+      Job curr = jobs.get(i);
+      if (curr.deadline > time) {
+        seq.add(curr.id);
+        time++;
+      }
+    }
+    System.out.println("max jobs: " + seq.size());
+    for (int i = 0; i < seq.size(); i++) {
+      System.out.print(seq.get(i) + " ");
+    }
+
+  }
+
+  public static void ChocolaProblem(Integer[] costVer, Integer[] costHor) { // divide the choclate into min cost
+
+    Arrays.sort(costVer, Collections.reverseOrder());
+    Arrays.sort(costHor, Collections.reverseOrder());
+
+    int h = 0, v = 0;
+    int hp = 1, vp = 1;
+    int cost = 0;
+
+    while (h < costHor.length && v < costVer.length) {
+      if (costVer[v] <= costHor[h]) {
+        cost += (costHor[h] * vp);
+        hp++;
+        h++;
+      } else {
+        cost += (costVer[v] * hp);
+        vp++;
+        v++;
+      }
+    }
+    while (h < costHor.length) {
+      cost += (costHor[h] * vp);
+      hp++;
+      h++;
+    }
+    while (v < costVer.length) {
+      cost += (costVer[v] * hp);
+      vp++;
+      v++;
+    }
+    System.out.println(cost);
+
+  }
+
+  public static int BalancedPartition(String str, int n) { // no.of partition possible in string
+    if (n == 0) {
+      return 0;
+    }
+    int r = 0, l = 0;
+    int ans = 0;
+    for (int i = 0; i < n; i++) {
+      if (str.charAt(i) == 'R') {
+        r++;
+      } else if (str.charAt(i) == 'L') {
+        l++;
+      }
+      if (l == r) {
+        ans++;
+      }
+    }
+    return ans;
+
+  }
+
+  public static int KthOddNo(int[] range, int K) { // find the kth odd no. in given range from backwards
+    if (K <= 0) {
+      return 0;
+    }
+    int L = range[0];
+    int R = range[1];
+
+    if ((R & 1) > 0) {
+      int count = (int) Math.ceil((R - L + 1) / 2);
+      if (K > count)
+        return 0;
+
+      else
+        return (R - 2 * K + 2);
+
+    } else {
+      int count = (R - L + 1) / 2;
+      if (K > count)
+        return 0;
+
+      else
+        return (R - 2 * K + 1);
+
+    }
+  }
+public static int ans = 10000000;
+  public static void CalculateSubarraySum(int[] a , int n,int k,int index,int sum,int maxSum){// calculate the minimum of the maximum subarray sum
+        if(k == 1){
+          maxSum = Math.max(maxSum,sum);
+          sum =0;
+          for(int i = index;i<n;i++){
+            sum += a[i];
+          }
+          maxSum = Math.max(maxSum,sum);
+          ans = Math.min(ans,maxSum);
+          return;
+        }
+        sum =0;
+        for(int i = index;i<n;i++){
+          sum +=a[i];
+          maxSum = Math.max(maxSum,sum);
+          CalculateSubarraySum(a,n,k-1,i+1,sum,maxSum);
+        }
+  }
+
+   
+
+
   public static void main(String[] args) {
-    Integer coins[] = { 1, 2, 5, 10, 20, 50, 100, 500, 2000 };
-    int amount = 5590;
-    IndianCoin(coins, amount);
+
+    int[] a = {1,2,3,4};
+    int k = 3;
+    int n =4;
+    CalculateSubarraySum(a, n, k, 0, 0, 0);
+    System.out.println(ans);
   }
 }
