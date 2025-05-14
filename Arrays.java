@@ -1,20 +1,28 @@
 import java.util.*;
 
 public class Arrays {
-    public static void MergeTwoArray() { // merge two array
-        int[] s = { 2, 3 };
-        int[] p = { 5, 4 };
-        int[] merge = new int[s.length + p.length];
-        int index = 0;
-        for (int i = 0; i < s.length; i++) {
-            merge[index++] = s[i];
+    public static void MergeTwoArray() { // merge two array without using extra space
+        int[] s = { 2, 3, 0, 0 };
+        int[] p = { 4, 5 };
+        int m = 2;
+        int n = p.length;
+        int i = m - 1;
+        int j = n - 1;
+        int k = m + n - 1;
+
+        for (; k >= 0; k--) {
+            if (j < 0)
+                break;
+            if (i >= 0 && s[i] > p[j]) {
+                s[k] = s[i];
+                i--;
+            } else {
+                s[k] = p[j];
+                j--;
+            }
         }
 
-        for (int j = 0; j < s.length; j++) {
-            merge[index++] = p[j];
-        }
-
-        for (int num : merge) {
+        for (int num : s) {
             System.out.print(num + " ");
 
         }
@@ -187,7 +195,7 @@ public class Arrays {
         System.out.println(sum);
     }
 
-    public static void SumOfDigits() {  // sum of digits
+    public static void SumOfDigits() { // sum of digits
         int a = 123;
         int original = a;
         int sum = 0;
@@ -201,18 +209,78 @@ public class Arrays {
         System.out.println(sum);
     }
 
+    public static void KadanesAlgorithm(int[] nums) { // maximum subarray sum
+        int maxSum = Integer.MIN_VALUE;
+        int currSum = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            currSum = currSum + nums[i];
+            if (currSum < 0) {
+                currSum = 0;
+            }
+            maxSum = Math.max(currSum, maxSum);
+        }
+        System.out.println("maximum subarray sum : " + maxSum);
+    }
+
+    public static void RearrangeArray(int[] arr) { // Move all negative numbers to beginning and positive to end
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] > arr[j]) {
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+
+        int[] temp = new int[arr.length];
+        int idx = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < 0) {
+                temp[idx++] = arr[i];
+            }
+        }
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] >= 0) {
+                temp[idx++] = arr[i];
+            }
+        }
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = temp[i];
+            System.out.print(arr[i] + " ");
+        }
+    }
+
+    public static void Occurences(int[] arr) { // Count the number of occurrences of an element
+        for (int i = 0; i < arr.length; i++) {
+            int count = 0;
+            boolean alreadyCounted = false;
+
+            for (int k = 0; k < i; k++) {
+                if (arr[i] == arr[k]) {
+                    alreadyCounted = true;
+                    break;
+                }
+            }
+            if (alreadyCounted) {
+                continue;
+            }
+
+            for (int j = i; j < arr.length; j++) {
+                if (arr[i] == arr[j]) {
+                    count++;
+                }
+            }
+            System.out.println(arr[i] + " ocuured " + count + " times ");
+        }
+    }
+
     public static void main(String[] args) {
 
-        int[] arr3 = { 3, 5, 6, 7, 0 };
-        FindMaximum(arr3);
-        TwoSum();
-        SumOfTwoArray();
-        SumOfDigits();
-
+        MergeTwoArray();
+        int[] nums = { 1, 2, 3, 4, 5 };
+        KadanesAlgorithm(nums);
     }
 
-    public static void fill(char[] res, char c) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'fill'");
-    }
 }
