@@ -276,6 +276,27 @@ public class Arrays {
         }
     }
 
+    public static void FindDuplicates(int[] arr) {// find duplicate element
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = arr.length - 1; j > i; j--) {
+                if (arr[i] == arr[j]) {
+                    System.out.println("duplicate element is : " + arr[j]);
+                    break;
+                }
+            }
+
+        }
+    }
+
+    public static int FindMissingElement(int[] arr) { // find missing element in an array
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i + 1] != arr[i] + 1) {
+                return arr[i] + 1;
+            }
+        }
+        return -1;
+    }
+
     public static void main(String[] args) {
 
         MergeTwoArray();

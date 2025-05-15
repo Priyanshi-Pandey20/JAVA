@@ -78,13 +78,13 @@ public class Functions {
         }
     }
 
-    public static void ReverseNaturalNo(int n) {
+    public static void ReverseNaturalNo(int n) { // reverse natural no.
         for (int i = n; i >= 0; i--) {
             System.out.print(i);
         }
     }
 
-    public static void PrintEvenNo(int n) {
+    public static void PrintEvenNo(int n) { // print even no.
         for (int i = 0; i < n; i++) {
             if (i % 2 == 0) {
                 System.out.println("even no." + i);
@@ -93,7 +93,7 @@ public class Functions {
         }
     }
 
-    public static void SumOfNaturalNo(int n) {
+    public static void SumOfNaturalNo(int n) { // print sum of natural no.
         int sum = 0;
         for (int i = 0; i <= n; i++) {
             sum += i;
@@ -102,7 +102,7 @@ public class Functions {
         System.out.println(sum);
     }
 
-    public static void ProductOfNaturalNo(int n) {
+    public static void ProductOfNaturalNo(int n) { // print product of natural no.
         int product = 1;
         for (int i = 1; i <= n; i++) {
             product *= i;
@@ -248,6 +248,30 @@ public class Functions {
             System.out.println(s);
         }
     }
+        public static void AlternatingPositiveNegative(int[] arr) { // alternating postive negative elements
+        int n = arr.length;
+        int[] temp = new int[n];
+        int postIdx = 0;
+        int negIdx = 1;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] >= 0) {
+                if (postIdx < n) {
+                    temp[postIdx] = arr[i];
+                    postIdx += 2;
+                }
+            } else {
+                if (negIdx < n) {
+                    temp[negIdx] = arr[i];
+                    negIdx += 2;
+                }
+            }
+        }
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(temp[i] + " ");
+        }
+
+    }
+
 
     
 
