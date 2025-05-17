@@ -353,7 +353,7 @@ public class BinaryTreesB {
         return max + 1;
     }
 
-    public static int TransformToSumTree(Node root) {
+    public static int TransformToSumTree(Node root) { // transform the tree to sum tree
         if (root == null) {
             return 0;
         }
@@ -377,6 +377,94 @@ public class BinaryTreesB {
         preOrder(root.right);
     }
 
+    public static boolean IsUnivaluedTree(Node root) { // check whether all nodes contains same value
+        if (root == null) {
+            return true;
+        }
+        if (root.left != null && root.data != root.left.data) {
+            return false;
+        }
+        if (root.right != null && root.data != root.right.data) {
+            return false;
+        }
+        return IsUnivaluedTree(root.left) && IsUnivaluedTree(root.right);
+
+    }
+
+    public static Node mirror(Node root) { // create Mirror image if the tree
+        if (root == null) {
+            return root;
+        }
+
+        Node left = mirror(root.left);
+        Node right = mirror(root.right);
+
+        root.left = right;
+        root.right = left;
+        return root;
+
+    }
+
+    public static void InOrder(Node root) {
+        if (root == null) {
+            return;
+        }
+
+        InOrder(root.left);
+        System.out.print(root.data + " ");
+        InOrder(root.right);
+    }
+
+    public static Node DeleteLeaFNodes(Node root, int x) { // delete all the leaf nodes with a given target
+        if (root == null) {
+            return null;
+        }
+        root.left = DeleteLeaFNodes(root.left, x);
+        root.right = DeleteLeaFNodes(root.right, x);
+
+        if (root.data == x && root.left == null && root.right == null) {
+            return null;
+        }
+        return root;
+    }
+
+    public static void inOrder(Node root) {
+        if (root == null) {
+            return;
+        }
+
+        inOrder(root.left);
+        System.out.print(root.data + " ");
+        inOrder(root.right);
+    }
+
+     static class Result { // maximum path sum
+        int maxSum;
+    
+    }
+    public static int maxSum(Node root, Result result) {
+        if (root == null) {
+            return 0;
+        }
+        int leftSum = maxSum(root.left, result);
+        int rightSum = maxSum(root.right, result);
+
+        int maxSinglePath = Math.max(Math.max(leftSum, rightSum) + root.data, root.data);
+        int maxTop = Math.max(maxSinglePath, leftSum + rightSum + root.data);
+
+        result.maxSum = Math.max(result.maxSum, maxTop);
+        return maxSinglePath;
+
+    }
+
+    public static int findMaxSum(Node root) {
+        Result result = new Result();
+        result.maxSum = Integer.MIN_VALUE;
+        maxSum(root, result);
+        return result.maxSum;
+    }
+
+
     public static void main(String[] args) {
         Node root = new Node(1);
         root.left = new Node(2);
@@ -385,7 +473,7 @@ public class BinaryTreesB {
         root.left.right = new Node(5);
         root.right.left = new Node(6);
         root.right.right = new Node(7);
-        TransformToSumTree(root);
-        preOrder(root);
+
+       System.out.println(findMaxSum(root));
     }
 }
