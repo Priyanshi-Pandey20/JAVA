@@ -464,6 +464,14 @@ public class BinaryTreesB {
         return result.maxSum;
     }
 
+    public static int countLeafNodes(Node root) {
+        if (root == null) return 0;
+
+        if (root.left == null && root.right == null) return 1;
+
+        return countLeafNodes(root.left) + countLeafNodes(root.right);
+    }
+
 
     public static void main(String[] args) {
         Node root = new Node(1);
@@ -474,6 +482,6 @@ public class BinaryTreesB {
         root.right.left = new Node(6);
         root.right.right = new Node(7);
 
-       System.out.println(findMaxSum(root));
+       System.out.println(countLeafNodes(root));
     }
 }
