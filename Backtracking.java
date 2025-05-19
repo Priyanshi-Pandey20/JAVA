@@ -47,7 +47,7 @@ public class Backtracking {
         }
     }
 
-    public static boolean isSafe(char board[][], int row, int col) {
+    public static boolean isSafe(char board[][], int row, int col) { // N Queen Problem
         for (int i = row - 1; i >= 0; i--) {
             if (board[i][col] == 'Q') {
                 return false;
@@ -117,7 +117,7 @@ public class Backtracking {
         return w1 + w2;
     }
 
-    public static boolean isSafe(int[][] sudoku, int row, int col, int digit) {
+    public static boolean isSafe(int[][] sudoku, int row, int col, int digit) { // Sudoku Problem
         for (int i = 0; i <= 8; i++) {
             if (sudoku[i][col] == digit) {
                 return false;
@@ -143,7 +143,7 @@ public class Backtracking {
         return true;
     }
 
-    public static boolean solveSudoku(int[][] sudoku, int row, int col) {
+    public static boolean solveSudoku(int[][] sudoku, int row, int col) { 
 
         if (row == 9 && col == 0) {
             return true;
