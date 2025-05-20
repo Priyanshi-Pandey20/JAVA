@@ -1,3 +1,4 @@
+import java.util.*;
 public class BinarySearchTreeB {
 
     static class Node {
@@ -50,13 +51,81 @@ public class BinarySearchTreeB {
 
     }
 
+    public static Node DeleteNode(Node root, int val) { // delete node from tree
+        if (root.data < val) {
+            root.right = DeleteNode(root.right, val);
+        } else if (root.data > val) {
+            root.left = DeleteNode(root.left, val);
+        } else {
+            if (root.left == null && root.right == null) {
+                return null;
+            }
+            if (root.left == null) {
+                return root.right;
+            } else if (root.right == null) {
+                return root.left;
+            }
+            Node IS = findInorderSuccessor(root.right);
+            root.data = IS.data;
+            DeleteNode(root.right, IS.data);
+        }
+        return root;
+
+    }
+
+    public static Node findInorderSuccessor(Node root) {
+        while (root.left != null) {
+            root = root.left;
+        }
+        return root;
+
+    }
+
+    public static void printInRange(Node root, int k1, int k2) { // print all the numbers in a given range
+        if (root == null) {
+            return;
+        }
+        if (root.data >= k1 && root.data <= k2) {
+            printInRange(root.left, k1, k2);
+            System.out.println(root.data + " ");
+            printInRange(root.right, k1, k2);
+        } else if (root.data < k1) {
+            printInRange(root.left, k1, k2);
+        } else {
+            printInRange(root.right, k1, k2);
+        }
+
+    }
+
+    public static void printPath(ArrayList<Integer>path){ // print the path 
+        for(int i =0;i<path.size();i++){
+            System.out.print(path.get(i) + "->");
+        }
+        System.out.println();
+    }
+
+    public static void RootToLeafPath(Node root,ArrayList<Integer>path){
+       if(root == null){
+        return;
+       }
+        path.add(root.data);
+        if(root.left == null && root.right == null){
+            printPath(path);
+        }
+        RootToLeafPath(root.left, path);
+        RootToLeafPath(root.right, path);
+        path.remove(path.size()-1);
+
+
+
+    }
+
     public static void main(String[] args) {
-        int[] val = { 5, 1, 3, 4, 2, 7 };
+        int[] val = { 8, 5, 3, 1, 4, 6, 10, 11, 14 };
         Node root = null;
         for (int i = 0; i < val.length; i++) {
             root = insert(root, val[i]);
         }
-        inorder(root);
-       System.out.println(search(root, 6)); 
+        RootToLeafPath(root, new ArrayList<>());
     }
 }
