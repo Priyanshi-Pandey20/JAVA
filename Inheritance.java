@@ -129,13 +129,92 @@ class Book {
     }
 }
 
+interface Client {
+    void print();
+
+    void show();
+}
+
+class Dev implements Client {
+    public void print() {
+        System.out.println("bill");
+    }
+
+    public void show() {
+        System.out.println("menu");
+    }
+}
+
+interface Walkable {
+    void walk();
+}
+
+interface Runable {
+    void run();
+}
+
+class Human implements Walkable, Runable {
+    public void walk() {
+        System.out.println("Walking");
+    }
+
+    public void run() {
+        System.out.println("running");
+    }
+}
+
+interface A {
+    void display();
+
+}
+
+interface B {
+    void display();
+}
+
+class Demo implements A, B {
+    public void display() {
+        System.out.println("display");
+    }
+}
+
+interface Animal2 {
+    void makeSound();
+}
+
+class Dog2 implements Animal2 {
+    public void makeSound() {
+        System.out.println("Bark");
+
+    }
+}
+
+interface Shape2 {
+    void area(int radius);
+}
+
+class Circle implements Shape2 {
+    public void area(int radius) {
+        System.out.println(3.14 * radius * radius);
+    }
+}
+
+interface Vehicle {
+    default void start() {
+        System.out.println("vehicle is starting");
+    }
+}
+
+class Car implements Vehicle {
+
+}
+
 public class Inheritance {
 
     public static void main(String[] args) {
 
-        Book obj = new Book();
-        obj.display("JunglebBook", "JS thomson");
-        obj.display("JunglebBook", "JS thomson", 50);
+        Car obj = new Car();
+        obj.start();
 
     }
 }
