@@ -220,7 +220,7 @@ public class BinarySearchTreeB {
 
     public static int maxBST = 0;
 
-    public static Info largestBST(Node root) {
+    public static Info largestBST(Node root) { // find the largest BST
         if (root == null) {
             return new Info(true, 0, Integer.MAX_VALUE, Integer.MIN_VALUE);
         }
@@ -241,22 +241,53 @@ public class BinarySearchTreeB {
 
     }
 
-    
+    public static int minDiffNode(Node root, int k) { // Find the kth closest element in BST
+        int closest = root.data;
+        while (root != null) {
+            if (Math.abs(root.data - k) < Math.abs(closest - k)) {
+                closest = root.data;
+            }
+            if (root.data > k) {
+                root = root.left;
+            } else if (root.data < k) {
+                root = root.right;
+            } else {
+                break;
+            }
+        }
+        return closest;
+    }
+
+    public static int findMin(Node root) { // Find minimum and maximum in BST
+        if (root == null)
+            return -1;
+        while (root.left != null) {
+            root = root.left;
+        }
+        return root.data;
+    }
+
+   
+    public static int findMax(Node root) { // Function to find the maximum value
+        if (root == null)
+            return -1;
+        while (root.right != null) {
+            root = root.right;
+        }
+        return root.data;
+    }
 
     public static void main(String[] args) {
 
-        Node root = new Node(50);
-        root.left = new Node(30);
-        root.left.left = new Node(5);
-        root.left.right = new Node(20);
+        Node root = new Node(9);
+        root.left = new Node(4);
+        root.right = new Node(17);
+        root.left.left = new Node(3);
+        root.left.right = new Node(6);
+        root.left.right.left = new Node(5);
 
-        root.right = new Node(60);
-        root.right.left = new Node(45);
-        root.right.right = new Node(70);
-        root.right.right.left = new Node(65);
-        root.right.right.right = new Node(80);
-        
-        Info info = largestBST(root);
-        System.out.println(maxBST);
+        System.out.println("Minimum value: " + findMin(root));
+        System.out.println("Maximum value: " + findMax(root));
+
     }
 }
