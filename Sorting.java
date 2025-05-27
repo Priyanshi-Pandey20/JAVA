@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Sorting {
-    public static void MergeSort(int[] arr, int l, int h) {// merge sort  //O(n) 
+    public static void MergeSort(int[] arr, int l, int h) {// merge sort //O(n)
 
         if (l >= h) {
             return;
@@ -76,7 +76,7 @@ public class Sorting {
 
     }
 
-    public static void BubbleSort(int[] arr) { // Bubble Sort   O(n^2)
+    public static void BubbleSort(int[] arr) { // Bubble Sort O(n^2)
         for (int turn = 0; turn < arr.length; turn++) {
             for (int j = 0; j < arr.length - 1 - turn; j++) {
                 if (arr[j] > arr[j + 1]) {
@@ -92,6 +92,40 @@ public class Sorting {
     public static void PrintArr(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i]);
+        }
+    }
+
+    public static void heapify(int[] arr, int i, int size) { // to sort the heap in asecnding order
+        int left = 2 * i + 1;
+        int right = 2 * i + 2;
+        int maxIdx = i;
+
+        if (left < size && arr[left] > arr[maxIdx]) {
+            maxIdx = left;
+        }
+        if (right < size && arr[right] > arr[maxIdx]) {
+            maxIdx = right;
+        }
+
+        if (maxIdx != i) {
+            int temp = arr[i];
+            arr[i] = arr[maxIdx];
+            arr[maxIdx] = temp;
+            heapify(arr, 0, i);
+        }
+    }
+
+    public static void HeapSort(int[] arr) {
+        int n = arr.length;
+        for (int i = n / 2; i >= 0; i--) {
+            heapify(arr, i, n);
+        }
+
+        for (int i = n - 1; i > 0; i--) {
+            int temp = arr[0];
+            arr[0] = arr[i];
+            arr[i] = temp;
+            heapify(arr, 0, i);
         }
     }
 
@@ -232,42 +266,16 @@ public class Sorting {
         }
         return count;
     }
-       
-    
-    
 
     public static void main(String[] args) {
-        // int[] arr = { 5, 9, 8, 2, 1 };
-        // MergeSort(arr, 0, arr.length - 1);
-        // PrintArr(arr);
-        // System.out.println();
-        // QuickSort(arr, 0, arr.length - 1);
-        // PrintArr(arr);
+
         int[] arr = { 5, 9, 8, 2, 1 };
-        BubbleSort(arr);
-        PrintArr(arr);
-
-        // int[] nums = { 5, 6, 7, 0, 1, 2, 3 };
-        // System.out.println(SearchInRoatedArray(nums, 0, 0, nums.length));
-
-        // System.out.println(search(nums, 0, 0, nums.length - 1));
-
-        // String[] a = { "sum", "earth", "mercury", "mars" };
-        // String[] b = mergeSort(a, 0, a.length - 1);
-        // for (int i = 0; i < b.length; i++) {
-        // System.out.println(b[i]);
-        // }
-
-        // int arr1[] = { 2, 2, 1, 1, 1, 2, 2 };
-        // System.out.println(MajorityElement(arr1));
-
-        // int[] arr2 = {7,9,12,5,6,8,10};
-        // System.out.println(InversionCount(arr2));
-
-      
-
+        HeapSort(arr);
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
         }
+        System.out.println();
 
     }
 
-
+}
