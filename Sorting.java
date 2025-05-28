@@ -178,8 +178,8 @@ public class Sorting {
         return -1;
     }
 
-    public static String[] mergeSort(String[] a, int lo, int hi) { // To sort a string array according to starting
-                                                                   // character
+    public static String[] mergeSort(String[] a, int lo, int hi) { // To sort a string array according to starting character
+                                                                   
 
         if (lo == hi) { // base case
             String[] A = { a[lo] };
