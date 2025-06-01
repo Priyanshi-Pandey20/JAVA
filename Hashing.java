@@ -1,112 +1,155 @@
 
 import java.util.*;
+import java.util.LinkedList;
+import java.util.HashMap;
 
 public class Hashing {
-    static class Node { 
-        int data;
-        Node left;
-        Node right;
 
-        Node(int data) {
-            this.data = data;
-            this.left = null;
-            this.right = null;
-        }
-    }
+    static class HashMap<K, V> {
+        private class Node {
+            K key;
+            V value;
 
-    static class Pair{ // Bottom View of Tree
-        int level;
-        int data;
-        Pair(int level,int data){
-            this.level = level;
-            this.data = data;
-        }
-    }
-
-    public static void helper(Node root,int dist,int level,TreeMap<Integer,Pair> map){
-        if(root == null) return;
-        
-        if(!map.containsKey(dist)|| map.get(dist).level <= level){
-            map.put(dist,new Pair(level, root.data));
-        }
-        helper(root.left, dist-1, level+1, map);
-        helper(root.right, dist+1, level+1, map);
-    }
-
-     public static  ArrayList<Integer>printbottomView(Node root){
-        TreeMap<Integer,Pair>map = new TreeMap<>();
-        ArrayList<Integer>ans = new ArrayList<>();
-
-        helper(root, 0, 0, map);
-
-        for(Map.Entry<Integer,Pair> entry : map.entrySet()){
-        ans.add(entry.getValue().data);
-        }
-        return ans;
-    }
-
-   
-    public  static String FrequencySort(String s) { //  on the basis of frequency sort the characters
-        Map<Character, Integer> frequencyMap = new HashMap<>();
-        for (int i = 0; i < s.length(); i++) {
-            char ch = s.charAt(i);
-            frequencyMap.put(ch, frequencyMap.getOrDefault(ch, 0) + 1);
-        }
-        List<Map.Entry<Character, Integer>> freqList = new ArrayList<>(frequencyMap.entrySet());
-
-        Collections.sort(freqList, (a, b) -> b.getValue() - a.getValue());
-        StringBuilder result = new StringBuilder();
-        for (Map.Entry<Character, Integer> entry : freqList) {
-            char ch = entry.getKey();
-            int count = entry.getValue();
-            while (count-- > 0) {
-                result.append(ch);
+            public Node(K key, V value) {
+                this.key = key;
+                this.value = value;
             }
         }
-        return result.toString();
-    }
 
-    public static int[] TwoSum(int[] arr, int target) { // find the target sum by adding the elements in array
+        private int n;
+        private int N;
+        private LinkedList<Node> buckets[];
 
-        HashMap<Integer, Integer> m = new HashMap<>();
-        int n = arr.length;
-        for (int i = 0; i < n; i++) {
-            if (m.containsKey(target - arr[i])) {
-                return new int[] { m.get(target - arr[i]), i };
+        public HashMap() {
+            this.N = 4;
+            this.buckets = new LinkedList[4];
+            for (int i = 0; i < 4; i++) {
+                this.buckets[i] = new LinkedList<>();
+            }
+        }
 
+        private int hashFunction(K key) { // it takes the objects anf return index
+            int hc = key.hashCode();
+            return Math.abs(hc) % buckets.length;
+        }
+
+        private int SearchLL(K key, int bi) { // it search the node in ll
+            LinkedList<Node> ll = buckets[bi];
+            int di = 0;
+
+            for (int i = 0; i < ll.size(); i++) {
+                Node node = ll.get(i);
+                if (node.key == key) {
+                    return di;
+                }
+                di++;
+            }
+            return -1;
+
+        }
+
+        private void rehash() {
+            LinkedList<Node> oldBuck[] = buckets;
+            buckets = new LinkedList[N * 2];
+            N = 2 * N;
+            for (int i = 0; i < buckets.length; i++) {
+                buckets[i] = new LinkedList<>();
+            }
+            for (int i = 0; i < oldBuck.length; i++) {
+                LinkedList<Node> ll = oldBuck[i];
+                for (int j = 0; j < ll.size(); j++) {
+                    Node node = ll.remove();
+                    put(node.key, node.value);
+                }
+            }
+        }
+
+        public void put(K key, V value) { // O(1)
+            int bi = hashFunction(key);
+            int di = SearchLL(key, bi);
+
+            if (di != -1) {
+                Node node = buckets[bi].get(di);
+                node.value = value;
             } else {
-                m.put(arr[i], i);
+                buckets[bi].add(new Node(key, value));
+                n++;
+            }
+            double lambda = (double) n / N;
+            if (lambda > 2.0) {
+                rehash();
+            }
+        }
+
+        public boolean containsKey(K key) { // O(1)
+            int bi = hashFunction(key);
+            int di = SearchLL(key, bi);
+
+            if (di != -1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        public V remove(K key) { // O(1)
+
+            int bi = hashFunction(key);
+            int di = SearchLL(key, bi);
+
+            if (di != -1) {
+                Node node = buckets[bi].remove(di);
+                return node.value;
+            } else {
+                return null;
             }
 
         }
-        return new int[] {};
+
+        public V get(K key) {
+            int bi = hashFunction(key);
+            int di = SearchLL(key, bi);
+
+            if (di != -1) {
+                Node node = buckets[bi].get(di);
+                n--;
+                return node.value;
+            } else {
+                return null;
+            }
+        }
+
+        public ArrayList<K> keySet() {
+            ArrayList<K> keys = new ArrayList<>();
+            for (int i = 0; i < buckets.length; i++) {
+                LinkedList<Node> ll = buckets[i];
+                for (Node node : ll) {
+                    keys.add(node.key); 
+                }
+            }
+            return keys;
+        }
+
+        public boolean isEmpty() {
+            return n == 0;
+        }
+
     }
-
-     
-   
- 
-
-
 
     public static void main(String[] args) {
-    //    String s = "aaaabbbcccdddddeee";
-    //    System.out.println(FrequencySort(s));
 
-       Node root = new Node(20);
-       root.left = new Node(8);
-       root.right = new  Node(22);
-       root.left.left = new Node(5);
-       root.left.right = new Node(3);
-       root.right.right = new Node(25);
-       root.left.right.left = new Node(10);
-       root.left.right.right = new Node(14);
-       System.out.println("Bottom View : " + printbottomView(root));
+        HashMap<String, Integer> hm = new HashMap<>();
+        hm.put("India", 100);
+        hm.put("China", 150);
+        hm.put("US", 50);
+        hm.put("Nepal", 5);
+        ArrayList<String> keys = hm.keySet();
+        for (String key : keys) {
+            System.out.println(key);
+        }
+        System.out.println(hm.get("India"));
+        System.out.println(hm.remove("India"));
+        System.out.println(hm.get("India"));
 
-
-       
-
-
-       
     }
-
 }

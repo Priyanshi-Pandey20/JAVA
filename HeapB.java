@@ -271,7 +271,11 @@ public class HeapB {
             System.out.print(node.data+ "->");
             node = node.next;
         }
-      }
+    }
+
+     
+
+
 
 
     
