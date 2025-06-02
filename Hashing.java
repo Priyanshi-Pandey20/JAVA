@@ -5,7 +5,8 @@ import java.util.HashMap;
 
 public class Hashing {
 
-    static class HashMap<K, V> {
+    static class HashMap<K, V> {   // implementing hashmap
+
         private class Node {
             K key;
             V value;
@@ -136,7 +137,11 @@ public class Hashing {
 
     }
 
+     
+    
+
     public static void main(String[] args) {
+        
 
         HashMap<String, Integer> hm = new HashMap<>();
         hm.put("India", 100);
