@@ -37,22 +37,63 @@ class Student1 {
 
 }
 
- class sortByname implements Comparator<Student1> {
+class sortByname implements Comparator<Student1> {
     public int compare(Student1 s1, Student1 s2) {
         return s1.name.compareTo(s2.name);
     }
 }
+
 class sortByage implements Comparator<Student1> {
     public int compare(Student1 s1, Student1 s2) {
-        return Integer.compare(s1.age,s2.age);
-    }
-}
-class sortByroll implements Comparator<Student1> {
-    public int compare(Student1 s1, Student1 s2) {
-        return Integer.compare(s1.rollno,s2.rollno);
+        return Integer.compare(s1.age, s2.age);
     }
 }
 
+class sortByroll implements Comparator<Student1> {
+    public int compare(Student1 s1, Student1 s2) {
+        return Integer.compare(s1.rollno, s2.rollno);
+    }
+}
+
+// MultiThreading 
+class downloadFile {   // without multithreading 
+    public static void file(String file) {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(file + " downloading..." + (i * 20) + "%");
+
+            try {
+                Thread.sleep(2000);
+            } catch (Exception e) {
+            }
+
+        }
+        System.out.println(file + " done");
+    }
+}
+
+
+class DownloadFile extends Thread { // with multithreading
+       String file;
+
+    DownloadFile(String file) {
+        this.file = file;
+
+    }
+
+    public void run() {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(file + " downloading..." + (i * 20) + "%");
+
+            try {
+                Thread.sleep(2000);
+            } catch (Exception e) {
+            }
+
+        }
+        System.out.println(file + " done");
+
+    }
+}
 
 public class Practise3 {
 
@@ -74,22 +115,26 @@ public class Practise3 {
         list4.add(new Student1(90, "Tina", 9));
         list4.add(new Student1(32, "Yash", 74));
         Collections.sort(list4, new sortByname());
-        for(Student1 s : list4){
+        for (Student1 s : list4) {
             System.out.println(s);
         }
         System.out.println();
 
-        Collections. sort(list4,new sortByroll());
-        for(Student1 s : list4){
+        Collections.sort(list4, new sortByroll());
+        for (Student1 s : list4) {
             System.out.println(s);
         }
         System.out.println();
 
-        Collections.sort(list4,new sortByage());
-        for(Student1 s : list4){
+        Collections.sort(list4, new sortByage());
+        for (Student1 s : list4) {
             System.out.println(s);
         }
 
+       DownloadFile df1= new DownloadFile("File A");
+       DownloadFile df2 = new DownloadFile("File B");
+       df1.start();
+       df2.start();
 
     }
 

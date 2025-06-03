@@ -140,7 +140,7 @@ public class Hashing2 {
 
         }
         for (int num : set) {
-            System.out.println( " union of array is : " + num);
+            System.out.println(" union of array is : " + num);
         }
         set.clear();
 
@@ -148,34 +148,46 @@ public class Hashing2 {
             set.add(arr1[i]);
         }
 
-       
         for (int i = 0; i < arr2.length; i++) {
             if (set.contains(arr2[i])) {
                 System.out.println(arr2[i]);
                 set.remove(arr2[i]);
             }
         }
-      
 
+    }   
+
+    public static String getStart(HashMap<String, String> tickets) {  // find iternary of 
+        HashMap<String, String> revMap = new HashMap<>();
+
+        for (String key : tickets.keySet()) {
+            revMap.put(tickets.get(key), key);
+        }
+        for (String key : tickets.keySet()) {
+            if (!revMap.containsKey(key)) {
+                return key;
+            }
+        }
+        return null;
     }
 
+    
+
     public static void main(String[] args) {
-        // String s = "aaaabbbcccdddddeee";
-        // System.out.println(FrequencySort(s));
+        
+        HashMap<String, String> tickets = new HashMap<>();
+        tickets.put("Chennai", "Banglore"); 
+        tickets.put("Mumbai", " Delhi");
+        tickets.put("Goa", " Chennai");
+        tickets.put("Delhi", " Goa");
 
-        Node root = new Node(20);
-        root.left = new Node(8);
-        root.right = new Node(22);
-        root.left.left = new Node(5);
-        root.left.right = new Node(3);
-        root.right.right = new Node(25);
-        root.left.right.left = new Node(10);
-        root.left.right.right = new Node(14);
-        System.out.println("Bottom View : " + printbottomView(root));
-
-        int[] arr1 = { 7, 3, 9 };
-        int[] arr2 = { 6, 3, 9, 2, 9, 4 };
-        findUnionNIntersection(arr1, arr2);
+        String start = getStart(tickets);
+        System.out.print(start);
+        for (String key : tickets.keySet()) {
+            System.out.print("->" + tickets.get(start));
+            start = tickets.get(start);
+        }
+        System.out.println();
 
     }
 
