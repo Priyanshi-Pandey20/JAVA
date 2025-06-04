@@ -157,7 +157,7 @@ public class Hashing2 {
 
     }   
 
-    public static String getStart(HashMap<String, String> tickets) {  // find iternary of 
+    public static String getStart(HashMap<String, String> tickets) {  // find the path from source to destination
         HashMap<String, String> revMap = new HashMap<>();
 
         for (String key : tickets.keySet()) {
@@ -170,6 +170,45 @@ public class Hashing2 {
         }
         return null;
     }
+
+
+    public static void largestSubarraySum(int[] arr){ // find the largest subarray with 0 sum
+         HashMap <Integer,Integer> map = new HashMap<>();
+
+        int sum =0;
+        int len =0;
+        for(int  j =0;j<arr.length;j++){
+            sum += arr[j];
+            if(map.containsKey(sum)){
+                len = Math.max(len, j-map.get(sum));
+            }
+            else{
+                map.put(sum, j);
+            }
+        }
+        System.out.println("length of largest subbarray sum : " + len);
+
+    }
+
+    public static void subarraySumEqualToK(int[]arr,int k){   // Subarray sum equals to K
+        HashMap<Integer,Integer> map = new HashMap<>();
+        map.put(0, 1);
+
+        int sum =0;
+        int ans =0;
+
+        for(int j =0;j<arr.length;j++){
+            sum +=arr[j];
+            if(map.containsKey(sum-k)){
+                ans += map.get(sum-k);
+            }
+            map.put(sum, map.getOrDefault(sum, 0) + 1);
+        }
+        System.out.println(ans);
+    }
+
+    
+
 
     
 
@@ -188,6 +227,11 @@ public class Hashing2 {
             start = tickets.get(start);
         }
         System.out.println();
+
+       int[] arr = {10,2,-2,-20,10};
+       int k = -10;
+       subarraySumEqualToK(arr, k);
+       
 
     }
 

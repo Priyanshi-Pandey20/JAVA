@@ -2,58 +2,57 @@
 import java.util.*;
 import java.util.Arrays;
 
-class Node {
-
-    Node[] children;
-    boolean isEnd;
-
-    Node() {
-        children = new Node[26];
-        isEnd = false;
-    }
-}
-
 class Trie {
-    static void insert(Node root, String s) {  // insertion in trie
-        Node curr = root;
-        int n = s.length();
 
-        for (int i = 0; i < n; i++) {
-            if (curr.children[s.charAt(i) - 'a'] == null) {
-                curr.children[s.charAt(i) - 'a'] = new Node();
+    static class Node {
+
+        Node[] children = new Node[26];;
+        boolean isEnd = false;
+
+        Node() {
+            for (int i = 0; i < 26; i++) {
+                children[i] = null;
+
             }
-            curr = curr.children[s.charAt(i) - 'a'];
+        }
+    }
+
+    public static Node root = new Node();
+
+    public static void insert(String word) {  // insert node in trie
+        Node curr = root;
+        for (int level = 0; level < word.length(); level++) {
+            int idx = word.charAt(level) - 'a';
+            if (curr.children[idx] == null) {
+                curr.children[idx] = new Node();
+            }
+            curr = curr.children[idx];
         }
         curr.isEnd = true;
-
-        return;
     }
 
-    static boolean search(Node root,String s){
-        Node curr = root;
-        int n = s.length();
-
-        for(int i =0;i<n;i++){
-            if(curr.children[s.charAt(i)-'a'] == null){
-                return false;
+    public static boolean search(String key){  //O(n)  search the key in trie
+            Node curr = root;
+        for (int level = 0; level < key.length(); level++) {
+            int idx = key.charAt(level) - 'a';
+            if (curr.children[idx] == null) {
+               return false;
             }
-            curr = curr.children[s.charAt(i)-'a'];
+            curr = curr.children[idx];
         }
-        return curr.isEnd;
+       return curr.isEnd == true;
     }
+
+    
+
     public static void main(String[] args) {
         Node root = new Node();
-        List<String> inputArr = Arrays.asList("abc", "adc", "abd", "bcd", "dca");
-        List<String> targetArr = Arrays.asList("abz", "bcr", "abd", "ab");
-
-        for (String s : inputArr) {
-            insert(root,s);
+        String[] word = {"the","a","there","their","any","three"};
+        for(int i =0; i<word.length;i++){
+              insert(word[i]);
         }
-        for(String s: targetArr){
-            if(search(root,s)){
-                System.out.println(s + " word exists");
-            }
-        }
+        System.out.println(search("there"));
+        System.out.println(search("thor"));
 
     }
 }

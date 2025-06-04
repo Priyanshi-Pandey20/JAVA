@@ -55,8 +55,8 @@ class sortByroll implements Comparator<Student1> {
     }
 }
 
-// MultiThreading 
-class downloadFile {   // without multithreading 
+// MultiThreading
+class downloadFile { // without multithreading
     public static void file(String file) {
         for (int i = 1; i <= 5; i++) {
             System.out.println(file + " downloading..." + (i * 20) + "%");
@@ -71,17 +71,39 @@ class downloadFile {   // without multithreading
     }
 }
 
+// class DownloadFile extends Thread { // with multithreading
+// String file;
 
-class DownloadFile extends Thread { // with multithreading
-       String file;
+// DownloadFile(String file) {
+// this.file = file;
 
-    DownloadFile(String file) {
+// }
+
+// public void run() {
+// for (int i = 1; i <= 5; i++) {
+// System.out.println(file + " downloading..." + (i * 20) + "%");
+
+// try {
+// Thread.sleep(2000);
+// } catch (Exception e) {
+// }
+
+// }
+// System.out.println(file + " done");
+
+// }
+// }
+
+class MyRunnable implements Runnable { // with runnable
+    String file;
+
+    MyRunnable(String file) {
         this.file = file;
 
     }
 
     public void run() {
-        for (int i = 1; i <= 5; i++) {
+        for (int i = 0; i <= 5; i++) {
             System.out.println(file + " downloading..." + (i * 20) + "%");
 
             try {
@@ -93,6 +115,36 @@ class DownloadFile extends Thread { // with multithreading
         System.out.println(file + " done");
 
     }
+}
+
+class MyThread extends Thread {  
+    static int balance = 1000;
+    int amount;
+
+    MyThread( int amount) {
+        this.amount = amount;
+    }
+
+    public void run() {
+        synchronized(MyThread.class){
+        if (balance >= amount) {
+
+            System.out.println(" is going to withdrawl " + amount);
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                // TODO: handle exception
+            }
+
+            balance -= amount;
+            System.out.println("Remaining balance " + balance);
+        } else {
+            System.out.println("sorry not have enough balance to withdraw ");
+        }
+    }
+
+    } 
+     
 }
 
 public class Practise3 {
@@ -131,10 +183,12 @@ public class Practise3 {
             System.out.println(s);
         }
 
-       DownloadFile df1= new DownloadFile("File A");
-       DownloadFile df2 = new DownloadFile("File B");
-       df1.start();
-       df2.start();
+        MyThread obj = new MyThread(800);
+         MyThread obj1 = new MyThread(500);
+        Thread t1 = new Thread(obj);
+       Thread t2 = new Thread(obj1);
+        t1.start(); 
+        t2.start();
 
     }
 
