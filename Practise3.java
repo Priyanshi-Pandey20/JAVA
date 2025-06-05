@@ -117,38 +117,48 @@ class MyRunnable implements Runnable { // with runnable
     }
 }
 
-class MyThread extends Thread {  
+class MyThread extends Thread {
     static int balance = 1000;
     int amount;
 
-    MyThread( int amount) {
+    MyThread(int amount) {
         this.amount = amount;
     }
 
     public void run() {
-        synchronized(MyThread.class){
-        if (balance >= amount) {
+        synchronized (MyThread.class) {
+            if (balance >= amount) {
 
-            System.out.println(" is going to withdrawl " + amount);
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                // TODO: handle exception
+                System.out.println(" is going to withdrawl " + amount);
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                }
+
+                balance -= amount;
+                System.out.println("Remaining balance " + balance);
+            } else {
+                System.out.println("sorry not have enough balance to withdraw ");
             }
-
-            balance -= amount;
-            System.out.println("Remaining balance " + balance);
-        } else {
-            System.out.println("sorry not have enough balance to withdraw ");
         }
+
     }
 
-    } 
-     
 }
 
-public class Practise3 {
+class NewThread extends Thread {
+    public void run() {
+        for (int i = 0; i <= 10; i++) {
+            System.out.println(getName() + " is running ..." + getPriority());
+            Thread.yield();
 
+        }
+    }
+}
+  
+
+public class Practise3 {
+   
     public static void main(String[] args) {
         ArrayList<Student> list3 = new ArrayList<>();
         list3.add(new Student(12, "rahul"));
@@ -183,12 +193,26 @@ public class Practise3 {
             System.out.println(s);
         }
 
-        MyThread obj = new MyThread(800);
-         MyThread obj1 = new MyThread(500);
-        Thread t1 = new Thread(obj);
-       Thread t2 = new Thread(obj1);
-        t1.start(); 
+
+        NewThread t1 = new NewThread();
+        NewThread t2 = new NewThread();
+
+        t1.setName("A");
+        t1.setName("B");
+
+        t1.setPriority(Thread.MIN_PRIORITY);
+        t2.setPriority(Thread.MAX_PRIORITY);
+        t1.start();
         t2.start();
+
+
+
+
+
+
+
+
+
 
     }
 

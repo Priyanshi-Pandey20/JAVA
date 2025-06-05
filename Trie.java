@@ -8,8 +8,9 @@ class Trie {
 
         Node[] children = new Node[26];;
         boolean isEnd = false;
+        int freq;
 
-        Node() {
+        public Node() {
             for (int i = 0; i < 26; i++) {
                 children[i] = null;
 
@@ -19,7 +20,7 @@ class Trie {
 
     public static Node root = new Node();
 
-    public static void insert(String word) {  // insert node in trie
+    public static void insert(String word) { // insert node in trie
         Node curr = root;
         for (int level = 0; level < word.length(); level++) {
             int idx = word.charAt(level) - 'a';
@@ -31,28 +32,40 @@ class Trie {
         curr.isEnd = true;
     }
 
-    public static boolean search(String key){  //O(n)  search the key in trie
-            Node curr = root;
+    public static boolean search(String key) { // O(n) search the key in trie
+        Node curr = root;
         for (int level = 0; level < key.length(); level++) {
             int idx = key.charAt(level) - 'a';
             if (curr.children[idx] == null) {
-               return false;
+                return false;
             }
             curr = curr.children[idx];
         }
-       return curr.isEnd == true;
+        return curr.isEnd == true;
     }
 
-    
-
-    public static void main(String[] args) {
-        Node root = new Node();
-        String[] word = {"the","a","there","their","any","three"};
-        for(int i =0; i<word.length;i++){
-              insert(word[i]);
+    public static boolean wordBreak(String s) { // word break problem
+        if(s.length() == 0){
+            return true;
         }
-        System.out.println(search("there"));
-        System.out.println(search("thor"));
+        for (int i = 1; i <= s.length(); i++) {
+            if (search(s.substring(0, i)) && wordBreak(s.substring(i))) {
+                wordBreak(s.substring(i));
+                return true;
+            }
+        }
+        return false;
+    }
+
+  
+    public static void main(String[] args) {
+
+        String[] arr = { "i", "like", "sam", "samsung", "mobile", "ice" };
+        for (int i = 0; i < arr.length; i++) {
+            insert(arr[i]);
+        }
+        String s = "ilikesung";
+        System.out.println(wordBreak(s));
 
     }
 }
