@@ -1,3 +1,10 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.*;
+import java.util.stream.Collectors;
+
 class Buffer {
 
     boolean hasData = false;
@@ -23,54 +30,58 @@ class Buffer {
 
             }
             System.out.println(" consumer : got the signal ! Proceeding ");
-          
+
         }
-    }
-}
-
-class MyThread extends Thread{
-     static int balance = 1000;
-    int amount;
-
-    MyThread(int amount) {
-        this.amount = amount;
-    }
-
-    public void run() {
-        synchronized (MyThread.class) {
-            if (balance >= amount) {
-
-                System.out.println(" is going to withdrawl " + amount);
-                try {
-                    Thread.sleep(1000);
-                    notify();
-                } catch (InterruptedException e) {
-                }
-
-                balance -= amount;
-                System.out.println("Remaining balance " + balance);
-            } else {
-                System.out.println("sorry not have enough balance to withdraw ");
-            }
-        }
-
     }
 }
 
 public class Practise4 {
     public static void main(String[] args) {
-        Buffer b = new Buffer();
-        Thread d1 = new Thread(() -> {
-             b.consume();
-          
-        });
+        // ArrayList<String> list = new ArrayList<>();
+        // list.add("rahul");
+        // list.add("rohit");
+        // list.add("raj");
 
-        Thread d2 = new Thread(() -> {
-           
-             b.produce();
-        });
-        d1.start();
-        d2.start();
+        // Collections.sort(list,(a,b) -> a.compareTo(b));
+        // System.out.println(list);
+
+        ArrayList<Integer> list = new ArrayList<>();
+     
+        list.add(4);
+        list.add(3);
+        list.add(10);
+        list.add(15);
+        list.add(20);
+        list.add(0);
+        list.add(2);
+        list.add(25);
+
+        Integer evenList = list.stream().sorted((a,b) -> a-b).skip(1).findFirst().orElse(Integer.MIN_VALUE);
+        System.out.println(evenList);
+      
+
+        // Buffer b = new Buffer();
+        // Thread d1 = new Thread(() -> {
+        // b.consume();
+
+        // });
+
+        // Thread d2 = new Thread(() -> {
+
+        // b.produce();
+        // });
+        // d1.start();
+        // d2.start();
+
+        // Runnable r = new Runnable() {
+
+        // public void run(){
+        // System.out.println("Runnable using anonymus class");
+        // }
+        // };
+        // r.run();
+        // Runnable r1 =() -> System.out.println("Runnable using anonymus class");
+        // r1.run();
 
     }
 }

@@ -304,4 +304,9 @@ public class Arrays {
         UniqueElement();
     }
 
+    public static List<Integer> asList(int i, int j, int k, int l, int m) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'asList'");
+    }
+
 }

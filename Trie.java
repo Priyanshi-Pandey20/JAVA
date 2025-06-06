@@ -11,10 +11,11 @@ class Trie {
         int freq;
 
         public Node() {
-            for (int i = 0; i < 26; i++) {
+            for (int i = 0; i < children.length; i++) {
                 children[i] = null;
 
             }
+            freq = 1;
         }
     }
 
@@ -26,8 +27,11 @@ class Trie {
             int idx = word.charAt(level) - 'a';
             if (curr.children[idx] == null) {
                 curr.children[idx] = new Node();
+            } else {
+                curr.children[idx].freq++;
             }
             curr = curr.children[idx];
+
         }
         curr.isEnd = true;
     }
@@ -45,7 +49,7 @@ class Trie {
     }
 
     public static boolean wordBreak(String s) { // word break problem
-        if(s.length() == 0){
+        if (s.length() == 0) {
             return true;
         }
         for (int i = 1; i <= s.length(); i++) {
@@ -57,15 +61,58 @@ class Trie {
         return false;
     }
 
-  
+    public static void shortestUniquePrefix(Node root, String ans) { // prefix problem O(L) L = levels
+        if (root == null) {
+            return;
+        }
+        if (root.freq == 1) {
+            System.out.println(ans);
+            return;
+        }
+
+        for (int i = 0; i < root.children.length; i++) {
+            if (root.children[i] != null) {
+                shortestUniquePrefix(root.children[i], ans + (char) (i + 'a'));
+            }
+
+        }
+
+    }
+
+    public static boolean startsWith(String prefix) { // check whether the given whole prefix is present in trie or not
+        Node curr = root;
+
+        for (int i = 0; i < prefix.length(); i++) {
+            int idx = prefix.charAt(i) - 'a';
+            if (curr.children[idx] == null) {
+                return false;
+            }
+          curr = curr.children[idx];
+        }
+        return true;
+    }
+
+   
+
     public static void main(String[] args) {
 
-        String[] arr = { "i", "like", "sam", "samsung", "mobile", "ice" };
-        for (int i = 0; i < arr.length; i++) {
-            insert(arr[i]);
+        // String[] arr = { "zebra", "dog", "duck", "dove" };
+        // for (int i = 0; i < arr.length; i++) {
+        //     insert(arr[i]);
+        // }
+        // root.freq = -1;
+        // shortestUniquePrefix(root, "");
+
+        String[] word = {"apple","app","mango","women"};
+        String prefix1 = "app";
+        String prefix2 = "moon";
+
+        for(int i =0;i<word.length;i++){
+            insert(word[i]);
         }
-        String s = "ilikesung";
-        System.out.println(wordBreak(s));
+        System.out.println(startsWith(prefix2));
+
+
 
     }
 }
