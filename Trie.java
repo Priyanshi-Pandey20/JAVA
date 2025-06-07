@@ -8,9 +8,12 @@ class Trie {
 
         Node[] children = new Node[26];;
         boolean isEnd = false;
+        char data;
+        String word;
         int freq;
 
         public Node() {
+
             for (int i = 0; i < children.length; i++) {
                 children[i] = null;
 
@@ -87,32 +90,66 @@ class Trie {
             if (curr.children[idx] == null) {
                 return false;
             }
-          curr = curr.children[idx];
+            curr = curr.children[idx];
         }
         return true;
     }
 
-   
+    public static int countUniqueSubtrings(Node root) { // count all the unique substrings in trie
+        if (root == null) {
+            return 0;
+        }
+        int count = 0;
+        for (int i = 0; i < 26; i++) {
+            if (root.children[i] != null) {
+                count += countUniqueSubtrings(root.children[i]);
+            }
+        }
+        return count + 1;
+    }
+
+    public static String ans = ""; // longest word of all prefixes
+
+    public static void longestWord(Node root, StringBuilder temp) {
+
+        if (root == null) {
+            return;
+        }
+
+        for (int i = 0; i < 26; i++) {
+            if (root.children[i] != null && root.children[i].isEnd == true) {
+                char ch = (char) (i + 'a');
+                temp.append(ch);
+                if (temp.length() > ans.length()) {
+                    ans = temp.toString();
+                }
+                longestWord(root.children[i], temp);
+                temp.deleteCharAt(temp.length() - 1);
+            }
+        }
+
+    }
+
+    
+
+    
+
 
     public static void main(String[] args) {
 
         // String[] arr = { "zebra", "dog", "duck", "dove" };
         // for (int i = 0; i < arr.length; i++) {
-        //     insert(arr[i]);
+        // insert(arr[i]);
         // }
         // root.freq = -1;
         // shortestUniquePrefix(root, "");
 
-        String[] word = {"apple","app","mango","women"};
-        String prefix1 = "app";
-        String prefix2 = "moon";
-
-        for(int i =0;i<word.length;i++){
+        String word[] = { "a", "banana", "app", "appl", "ap", "apply", "apple" };
+        for (int i = 0; i < word.length; i++) {
             insert(word[i]);
         }
-        System.out.println(startsWith(prefix2));
-
-
+        longestWord(root, new StringBuilder(""));
+        System.out.println(ans);
 
     }
 }
