@@ -1,1 +1,1 @@
-key
+String[] arr = {"cat","bat","mat","act"};

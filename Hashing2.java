@@ -54,7 +54,7 @@ public class Hashing2 {
         }
         List<Map.Entry<Character, Integer>> freqList = new ArrayList<>(frequencyMap.entrySet());
 
-        Collections.sort(freqList, (a, b) -> b.getValue() - a.getValue());
+        Collections.sort(freqList , (a, b) -> b.getValue() - a.getValue());
         StringBuilder result = new StringBuilder();
         for (Map.Entry<Character, Integer> entry : freqList) {
             char ch = entry.getKey();

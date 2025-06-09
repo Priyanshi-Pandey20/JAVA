@@ -309,4 +309,9 @@ public class Arrays {
         throw new UnsupportedOperationException("Unimplemented method 'asList'");
     }
 
+    public static Object stream(String[] split) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'stream'");
+    }
+
 }
