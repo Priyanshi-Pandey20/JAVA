@@ -1,0 +1,122 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.*;
+
+class Transcation {
+    String type;
+    double amount;
+
+    Transcation(String type, double amount) {
+        this.type = type;
+        this.amount = amount;
+    }
+
+}
+
+class Account {
+    private String name;
+    private int accountNumber;
+    private double balance;
+
+    public Account(String name, int accountNumber, double balance) {
+        this.accountNumber = accountNumber;
+        this.name = name;
+        this.balance = balance;
+    }
+
+    ArrayList<Transcation> transcations = new ArrayList<>();
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            transcations.add(new Transcation("Deposit", amount));
+            System.out.println("Deposit successfully!");
+        }
+    }
+
+    public void withdraw(double amount){
+        if(amount > 0 && amount <=balance){
+            balance-= amount;
+            transcations.add(new Transcation("withdrawal ", amount));
+            System.out.println("withdrawal successfully!");
+            
+            
+        }
+        else{
+            System.out.println("Insufficient amount");
+        }
+
+    }
+
+    public void viewTranscation() {
+        if (transcations.isEmpty()) {
+            System.out.println("No transcation record");
+        } 
+        else {
+            System.out.print("Transcation history");
+            for (Transcation t : transcations) {
+                System.out.println(t.amount);
+            }
+        }
+    }
+
+    public void checkBalance() {
+        System.out.println("Your account balance : " + balance);
+    }
+
+
+}
+
+public class BankAccount {
+    static Scanner sc = new Scanner(System.in);
+    static Account account;
+    public static void main(String[] args) {
+
+        System.out.println("---Banking System---");
+        System.out.print("Enter your name : ");
+        String name = sc.nextLine();
+        account = new Account(name, 47654, 0);
+        System.out.println( " Account created successfully .Account number :");
+
+        int choice;
+        do{
+            System.out.println("\n1. Deposit\n2.Withdraw\n3.CheckBalance\n4.View Transcations\n5.Exit");
+            System.out.print("Enter your choice : ");
+            choice  = sc.nextInt();
+            switch(choice){
+                case 1 : 
+                System.out.print("Enter deposit amount : ");
+                  long startdep = System.currentTimeMillis();
+                double dep = sc.nextDouble();
+                account.deposit(dep);
+                long enddep = System.currentTimeMillis();
+                System.out.println("Deposit time : " + (enddep-startdep) + " ms");
+              
+                break;
+
+                case 2 :
+                System.out.print("Enter amount to withdraw : ");
+                long startwith = System.currentTimeMillis();
+                double with = sc.nextDouble();
+                account.withdraw(with);
+                long endwith = System.currentTimeMillis();
+                System.out.println("Withdrawal time : " + (endwith-startwith) + " ms");
+                break;
+
+                case 3 : 
+                account.checkBalance();
+
+                case 4 : 
+                account.viewTranscation();
+
+                case 5 : 
+                System.out.println("Thank you for using Bank app");
+                break;
+
+                default:
+                System.out.println("Invalid choice");
+            }
+        }while(choice!=5);
+
+    }
+}

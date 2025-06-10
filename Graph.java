@@ -84,7 +84,8 @@ public class Graph {
         }
     }
 
-    public static boolean hasPath(ArrayList<Edge>[] graph, int src, int dest, boolean[] vis) { // find if the path exists
+    public static boolean hasPath(ArrayList<Edge>[] graph, int src, int dest, boolean[] vis) { // find if the path
+                                                                                               // exists
         if (src == dest) {
             return true;
         }
@@ -134,31 +135,30 @@ public class Graph {
         return false;
     }
 
-
-    public static ArrayList<Integer> topologicalSort(ArrayList<ArrayList<Integer>> adj){ // Topological sort            
+    public static ArrayList<Integer> topologicalSort(ArrayList<ArrayList<Integer>> adj) { // Topological sort
         int n = adj.size();
         int[] indegree = new int[n];
 
-        for(int curr =0;curr<n;curr++){
-            for(int conn : adj.get(curr)){
+        for (int curr = 0; curr < n; curr++) {
+            for (int conn : adj.get(curr)) {
                 indegree[conn]++;
             }
         }
         Queue<Integer> q = new LinkedList<>();
 
-        for(int i =0;i<n;i++){
-            if(indegree[i] == 0){
+        for (int i = 0; i < n; i++) {
+            if (indegree[i] == 0) {
                 q.add(i);
             }
         }
         ArrayList<Integer> ans = new ArrayList<>();
-        while(q.size()>0){
+        while (q.size() > 0) {
             int curr = q.remove();
             ans.add(curr);
 
-            for(int conn: adj.get(curr)){
+            for (int conn : adj.get(curr)) {
                 indegree[conn]--;
-                if(indegree[conn] == 0){
+                if (indegree[conn] == 0) {
                     q.add(conn);
                 }
             }
@@ -166,61 +166,61 @@ public class Graph {
         return ans;
     }
 
-    
-    public static boolean validAlienDictionary(String[] arr,int k){ // Alien Dictionary problem
-      int indegree[] = new int[26];
-      ArrayList<ArrayList<Integer>> adj = new ArrayList<ArrayList<Integer>>();
+    public static boolean validAlienDictionary(String[] arr, int k) { // Alien Dictionary problem
+        int indegree[] = new int[26];
+        ArrayList<ArrayList<Integer>> adj = new ArrayList<ArrayList<Integer>>();
 
-      for(int i =0;i<26;i++){
-        adj.add(new ArrayList<Integer>());
-      }
-      for(int i =0;i<arr.length-1;i++){
-        String word1 = arr[i];
-        String word2 = arr[i+1];
+        for (int i = 0; i < 26; i++) {
+            adj.add(new ArrayList<Integer>());
+        }
+        for (int i = 0; i < arr.length - 1; i++) {
+            String word1 = arr[i];
+            String word2 = arr[i + 1];
 
-        for(int j =0;j<Math.min(word1.length(),word2.length());j++){
-            char ch1 = word1.charAt(j);
-            char ch2 = word2.charAt(j);
+            for (int j = 0; j < Math.min(word1.length(), word2.length()); j++) {
+                char ch1 = word1.charAt(j);
+                char ch2 = word2.charAt(j);
 
-            if(ch1!= ch2){
-                adj.get(ch1-'a').add(ch2-'a');
-                indegree[ch2 - 'a']++;
-                break;
+                if (ch1 != ch2) {
+                    adj.get(ch1 - 'a').add(ch2 - 'a');
+                    indegree[ch2 - 'a']++;
+                    break;
+                }
             }
         }
-      }
-      Queue<Integer> q = new LinkedList<>();
+        Queue<Integer> q = new LinkedList<>();
 
-      for(int i =0;i<k;i++){
-        if(indegree[i] == 0){
-            q.add(i);
-        }
-    }
-      ArrayList<Integer> ans = new ArrayList<>();
-
-      while(q.size()>0){
-        int curr = q.poll();
-
-        ans.add(curr);
-
-        for(int i =0;i<adj.get(curr).size();i++){
-            int conn = adj.get(curr).get(i);
-            indegree[conn]--;
-
-            if(indegree[conn] == 0){
-                q.add(conn);
+        for (int i = 0; i < k; i++) {
+            if (indegree[i] == 0) {
+                q.add(i);
             }
         }
-    
-      }
-      if(ans.size() == k){
-        return true;
-      }
-      else{
-        return false;
-      }
+        ArrayList<Integer> ans = new ArrayList<>();
+
+        while (q.size() > 0) {
+            int curr = q.poll();
+
+            ans.add(curr);
+
+            for (int i = 0; i < adj.get(curr).size(); i++) {
+                int conn = adj.get(curr).get(i);
+                indegree[conn]--;
+
+                if (indegree[conn] == 0) {
+                    q.add(conn);
+                }
+            }
+
+        }
+        if (ans.size() == k) {
+            return true;
+        } else {
+            return false;
+        }
 
     }
+
+    
 
     public static void main(String[] args) {
         List<List<Integer>> adj = new ArrayList<>();
@@ -241,8 +241,8 @@ public class Graph {
         ArrayList<Edge>[] graph = new ArrayList[V];
 
         createGraph(graph);
-       String[] arr = {"cat","bat","mat","act"};
-       System.out.println(validAlienDictionary(arr,4 ));
+        String[] arr = { "cat", "bat", "mat", "act" };
+        System.out.println(validAlienDictionary(arr, 4));
 
     }
 

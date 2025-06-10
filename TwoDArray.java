@@ -1,4 +1,5 @@
 public class TwoDArray {
+    
 
     public static void main(Demo[] args) {
         int[][] r = { { 1, 2, 3 }, { 6, 7, 8 }, { 9, 10, 11 } };// row sum
