@@ -1,0 +1,12 @@
+Account Holder: Priyansgi
+Account Number: 47654
+Balance: 1000.0
+Account Holder: Priyanshi
+Account Number: 47654
+Balance: 800.0
+Account Holder: Priyanshi
+Account Number: 47654
+Balance: 48000.0
+Account Holder: Priya
+Account Number: 47654
+Balance: 100.0
