@@ -29,20 +29,17 @@ public class Graph {
             graph[i] = new ArrayList<>();
 
         }
-        graph[0].add(new Edge(0, 1));
-        graph[0].add(new Edge(0, 2));
-
-        graph[1].add(new Edge(1, 0));
-        graph[1].add(new Edge(1, 3));
-
-        graph[2].add(new Edge(2, 0));
-        graph[2].add(new Edge(2, 4));
+        graph[2].add(new Edge(2, 3));
 
         graph[3].add(new Edge(3, 1));
-        graph[3].add(new Edge(3, 4));
 
-        graph[4].add(new Edge(4, 2));
-        graph[4].add(new Edge(4, 3));
+        graph[4].add(new Edge(4, 0));
+         graph[4].add(new Edge(4, 1));
+
+
+        graph[5].add(new Edge(5, 0));
+         graph[5].add(new Edge(5, 2));
+
 
     }
 
@@ -144,36 +141,37 @@ public class Graph {
         return false;
     }
 
-    public static ArrayList<Integer> topologicalSort(ArrayList<ArrayList<Integer>> adj) { // Topological sort
-        int n = adj.size();
-        int[] indegree = new int[n];
+    public static boolean detectCycleInDirectedGraph(ArrayList<Edge>[] graph) { // detect cycle in directed graph
+        boolean[] vis = new boolean[graph.length];
+        boolean[] stack = new boolean[graph.length];
 
-        for (int curr = 0; curr < n; curr++) {
-            for (int conn : adj.get(curr)) {
-                indegree[conn]++;
-            }
-        }
-        Queue<Integer> q = new LinkedList<>();
-
-        for (int i = 0; i < n; i++) {
-            if (indegree[i] == 0) {
-                q.add(i);
-            }
-        }
-        ArrayList<Integer> ans = new ArrayList<>();
-        while (q.size() > 0) {
-            int curr = q.remove();
-            ans.add(curr);
-
-            for (int conn : adj.get(curr)) {
-                indegree[conn]--;
-                if (indegree[conn] == 0) {
-                    q.add(conn);
+        for (int i = 0; i < graph.length; i++) {
+            if (!vis[i]) {
+                if (isCycleUtil(graph, i, vis, stack)){
+                return true;
                 }
             }
         }
-        return ans;
+        return false;
+
     }
+    public static boolean isCycleUtil(ArrayList<Edge>[] graph,int curr,boolean[] vis,boolean[] stack){
+        vis[curr] = true;
+        stack[curr] = true;
+
+        for(int i =0;i<graph[curr].size();i++){
+            Edge e = graph[curr].get(i);
+            if(stack[e.dest]){
+                return true;
+            }
+            if(!vis[e.dest] && isCycleUtil(graph, e.dest, vis, stack)){
+            return true;
+            }
+        }
+        return false;
+    }
+
+    
 
     public static boolean validAlienDictionary(String[] arr, int k) { // Alien Dictionary problem
         int indegree[] = new int[26];
@@ -229,8 +227,9 @@ public class Graph {
 
     }
 
-    public static boolean isBipartiteGraph(ArrayList<Edge>[] graph) { // check whether the given graph is bipartite or  not
-                                                                     
+    public static boolean isBipartiteGraph(ArrayList<Edge>[] graph) { // check whether the given graph is bipartite or
+                                                                      // not
+
         int col[] = new int[graph.length];
         for (int i = 0; i < col.length; i++) {
             col[i] = -1;
@@ -261,26 +260,53 @@ public class Graph {
 
     }
 
-    public static void main(String[] args) {
-        List<List<Integer>> adj = new ArrayList<>();
-        int nodes = 4;
-        for (int i = 0; i < nodes; i++)
-            adj.add(new ArrayList<>());
-        adj.get(0).add(1);
-        adj.get(1).add(0);
-        adj.get(1).add(2);
-        adj.get(2).add(1);
-        adj.get(2).add(3);
-        adj.get(3).add(2);
-        adj.get(3).add(0);
-        adj.get(0).add(3);
-        System.out.println(detectTheCycle(adj));
+    public static void topSort(ArrayList<Edge>[] graph){ // topological sort
+        boolean[] vis = new boolean[graph.length];
+        Stack<Integer> s = new Stack<>();
 
-        int V = 5;
+        for(int i = 0;i<graph.length;i++){
+            if(!vis[i]){
+                topSortUtil(graph,i,vis,s);
+            }
+        }
+        while(!s.isEmpty()){
+            System.out.print(s.pop() + " ");
+        }
+    }
+
+    public static void topSortUtil(ArrayList<Edge>[] graph,int curr,boolean[] vis,Stack<Integer> s){
+       vis[curr] = true;
+       for(int i = 0;i< graph[curr].size();i++){
+        Edge e = graph[curr].get(i);
+        if(!vis[e.dest]){
+            topSortUtil(graph, e.dest, vis, s);
+        }
+       }
+       s.push(curr);
+    }
+
+    
+
+    public static void main(String[] args) {
+        ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
+        // int nodes = 4;
+        // for (int i = 0; i < nodes; i++)
+        //     adj.add(new ArrayList<>());
+        // adj.get(0).add(1);
+        // adj.get(1).add(0);
+        // adj.get(1).add(2);
+        // adj.get(2).add(1);
+        // adj.get(2).add(3);
+        // adj.get(3).add(2);
+        // adj.get(3).add(0);
+        // adj.get(0).add(3);
+       // System.out.println(detectTheCycle(adj));
+
+        int V = 6;
         ArrayList<Edge>[] graph = new ArrayList[V];
 
         createGraph(graph);
-        System.out.println(isBipartiteGraph(graph));
+      topSort(graph);
 
     }
 
