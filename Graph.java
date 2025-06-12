@@ -284,8 +284,43 @@ public class Graph {
        }
        s.push(curr);
     }
+    public static void calculateIndegree(ArrayList<Edge> graph[],int indeg[]){// kahn's algorithm 
+        
+        for(int i =0;i<graph.length;i++){
+            int v = i;
+            for(int j =0;j<graph[v].size();j++){
+                Edge e = graph[v].get(j);
+                indeg[e.dest]++;
+            }
+        }
+    }
 
-    
+    public static void kahnAlogrithm(ArrayList<Edge>graph[]){
+        int[] indeg = new int[graph.length];
+        calculateIndegree(graph, indeg);
+        Queue<Integer> q  = new LinkedList<>();
+
+        for(int i =0;i<indeg.length;i++){
+            if(indeg[i] == 0){
+                q.add(i);
+            }
+        }
+        while(!q.isEmpty()){
+            int curr = q.remove();
+            System.out.print(curr+ " ");
+
+            for(int i =0;i<graph[curr].size();i++){
+                Edge e = graph[curr].get(i);
+                indeg[e.dest]--;
+                if(indeg[e.dest] == 0){
+                    q.add(e.dest);
+                }
+            }
+
+        }
+        System.out.println();
+
+    }
 
     public static void main(String[] args) {
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
@@ -306,7 +341,7 @@ public class Graph {
         ArrayList<Edge>[] graph = new ArrayList[V];
 
         createGraph(graph);
-      topSort(graph);
+    kahnAlogrithm(graph);
 
     }
 
