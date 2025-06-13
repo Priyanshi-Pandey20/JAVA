@@ -107,7 +107,7 @@ public class Graph {
         return false;
     }
 
-    public static boolean detectTheCycle(List<List<Integer>> adj) { // detect the cycle in undirected graph
+    public static boolean detectTheCycle(ArrayList<ArrayList<Integer>> adj) { // detect the cycle in undirected graph
         int n = adj.size();
         int vis[] = new int[n];
 
@@ -120,7 +120,7 @@ public class Graph {
         return false;
     }
 
-    private static boolean bfsCycleCheck(int start, int[] vis, List<List<Integer>> adj) {
+    private static boolean bfsCycleCheck(int start, int[] vis, ArrayList<ArrayList<Integer>> adj) {
         Queue<Pair> q = new LinkedList<>();
         q.add(new Pair(start, -1));
         vis[start] = 1;
@@ -324,24 +324,24 @@ public class Graph {
 
     public static void main(String[] args) {
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
-        // int nodes = 4;
-        // for (int i = 0; i < nodes; i++)
-        //     adj.add(new ArrayList<>());
-        // adj.get(0).add(1);
-        // adj.get(1).add(0);
-        // adj.get(1).add(2);
-        // adj.get(2).add(1);
-        // adj.get(2).add(3);
-        // adj.get(3).add(2);
-        // adj.get(3).add(0);
-        // adj.get(0).add(3);
-       // System.out.println(detectTheCycle(adj));
+        int nodes = 4;
+        for (int i = 0; i < nodes; i++)
+            adj.add(new ArrayList<>());
+        adj.get(0).add(1);
+        adj.get(1).add(0);
+        adj.get(1).add(2);
+        adj.get(2).add(1);
+        adj.get(2).add(3);
+        adj.get(3).add(2);
+        adj.get(3).add(0);
+        adj.get(0).add(3);
+       System.out.println(detectTheCycle(adj));
 
-        int V = 6;
-        ArrayList<Edge>[] graph = new ArrayList[V];
+        // int V = 6;
+        // ArrayList<Edge>[] graph = new ArrayList[V];
 
-        createGraph(graph);
-    kahnAlogrithm(graph);
+        // createGraph(graph);
+    
 
     }
 
