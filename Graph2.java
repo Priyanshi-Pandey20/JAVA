@@ -19,16 +19,19 @@ public class Graph2 {
             graph[i] = new ArrayList<>();
 
         }
-        graph[0].add(new Edge(0, 1, 2));
-        graph[0].add(new Edge(0, 2, 4));
+        graph[0].add(new Edge(0, 1, 10));
+        graph[0].add(new Edge(0, 2, 15));
+        graph[0].add(new Edge(0, 3, 30));
 
-        graph[1].add(new Edge(1, 2, -4));
+        graph[1].add(new Edge(1, 0, 10));
+        graph[1].add(new Edge(1, 3, 40));
 
-        graph[2].add(new Edge(2, 3, 2));
+        graph[2].add(new Edge(2, 0, 15));
+        graph[2].add(new Edge(2, 3, 50));
 
-        graph[3].add(new Edge(3, 4, 4));
+        graph[3].add(new Edge(3, 1, 40));
+        graph[3].add(new Edge(3, 2, 50));
 
-        graph[4].add(new Edge(4, 1, -1));
     }
 
     public static void printAllPaths(ArrayList<Edge>[] graph, int src, int dest, String path) { // print all paths from
@@ -124,17 +127,56 @@ public class Graph2 {
         System.out.println();
     }
 
+    static class Pair1 implements Comparable<Pair1> {  // Prims Algorithm
+        int v;
+        int cost;
+
+        Pair1(int v, int c) {
+            this.v = v;
+            this.cost = c;
+        }
+
+        @Override
+        public int compareTo(Pair1 p2) {
+            return this.cost - p2.cost;
+        }
+
+    }
+
+    public static void prims(ArrayList<Edge> graph[]) {
+        boolean vis[] = new boolean[graph.length];
+        PriorityQueue<Pair1> pq = new PriorityQueue<>();
+
+        pq.add(new Pair1(0, 0));
+        int finalCost = 0;
+
+        while (!pq.isEmpty()) {
+            Pair1 curr = pq.remove();
+            if (!vis[curr.v]) {
+                vis[curr.v] = true;
+                finalCost += curr.cost;
+
+                for (int i = 0; i < graph[curr.v].size(); i++) {
+                    Edge e = graph[curr.v].get(i);
+                    pq.add(new Pair1(e.dest, e.wt));
+                }
+
+            }
+        }
+
+        System.out.println(finalCost);
+
+    }
 
     
 
 
+
     public static void main(String[] args) {
-        int V = 5;
+        int V = 4;
         ArrayList<Edge>[] graph = new ArrayList[V];
         createGraph(graph);
-
-        int src = 0;
-        bellmanFord(graph, src);
+        prims(graph);
 
     }
 }
