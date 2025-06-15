@@ -216,54 +216,84 @@ public class Graph2 {
         }
 
     }
+
     static class Edge1 implements Comparable<Edge1> { // connect cities with minimum cost
-    
+
         int dest;
         int cost;
-        
 
         public Edge1(int d, int c) {
-            
+
             this.dest = d;
             this.cost = c;
-          
 
         }
+
         @Override
-        public int compareTo(Edge1 e2){
+        public int compareTo(Edge1 e2) {
             return this.cost - e2.cost;
         }
     }
 
-    public static int connectCities(int[][] cities){
+    public static int connectCities(int[][] cities) {
         PriorityQueue<Edge1> pq = new PriorityQueue<>();
 
         boolean[] vis = new boolean[cities.length];
 
         pq.add(new Edge1(0, 0));
         int finalCost = 0;
-        
-        while(!pq.isEmpty()){
-            Edge1 curr = pq.remove();
-            if(!vis[curr.dest]){
-                vis[curr.dest] = true;
-                finalCost +=curr.cost;
 
-                for(int i = 0;i<cities[curr.dest].length;i++){
-                    if(cities[curr.dest][i] != 0){
+        while (!pq.isEmpty()) {
+            Edge1 curr = pq.remove();
+            if (!vis[curr.dest]) {
+                vis[curr.dest] = true;
+                finalCost += curr.cost;
+
+                for (int i = 0; i < cities[curr.dest].length; i++) {
+                    if (cities[curr.dest][i] != 0) {
                         pq.add(new Edge1(i, cities[curr.dest][i]));
                     }
                 }
             }
         }
         return finalCost;
-          
-
 
     }
-    
 
+    static int n = 7; // Disjoint set
+    static int[] par = new int[n];
+    static int[] rank = new int[n];
 
+    public static void init() {
+        for (int i = 0; i < n; i++) {
+            par[i] = i;
+        }
+    }
+
+    public static int find(int x) {
+        if (x == par[x]) {
+            return x;
+        }
+        return find(par[x]);
+    }
+
+    public static void union(int a, int b) {
+        int parA = find(a);
+        int parB = find(b);
+
+        if (rank[parA] == rank[parB]) {
+            par[parB] = parA;
+            rank[parA]++;
+        } 
+        else if (rank[parA] < rank[parB]) {
+            par[parA] = parB;
+
+        }
+        else {
+            par[parB] = parA;
+
+        }
+    }
 
     public static void main(String[] args) {
         int n = 4;
@@ -276,13 +306,23 @@ public class Graph2 {
         System.out.println(cheapestFlight(n, flights, src, dest, k));
 
         int[][] cities = {
-            {0,1,2,3,4},
-            {1,0,5,0,7},
-            {2,5,0,6,0},
-            {3,0,6,0,0},
-            {4,7,0,0,0}
+                { 0, 1, 2, 3, 4 },
+                { 1, 0, 5, 0, 7 },
+                { 2, 5, 0, 6, 0 },
+                { 3, 0, 6, 0, 0 },
+                { 4, 7, 0, 0, 0 }
         };
         System.out.println(connectCities(cities));
-        
+
+        init();
+        union(1, 3);
+        System.out.println(find(3));
+        union(2, 4);
+        union(3, 6);
+        union(1, 4);
+        System.out.println(find(3));
+        System.out.println(find(4));
+        union(1, 5);
+
     }
 }
