@@ -164,7 +164,7 @@ public class Graph2 {
 
     }
 
-    static class Info {
+    static class Info { // cheapest flights with K spots
         int v;
         int cost;
         int stops;
@@ -216,6 +216,54 @@ public class Graph2 {
         }
 
     }
+    static class Edge1 implements Comparable<Edge1> { // connect cities with minimum cost
+    
+        int dest;
+        int cost;
+        
+
+        public Edge1(int d, int c) {
+            
+            this.dest = d;
+            this.cost = c;
+          
+
+        }
+        @Override
+        public int compareTo(Edge1 e2){
+            return this.cost - e2.cost;
+        }
+    }
+
+    public static int connectCities(int[][] cities){
+        PriorityQueue<Edge1> pq = new PriorityQueue<>();
+
+        boolean[] vis = new boolean[cities.length];
+
+        pq.add(new Edge1(0, 0));
+        int finalCost = 0;
+        
+        while(!pq.isEmpty()){
+            Edge1 curr = pq.remove();
+            if(!vis[curr.dest]){
+                vis[curr.dest] = true;
+                finalCost +=curr.cost;
+
+                for(int i = 0;i<cities[curr.dest].length;i++){
+                    if(cities[curr.dest][i] != 0){
+                        pq.add(new Edge1(i, cities[curr.dest][i]));
+                    }
+                }
+            }
+        }
+        return finalCost;
+          
+
+
+    }
+    
+
+
 
     public static void main(String[] args) {
         int n = 4;
@@ -226,5 +274,15 @@ public class Graph2 {
         int dest = 3;
         int k = 1;
         System.out.println(cheapestFlight(n, flights, src, dest, k));
+
+        int[][] cities = {
+            {0,1,2,3,4},
+            {1,0,5,0,7},
+            {2,5,0,6,0},
+            {3,0,6,0,0},
+            {4,7,0,0,0}
+        };
+        System.out.println(connectCities(cities));
+        
     }
 }
