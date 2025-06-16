@@ -1,6 +1,6 @@
 import java.util.*;
 import java.util.LinkedList;
-import java .util.PriorityQueue;
+import java.util.PriorityQueue;
 import java.util.Comparator;
 
 public class HeapB {
@@ -168,7 +168,8 @@ public class HeapB {
         return 0;
     }
 
-    static PriorityQueue<Integer> min1; /// kth largest element in stream of integer
+    static PriorityQueue<Integer> min1;
+    /// kth largest element in stream of integer
     static int p;
 
     static List<Integer> getAllKthNumbers(int[] arr) {
@@ -196,7 +197,7 @@ public class HeapB {
         boolean vis[] = new boolean[n + 1];
         int time = 0;
 
-        for (int i = 0; i < k ; i++) {
+        for (int i = 0; i < k; i++) {
             q.add(arr[i]);
             vis[arr[i]] = true;
         }
@@ -217,68 +218,61 @@ public class HeapB {
         System.out.println(time - 1);
     }
 
-    static class ListNode{ // merge k sorted list
+    static class ListNode { // merge k sorted list
         int data;
         ListNode next;
 
-        ListNode(int key){
+        ListNode(int key) {
             data = key;
             next = null;
         }
     }
-     static class ListNodeComparator implements Comparator<ListNode>{
-        public int compare(ListNode k1, ListNode k2){
-            if(k1.data > k2.data){
+
+    static class ListNodeComparator implements Comparator<ListNode> {
+        public int compare(ListNode k1, ListNode k2) {
+            if (k1.data > k2.data) {
                 return 1;
-            }
-            else if(k1.data <k2.data){
+            } else if (k1.data < k2.data) {
                 return -1;
-              
+
             }
             return 0;
 
         }
-      }
+    }
 
-      static ListNode  mergeKList(ListNode[] arr ,int k){
+    static ListNode mergeKList(ListNode[] arr, int k) {
         PriorityQueue<ListNode> queue = new PriorityQueue<>(new ListNodeComparator());
-         int[] at = new int[k];
+        int[] at = new int[k];
         ListNode head = new ListNode(0);
         ListNode last = head;
 
-        for(int i =0;i<k;i++){
-            if(arr[i] != null){
+        for (int i = 0; i < k; i++) {
+            if (arr[i] != null) {
                 queue.add(arr[i]);
             }
         }
-        if(queue .isEmpty()){
+        if (queue.isEmpty()) {
             return null;
         }
-        while(!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             ListNode curr = queue.poll();
             last.next = curr;
             last = last.next;
-            if(curr.next!=null){
+            if (curr.next != null) {
                 queue.add(curr.next);
             }
-            
+
         }
         return head.next;
-      }
+    }
 
-      public static void printList(ListNode node){
-        while(node!= null){
-            System.out.print(node.data+ "->");
+    public static void printList(ListNode node) {
+        while (node != null) {
+            System.out.print(node.data + "->");
             node = node.next;
         }
     }
-
-     
-
-
-
-
-    
 
     public static void main(String[] args) {
         int[][] pts = { { 3, 3 }, { 5, -1 }, { -2, 4 } }; // nearest car main function
@@ -310,8 +304,8 @@ public class HeapB {
         }
         System.out.println(cost);
 
-        int[][] army = { { 1, 0, 0, 0 }, { 1, 1, 1, 1 }, { 1, 0, 0, 0 }, { 1, 0, 0, 0 } }; // Weakest Soliders main  method
-                                                                                         
+        int[][] army = { { 1, 0, 0, 0 }, { 1, 1, 1, 1 }, { 1, 0, 0, 0 }, { 1, 0, 0, 0 } }; // Weakest Soliders main
+                                                                                           // method
 
         int s = 2;
         PriorityQueue<Row> pq2 = new PriorityQueue<>();
@@ -366,12 +360,12 @@ public class HeapB {
 
         int[] arr3 = { 2, 6 };
         int q = 6;
-        int b = arr3.length ;
+        int b = arr3.length;
         minTime(arr3, q, b);
 
         int N = 3;
         ListNode[] a = new ListNode[N];
-        ListNode  head1 = new ListNode(1);
+        ListNode head1 = new ListNode(1);
         a[0] = head1;
         head1.next = new ListNode(3);
         head1.next.next = new ListNode(5);
@@ -379,22 +373,21 @@ public class HeapB {
 
         ListNode head2 = new ListNode(2);
         a[1] = head2;
-         head2.next = new ListNode(4);
+        head2.next = new ListNode(4);
         head2.next.next = new ListNode(6);
         head2.next.next.next = new ListNode(8);
 
         ListNode head3 = new ListNode(0);
         a[2] = head3;
-         head3.next = new ListNode(9);
+        head3.next = new ListNode(9);
         head3.next.next = new ListNode(10);
         head3.next.next.next = new ListNode(11);
 
         ListNode mergedList = mergeKList(a, N);
-        if(mergedList != null){
+        if (mergedList != null) {
             printList(mergedList);
             System.out.println();
         }
-
 
     }
 
