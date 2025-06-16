@@ -392,6 +392,8 @@ public class Graph2 {
         return image;
     }
 
+    
+
     public static void main(String[] args) {
         int V = 4;
         ArrayList<Edge2> edges = new ArrayList<>();

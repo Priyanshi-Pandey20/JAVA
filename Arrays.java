@@ -314,4 +314,9 @@ public class Arrays {
         throw new UnsupportedOperationException("Unimplemented method 'stream'");
     }
 
+    public static char[] toString(int[] row) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'toString'");
+    }
+
 }
