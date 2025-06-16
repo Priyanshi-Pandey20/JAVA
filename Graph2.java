@@ -319,24 +319,25 @@ public class Graph2 {
         edges.add(new Edge2(2, 3, 50));
 
     }
-   static int m = 4;
-   static int p[] = new int[m];
-   static int rank1[] = new int[m];
 
-   public static void init1(){
-    for(int i =0;i<m;i++){
-        par[i] = i;
+    static int m = 4;
+    static int p[] = new int[m];
+    static int rank1[] = new int[m];
+
+    public static void init1() {
+        for (int i = 0; i < m; i++) {
+            par[i] = i;
+        }
     }
-   }
 
-   public static int find1(int x) {
+    public static int find1(int x) {
         if (x == par[x]) {
             return x;
         }
         return find1(par[x]);
     }
 
-     public static void union1(int a, int b) {
+    public static void union1(int a, int b) {
         int parA = find(a);
         int parB = find(b);
 
@@ -352,37 +353,44 @@ public class Graph2 {
         }
     }
 
-    public static void KruskalMST(ArrayList<Edge2> edges,int V){
+    public static void KruskalMST(ArrayList<Edge2> edges, int V) {
         init1();
         Collections.sort(edges);
         int mstCost = 0;
         int count = 0;
 
-        for(int i =0; count<V-1;i++){
+        for (int i = 0; count < V - 1; i++) {
             Edge2 e = edges.get(i);
 
             int parA = find(e.src);
             int parB = find(e.dest);
-            if(parA != parB){
-              union(e.src, e.dest);
-              mstCost +=e.wt;
-              count++;
+            if (parA != parB) {
+                union(e.src, e.dest);
+                mstCost += e.wt;
+                count++;
             }
         }
         System.out.println(mstCost);
     }
 
-    
+    public static void helper(int[][] image, int sr, int sc, int color, boolean[][] vis, int orgCol) {  // Flood Fill
+        if(sr < 0 || sc < 0 || sr >= image.length|| sc>= image[0].length|| vis[sr][sc] || image[sr][sc] != orgCol){
+            return;
+        }
+        image[sr][sc] = color;
 
+        helper(image, sr, sc - 1, color, vis, orgCol);
+        helper(image, sr, sc + 1, color, vis, orgCol);
+        helper(image, sr-1, sc , color, vis, orgCol);
+        helper(image, sr+1, sc , color, vis, orgCol);
 
+    }
 
-
-
-    
-
-
-    
-
+    public static int[][] floodFill(int[][] image, int sr, int sc, int color) {
+        boolean[][] vis = new boolean[image.length][image[0].length];
+        helper(image, sr, sc, color, vis, image[sr][sc]);
+        return image;
+    }
 
     public static void main(String[] args) {
         int V = 4;
@@ -405,9 +413,6 @@ public class Graph2 {
         };
         System.out.println(connectCities(cities));
 
-
-
-
-
+         
     }
 }
