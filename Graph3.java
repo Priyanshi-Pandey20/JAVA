@@ -25,8 +25,8 @@ public class Graph3 {
         graph[1].add(new Edge(1, 0));
         graph[1].add(new Edge(1, 2));
 
+        graph[2].add(new Edge(2, 0));
         graph[2].add(new Edge(2, 1));
-        graph[2].add(new Edge(2, 2));
 
         graph[3].add(new Edge(3, 0));
         graph[3].add(new Edge(3, 4));
@@ -97,12 +97,51 @@ public class Graph3 {
 
     }
 
+    public static void dfs(ArrayList<Edge>[] graph, int curr, int par, int dt[], int low[], boolean[] vis, int time) {// targan's
+                                                                                                                      // algorithm
+        vis[curr] = true;
+        dt[curr] = low[curr] = ++time;
+
+        for (int i = 0; i < graph[curr].size(); i++) {
+            Edge e = graph[curr].get(i);
+            int neigh = e.dest;
+            if (neigh == par) {
+                continue;
+            } else if (!vis[neigh]) {
+                dfs(graph, neigh, curr, dt, low, vis, time);
+                low[curr] = Math.min(low[curr], low[neigh]);
+
+                if (dt[curr] < low[neigh]) {
+                    System.out.print("Bridge : " + curr + "---------" + neigh);
+                }
+            } else {
+                low[curr] = Math.min(low[curr], dt[neigh]);
+            }
+
+        }
+    }
+
+    public static void tarjanBridge(ArrayList<Edge>[] graph, int V) {
+        int[] dt = new int[V];
+        int[] low = new int[V];
+        int time = 0;
+        boolean[] vis = new boolean[V];
+
+        for (int i = 0; i < V; i++) {
+            if (!vis[i]) {
+                dfs(graph, i, -1, dt, low, vis, time);
+            }
+        }
+
+    }
+
     
 
     public static void main(String[] args) {
-        int V = 5;
+        int V = 6;
         ArrayList<Edge> graph[] = new ArrayList[V];
         createGraph(graph);
         kosaraju(graph, V);
+        tarjanBridge(graph, V);
     }
 }
