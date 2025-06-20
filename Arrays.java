@@ -319,4 +319,9 @@ public class Arrays {
         throw new UnsupportedOperationException("Unimplemented method 'toString'");
     }
 
+    public static void fill(int[] ways, int i) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'fill'");
+    }
+
 }
