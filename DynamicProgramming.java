@@ -107,7 +107,7 @@ public class DynamicProgramming {
         System.out.println();
     }
 
-    public static boolean targetSum(int[] arr, int sum) { // target sum
+    public static boolean targetSumSubset(int[] arr, int sum) { // target sum
         int n = arr.length;
         boolean[][] dp = new boolean[n + 1][sum+1];
 
@@ -130,10 +130,15 @@ public class DynamicProgramming {
 
     }
 
+    
+
+
+
+
     public static void main(String[] args) {
         int[] arr = { 4, 2, 7, 1, 3 };
         int sum = 10;
-        System.out.println(targetSum(arr, sum));
+        System.out.println(targetSumSubset(arr, sum));
 
     }
 }
