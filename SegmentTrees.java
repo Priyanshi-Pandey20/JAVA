@@ -22,6 +22,19 @@ public class SegmentTrees {
         return getSumRec(qs, qe, ss, mid, 2 * si + 1, tree) + getSumRec(qs, qe, mid + 1, se, 2 * si + 2, tree);
     }
 
+    static void updateRec(int ss,int se,int i,int si,int diff,int[] tree){
+        if(i<ss|| i>se){
+            return;
+        }
+        tree[si] = tree[si] + diff;
+
+        if(se>ss){
+            int mid = (ss+se)/2;
+            updateRec(ss, mid,i, 2*si+1, diff, tree);
+            updateRec(mid+1, se, i, 2*si+2, diff, tree);
+        }
+    }
+
     public static void main(String[] args) {
         int[] arr = { 10, 20, 30, 40 };
         int n = 4;
