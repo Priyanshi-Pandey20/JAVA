@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.Arrays;
 
 public class DynamicProgramming2 {
 
@@ -45,11 +46,28 @@ public class DynamicProgramming2 {
         return ans;
     }
 
+    public static int catalnMem(int n,int[] dp){ // catalane number using memoization
+         if(n == 0|| n==1){
+            return 1;
+         }
+         if(dp[n] != -1){
+            return dp[n];
+         }
+         int ans = 0;
+         for(int i =0;i<n;i++){
+            ans += catalnMem(i, dp) * catalnMem(n-i-1, dp);
+         }
+         return dp[n] = ans;
+    }
+
     public static void main(String[] args) {
         String s = "baaabab";
         String p = "*****ba*****ab";
         System.out.println(wildcardMatching(s, p));
         int n =4;
        System.out.println(catalnRec(n));
+        int[] dp = new int[n+1];
+        Arrays.fill(dp,-1);
+       System.out.println(catalnMem(n, dp));
     }
 }
