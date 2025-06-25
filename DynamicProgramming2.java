@@ -34,6 +34,8 @@ public class DynamicProgramming2 {
 
     }
 
+    
+
     public static void main(String[] args) {
         String s = "baaabab";
         String p = "*****ba*****ab";
