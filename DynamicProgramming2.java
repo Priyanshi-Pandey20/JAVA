@@ -71,16 +71,23 @@ public class DynamicProgramming2 {
         return dp[n];
     }
 
-    
+    public static int countBST(int n) { // unique binary search trees
+        int[] dp = new int[n + 1];
+        dp[0] = 1;
+        dp[1] = 1;
+
+        for (int i = 2; i < n + 1; i++) {
+            for (int j = 0; j < i; j++) {
+                int left = dp[j];
+                int right = dp[i - j - 1];
+                dp[i] += left * right;
+            }
+        }
+        return dp[n];
+    }
 
     public static void main(String[] args) {
-        String s = "baaabab";
-        String p = "*****ba*****ab";
-        System.out.println(wildcardMatching(s, p));
         int n = 4;
-        // System.out.println(catalnRec(n));
-        // int[] dp = new int[n+1];
-        // Arrays.fill(dp,-1);
-        System.out.println(catalnTab(n));
+        System.out.println(countBST(n));
     }
 }
