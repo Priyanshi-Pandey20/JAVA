@@ -101,11 +101,24 @@ public class DynamicProgramming2 {
         return dp[n];
     }
 
-   
-
+    public static int mcm(int[] arr, int i, int j) { // matrix chain multiplication using recursion
+        if (i == j) {
+            return 0;
+        }
+        int ans = Integer.MAX_VALUE;
+        for (int k = i; k < j - 1; k++) {
+            int cost1 = mcm(arr, i, k);
+            int cost2 = mcm(arr, i + 1, j);
+            int cost3 = arr[i - 1] * arr[k] * arr[j];
+            int finalCost = cost1 + cost2 + cost3;
+            ans = Math.min(ans, finalCost);
+        }
+        return ans;
+    }
 
     public static void main(String[] args) {
-        int n = 4;
-        System.out.println(mountainRanges(n));
+        int[] arr = { 1, 2, 3, 4, 5 };
+        int n = arr.length;
+        System.out.println(mcm(arr, n, n));
     }
 }
