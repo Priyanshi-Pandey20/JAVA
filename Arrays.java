@@ -304,24 +304,5 @@ public class Arrays {
         UniqueElement();
     }
 
-    public static List<Integer> asList(int i, int j, int k, int l, int m) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'asList'");
-    }
-
-    public static Object stream(String[] split) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'stream'");
-    }
-
-    public static char[] toString(int[] row) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'toString'");
-    }
-
-    public static void fill(int[] ways, int i) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'fill'");
-    }
-
+   
 }

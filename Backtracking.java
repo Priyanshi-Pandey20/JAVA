@@ -51,6 +51,7 @@ public class Backtracking {
         for (int i = row - 1; i >= 0; i--) {
             if (board[i][col] == 'Q') {
                 return false;
+                
             }
         }
 
@@ -71,7 +72,7 @@ public class Backtracking {
         }
         return true;
     }
-
+  
     public static boolean NQueen(char board[][], int row) {
         if (row == board.length) {
             printBoard(board);
