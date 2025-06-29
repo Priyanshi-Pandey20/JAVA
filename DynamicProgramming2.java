@@ -159,7 +159,7 @@ public class DynamicProgramming2 {
         return dp[1][n - 1];
     }
 
-    public static int minimumPartition(int[] arr) { // Array partition with minimum difference
+    public static int minimumPartition(int[] arr) { // Array partition with minimum difference problem
         int n = arr.length;
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
