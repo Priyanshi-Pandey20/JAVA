@@ -35,8 +35,8 @@ public class Graph3 {
 
     }
 
-    public static void topSort(ArrayList<Edge>[] graph, int curr, boolean[] vis, Stack<Integer> s) { // Kosaraju
-                                                                                                     // Algorithm
+    public static void topSort(ArrayList<Edge>[] graph, int curr, boolean[] vis, Stack<Integer> s) { // Kosaraju Algorithm
+                                                                                                     
         vis[curr] = true;
 
         for (int i = 0; i < graph[curr].size(); i++) {
