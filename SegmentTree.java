@@ -1,3 +1,4 @@
+import java.util.*;
 public class SegmentTree {
     static int[] tree;
 
