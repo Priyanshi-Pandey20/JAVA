@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.Arrays;
 public class TwoDArray {
     
 
@@ -22,7 +23,7 @@ public class TwoDArray {
             System.out.println(colSum);
         }
 
-        int[][] b = { { 7, 8, 9 }, { 2, 3, 1 } }; // max element
+        int[][] b = { { 7, 8, 9 }, { 2, 3, 1 } }; // max element in 2d array
         int max = Integer.MIN_VALUE;
         for (int i = 0; i < b.length; i++) {
             for (int j = 0; j < b[i].length; j++) {
@@ -34,7 +35,7 @@ public class TwoDArray {
         }
         System.out.println(max);
 
-        int[][] c = { { 7, 8, 9 }, { 2, 3, 1 } }; // min element
+        int[][] c = { { 7, 8, 9 }, { 2, 3, 1 } }; // min element in 2d array
         int min = Integer.MAX_VALUE;
         for (int i = 0; i < c.length; i++) {
             for (int j = 0; j < c[i].length; j++) {
