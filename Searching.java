@@ -1,15 +1,16 @@
  import java .util.*;
+ import java .util.Arrays;
     public class Searching {
-        public static int linearSearch(int[] numbers, int key) {   // O(n)
+        public static int linearSearch(int[] numbers, int key) {   // O(n) - time complexicity
             for (int i = 0; i < numbers.length; i++) {
                 if (numbers[i] == key) {
-                    return i; // Key found at index i
+                    return i; 
                 }
             }
-            return -1; // Key not found
+            return -1; 
         }
 
-    public static int BinarySearch(int[] arr,int key){  // O(log n)
+    public static int BinarySearch(int[] arr,int key){  // O(log n) - time complexicity
         int start = 0; 
         int end = arr.length-1;
 
