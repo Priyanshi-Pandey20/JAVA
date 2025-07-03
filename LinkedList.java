@@ -379,6 +379,7 @@ public class LinkedList {
         }
         System.out.println("null");
     }
+    
 
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
