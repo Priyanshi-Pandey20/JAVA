@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.Arrays;
 
 class Recursion {
 
@@ -122,7 +123,7 @@ class Recursion {
 
     }
 
-    public static int StringLength(String str1, int idx) {// print length of the string
+    public static int StringLength(String str1, int idx) {// print length of string
         if (idx == str1.length()) {
             return -1;
         }
