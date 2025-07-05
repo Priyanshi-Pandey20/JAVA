@@ -10,7 +10,7 @@ import java.util.*;
         }
 
     }
-    class Rectangle{
+    class Rectangle{ // rectangle class
        int length = 2;
        int width = 4;
        void Area(){
