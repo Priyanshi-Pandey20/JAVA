@@ -23,13 +23,13 @@ import java.util.*;
         String brand;
         int price;
 
-        void Model( String model){ 
+        void Model( String model){ // child class
             System.out.println(model);
         }
-        void Brand( String brand){
+        void Brand( String brand){ // child class
             System.out.println(brand);
         }
-        void Price( int price){
+        void Price( int price){ //child class
             System.out.println(price);
         }
 
