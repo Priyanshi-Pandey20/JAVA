@@ -18,12 +18,12 @@ import java.util.*;
        }
     }
 
-    class Car{
+    class Car{ // car class 
         String model;
         String brand;
         int price;
 
-        void Model( String model){
+        void Model( String model){ 
             System.out.println(model);
         }
         void Brand( String brand){
