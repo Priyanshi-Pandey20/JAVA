@@ -92,7 +92,7 @@ public class StackB {
      }
 
 
-    static class StackArrayList { // implementing using arraylist
+    static class StackArrayList { //implementing using arraylist
         static ArrayList<Integer> list = new ArrayList<>();
 
         public static boolean isEmpty() {
