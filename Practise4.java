@@ -9,7 +9,7 @@ class Buffer {
 
     boolean hasData = false;
 
-    public synchronized void produce() {
+    public synchronized void produce() { // producer class 
         System.out.println("producer : fetching the signal");
         try {
             Thread.sleep(2000);
