@@ -36,7 +36,7 @@ import java.util.*;
 
     }
 
-    class BankAccount{
+    class BankAccount{ // parent class 
         int accountNumber = 123456;
         String accountHolder = "rita";
         int balance = 3000;
