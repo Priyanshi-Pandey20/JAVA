@@ -21,7 +21,7 @@ class Buffer {
 
     }
 
-    public synchronized void consume() {
+    public synchronized void consume() { // consumer class 
         while (!hasData) {
             try {
                 System.out.println("consumer: is waiting ... ");
