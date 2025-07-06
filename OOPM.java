@@ -40,8 +40,8 @@ import java.util.*;
         int accountNumber = 123456;
         String accountHolder = "rita";
         int balance = 3000;
-
-        void displaydetail(){
+ 
+        void displaydetail(){ // child class 
             System.out.println(accountHolder);
             System.out.println(accountNumber);
             System.out.println(balance);
