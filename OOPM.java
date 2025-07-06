@@ -52,7 +52,7 @@ import java.util.*;
             System.out.println("Total amount after deposit :");
             System.out.println(balance);
         }
-        void withdrawl(int amount){
+        void withdrawl(int amount){ // child class 
           balance = balance - amount;
          System.out.println("Total balance afterwithdraw :");
          System.out.println(balance);
