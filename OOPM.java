@@ -47,7 +47,7 @@ import java.util.*;
             System.out.println(balance);
         }
 
-        void deposit (int amount){
+        void deposit (int amount){ // child class 
              balance = balance + amount;
             System.out.println("Total amount after deposit :");
             System.out.println(balance);
