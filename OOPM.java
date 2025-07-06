@@ -60,9 +60,9 @@ import java.util.*;
 
     }
 
-          class Circle{
+          class Circle{ // parent class 
             int radius;
-            void Area(int radius){
+            void Area(int radius){ // child class 
                 System.out.println(3.14*radius*radius);
             }
             void Circumference(int radius){
