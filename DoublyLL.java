@@ -99,8 +99,8 @@ public class DoublyLL {
     }
 
 
-
-    public void Print() {
+ 
+    public void Print() { // print doubly linked list
         Node temp = head;
         while (temp != null) {
             System.out.print(temp.data + "<->");
