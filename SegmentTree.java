@@ -6,7 +6,7 @@ public class SegmentTree {
         tree = new int[4 * n];
     }
 
-    public static int buildST(int[] arr, int i, int start, int end) { // build segment tree
+    public static int buildST(int[] arr, int i, int start, int end) { //build segment tree
         if (start == end) {
             tree[i] = arr[start];
             return arr[start];
