@@ -2,7 +2,7 @@ import java.util.*;
 
 public class PriorityQueueB {
 
-    static class Student implements Comparable<Student> { // how to compare the objects
+    static class Student implements Comparable<Student> { // how to compare objects
         String name;
         int rank;
 
