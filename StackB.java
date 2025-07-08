@@ -195,7 +195,7 @@ public class StackB {
         return result.toString();
     }
 
-    public static void reverseStack(Stack<Integer> s) { // reverse the stack elements
+    public static void reverseStack(Stack<Integer> s) { // reverse the stack element
         if (s.isEmpty()) {
             return;
         }
