@@ -38,7 +38,7 @@ class Account {
         }
     }
 
-    public void withdraw(double amount) {
+    public void withdraw(double amount) { //withdraw function 
         if (amount > 0 && amount <= balance) {
             balance -= amount;
             transcations.add(new Transcation("withdrawal ", amount));
