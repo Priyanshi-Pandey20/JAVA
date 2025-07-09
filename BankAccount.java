@@ -6,7 +6,7 @@ import java.util.*;
 import java.io.File;
 import java.io.IOException;
 
-class Transcation {
+class Transcation { // transcation class 
     String type;
     double amount;
 
