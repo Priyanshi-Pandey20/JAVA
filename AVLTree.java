@@ -33,7 +33,7 @@ public class AVLTree {
         return x;
     }
 
-    public static Node leftRotate(Node x) {
+    public static Node leftRotate(Node x) { // left rotate
         Node y = x.right;
         Node T2 = y.left;
 
