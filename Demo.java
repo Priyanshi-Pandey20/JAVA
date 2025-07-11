@@ -25,7 +25,7 @@ public class Demo {
    }
 
    public static void CountCharacter() {
-      String s = "racecar"; // Count given character in string
+      String s = "racecar"; // count given charater in string
       int target = 'r';
       char[] arr = s.toCharArray();
       int count = 0;
