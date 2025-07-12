@@ -52,7 +52,7 @@ public class AVLTree {
         return height(root.left) - height(root.right);
     }
 
-    public static Node insert(Node root, int key) { // insertion
+    public static Node insert(Node root, int key) { // insertion 
         if (root == null) {
             return new Node(key);
         }
