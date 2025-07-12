@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 public class DynamicProgramming {
 
-    public static int fibbonacci(int[] f, int n) { // print nth fibbnocci
+    public static int fibbonacci(int[] f, int n) { // print nth fibbonaci 
         int[] dp = new int[n + 1];
         dp[0] = 0;
         dp[1] = 1;
