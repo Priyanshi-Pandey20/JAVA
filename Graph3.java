@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Stack;
 
 public class Graph3 {
-    static class Edge {
+    static class Edge { // Edge class 
         int src;
         int dest;
 
