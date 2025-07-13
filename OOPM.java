@@ -94,7 +94,7 @@ import java.util.*;
         obj2.display("rohit",987,50);
         
          
-        Rectangle r = new Rectangle();
+        Rectangle r = new Rectangle(); // object of rectangle 
         r.Area();
 
         Car c = new Car();
