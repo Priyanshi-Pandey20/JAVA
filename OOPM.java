@@ -70,7 +70,7 @@ import java.util.*;
             }
           }
            
-          class Book {
+          class Book { // book class 
             String title;
             String author;
             int price;
