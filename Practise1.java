@@ -21,8 +21,8 @@ public class Practise1 {
         } else {
             System.out.println("zero");
         }
-
-        int a = scn.nextInt(); // Q3
+  
+        int a = scn.nextInt(); // Q3 check the no.is greater or not 
         int b = scn.nextInt();
         if (a > b) {
             System.out.println("1st no. is greater than 2nd : " + a);
