@@ -8,7 +8,7 @@ public class HeapB {
     static class Heap {
         static ArrayList<Integer> arr = new ArrayList<>();
 
-        public void add(int data) { // add data to heap
+        public void add(int data) { // add data to heap 
             arr.add(data);
 
             int x = arr.size() - 1;
