@@ -49,14 +49,14 @@ public class Practise1 {
             default:
                 System.out.println("Consonet");
 
-                int m = scn.nextInt(); // Q5
+                int m = scn.nextInt(); // Q5 print no. 
                 for (int i = 0; i <= m; i++) {
                     System.out.println(i);
                 }
                 System.out.println();
 
                 int p = scn.nextInt();
-                int sum = 0; // Q6
+                int sum = 0; // Q6  print the sum of n no. 
                 for (int i = 0; i <= p; i++) {
                     sum = sum + i;
                 }
@@ -76,7 +76,7 @@ public class Practise1 {
                     System.out.println("Not divisible");
                 }
 
-                int q = scn.nextInt(); // Q9
+                int q = scn.nextInt(); // Q9 
                 if (q % 3 == 0) {
                     System.out.println("It is divisible by 3");
                 } else {
