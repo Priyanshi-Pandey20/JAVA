@@ -62,7 +62,7 @@ public class Practise1 {
                 }
                 System.out.println(sum);
 
-                int f = scn.nextInt(); // Q7
+                int f = scn.nextInt(); // Q7 print the table of given no. 
                 for (int i = 1; i <= 10; i++) {
                     int table = i * f;
                     System.out.println(table);
