@@ -181,7 +181,7 @@ public class Backtracking {
         }
     }
 
-    public static void printSolution(int sol[][]) { // Rat in maze problem
+    public static void printSolution(int sol[][]) { // rat in a maze problem 
         for (int i = 0; i < sol.length; i++) {
             for (int j = 0; j < sol.length; j++) {
                 System.out.print(" " + sol[i][j] + " ");
@@ -229,7 +229,7 @@ public class Backtracking {
         return false;
     }
 
-    // keypad combinations
+    // keypad combination
 
     final static char[][] L = { {}, {}, { 'a', 'b', 'c' }, { 'd', 'e', 'f' }, { 'g', 'h', 'i' }, { 'j', 'k', 'l' },
             { 'm', 'n', 'o' }, { 'p', 'q', 'r', 's' },
