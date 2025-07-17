@@ -53,7 +53,7 @@ public class Demo {
    }
 
    public static void RemoveDuplicates() {
-      String str4 = "happy"; // remove duplicate
+      String str4 = "happy"; // remove dulicates 
       for (int i = 0; i < str4.length(); i++) {
          boolean flag = true;
          for (int j = 0; j < i; j++) {
