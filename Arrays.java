@@ -288,7 +288,7 @@ public class Arrays {
         }
     }
 
-    public static int FindMissingElement(int[] arr) { // find missing element in an array
+    public static int FindMissingElement(int[] arr) { // find the missing element 
         for (int i = 0; i < arr.length - 1; i++) {
             if (arr[i + 1] != arr[i] + 1) {
                 return arr[i] + 1;
