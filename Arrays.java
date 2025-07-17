@@ -276,7 +276,7 @@ public class Arrays {
         }
     }
 
-    public static void FindDuplicates(int[] arr) {// find duplicate element
+    public static void FindDuplicates(int[] arr) {// find duplicate element 
         for (int i = 0; i < arr.length; i++) {
             for (int j = arr.length - 1; j > i; j--) {
                 if (arr[i] == arr[j]) {
