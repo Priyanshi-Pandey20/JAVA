@@ -13,7 +13,7 @@ public class Sorting {
 
     }
 
-    public static void merge(int[] arr, int l, int mid, int h) {
+    public static void merge(int[] arr, int l, int mid, int h) { // merge function 
         int[] temp = new int[h - l + 1];
         int i = l;
         int j = mid + 1;
