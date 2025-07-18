@@ -89,7 +89,7 @@ public class Sorting {
         }
     }
 
-    public static void PrintArr(int[] arr) {
+    public static void PrintArr(int[] arr) { // print array 
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i]);
         }
