@@ -101,7 +101,7 @@ class Recursion {
         return a * powerOf(a, n - 1);
     }
 
-    public static void TowerOfHanoi(int n, char A, char B, char C) { // Tower of hanoi
+    public static void TowerOfHanoi(int n, char A, char B, char C) { // tower  of hanaoi
         if (n == 0) {
             return;
         }
