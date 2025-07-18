@@ -103,7 +103,7 @@ public class AVLTree {
 
     }
 
-    public static Node deleteNode(Node root, int key) {
+    public static Node deleteNode(Node root, int key) { // delete node 
 
         if (root == null) {
             return root;
