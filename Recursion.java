@@ -83,7 +83,7 @@ class Recursion {
         }
     }
 
-    public static int friendsPairing(int n) { // friends pairing problem
+    public static int friendsPairing(int n) { // friend pairing problem 
         if (n == 1 || n == 2) {
             return n;
         }
