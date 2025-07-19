@@ -51,7 +51,7 @@ class Trie {
         return curr.isEnd == true;
     }
 
-    public static boolean wordBreak(String s) { // word break problem
+    public static boolean wordBreak(String s) { // word break problem 
         if (s.length() == 0) {
             return true;
         }
