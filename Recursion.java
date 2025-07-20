@@ -13,7 +13,7 @@ class Recursion {
 
     }
 
-    public static int sum(int n) { // sum of no.     O(n)-time and space 
+    public static int sum(int n) { // sum of no.   O(n)-time and space 
         if (n == 1) {
             return 1;
         }
