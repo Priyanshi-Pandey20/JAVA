@@ -74,7 +74,7 @@ public class LinkedList {
         return val;
     }
 
-    public int RemoveLast() { // remove last node
+    public int RemoveLast() { // remove last node 
 
         if (size == 0) {
             System.out.println("ll is empty");
