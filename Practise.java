@@ -122,7 +122,7 @@ public class Practise {
 
     }
 
-    public static void FirstNonReapting() { // print first non repeating no.
+    public static void FirstNonReapting() { // print first non repeting no.
 
         String str = "aaabcccddeef";
         char[] ch = str.toCharArray();
