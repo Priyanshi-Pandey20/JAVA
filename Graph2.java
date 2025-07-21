@@ -15,7 +15,7 @@ public class Graph2 {
         }
     }
 
-    static void createGraph1(int[][] flights, ArrayList<Edge> graph[]) { // create a graph
+    static void createGraph1(int[][] flights, ArrayList<Edge> graph[]) { // create a graph 
         for (int i = 0; i < graph.length; i++) {
             graph[i] = new ArrayList<>();
 
