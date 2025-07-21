@@ -108,7 +108,7 @@ class Trie {
         return count + 1;
     }
 
-    public static String ans = ""; // longest word of all prefixes
+    public static String ans = ""; // longest word of all prefix
 
     public static void longestWord(Node root, StringBuilder temp) {
 
