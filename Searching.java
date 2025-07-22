@@ -38,9 +38,9 @@
       // int result = BinarySearch(numbers, key);
 
         if (result == -1) {
-            System.out.println("Element not found in the array.");
+            System.out.println("Element not found in the array."); // element not found 
         } else {
-            System.out.println("Element found at index: " + result);
+            System.out.println("Element found at index: " + result); // element found at certain index 
         }
 
     
