@@ -237,7 +237,7 @@ public class Sorting {
         return false;
     }
 
-    public static int MajorityElement(int arr1[]) { // majority occurring element
+    public static int MajorityElement(int arr1[]) { // majority occuring element
         int majority = arr1.length / 2;
 
         for (int i = 0; i < arr1.length; i++) {
