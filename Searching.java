@@ -10,7 +10,7 @@
             return -1; 
         }
 
-    public static int BinarySearch(int[] arr,int key){  // O(log n) - time complexicity
+    public static int BinarySearch(int[] arr,int key){  // O(log n) - time complexicity 
         int start = 0; 
         int end = arr.length-1;
 
