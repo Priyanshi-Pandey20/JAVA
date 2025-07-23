@@ -343,7 +343,8 @@ public class LinkedList {
 
     }
 
-    public Node oddevenLL(Node head) { // print even nodes first and then odd nodes 
+    public Node oddevenLL(Node head) { // print even nodes first the odd no .
+        
         if (head == null || head.next == null) {
             return head;
         }
