@@ -143,7 +143,7 @@ public class AVLTree {
 
         int bf = getBalance(root);
 
-        if (bf > 1 && getBalance(root.left) >= 0)
+        if (bf > 1 && getBalance(root.left) >= 0) // when bf is greater 
             return rightRotate(root);
 
         if (bf > 1 && getBalance(root.left) < 0) {
