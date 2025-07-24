@@ -150,10 +150,10 @@ public class AVLTree {
             root.left = leftRotate(root.left);
             return rightRotate(root);
         }
-        if (bf < -1 && getBalance(root.right) <= 0)
+        if (bf < -1 && getBalance(root.right) <= 0) // when bf is less than -1 
             return leftRotate(root);
 
-        if (bf < -1 && getBalance(root.right) > 0) {
+        if (bf < -1 && getBalance(root.right) > 0) { // when bf is greater than 0 
             root.right = rightRotate(root.right);
             return leftRotate(root);
         }
