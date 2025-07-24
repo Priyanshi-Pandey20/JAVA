@@ -87,7 +87,7 @@ public class BinaryTreesB {
         }
     }
 
-    public static int HeightOfTree(Node root) {// heigth of tree
+    public static int HeightOfTree(Node root) {// heigth of tree of the binary tree 
         if (root == null) {
             return 0;
         }
