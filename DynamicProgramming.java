@@ -97,7 +97,7 @@ public class DynamicProgramming {
 
     }
 
-    public static void print(int[][] dp) {
+    public static void print(int[][] dp) { // print the output 
         for (int i = 0; i < dp.length; i++) {
             for (int j = 0; j < dp[0].length; j++) {
                 System.out.print(dp[i][j] + " ");
