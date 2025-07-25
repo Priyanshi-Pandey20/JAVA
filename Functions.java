@@ -110,7 +110,7 @@ public class Functions {
         System.out.println(product);
     }
 
-    public static void printNumber(int n) {
+    public static void printNumber(int n) { // print numbers 
         for (int i = 0; i < n; i++) {
             System.out.println(i);
         }
