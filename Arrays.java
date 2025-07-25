@@ -111,7 +111,7 @@ public class Arrays {
 
     }
 
-    public static void SortArrayInAsending(int[] arr1) { // Sort an array in ascending order
+    public static void SortArrayInAsending(int[] arr1) { // sort array in asecnding order 
 
         for (int i = 0; i < arr1.length; i++) {
             for (int j = i + 1; j < arr1.length; j++) {
