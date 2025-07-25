@@ -180,7 +180,7 @@ public class Arrays {
         }
     }
 
-    public static void SumOfTwoArray() { // sum of two array
+    public static void SumOfTwoArray() { //  sum of two arrays 
         int[] x = { 1, 2, 3, 4, 5 };
         int[] y = { 1, 2, 3, 4, 5 };
         int sum = 0;
