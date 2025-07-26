@@ -135,7 +135,7 @@ public class Functions {
         System.out.println(count);
     }
 
-    public static void PrintReverseNo(int n) {
+    public static void PrintReverseNo(int n) { // print reverse no. 
         int rev = 0;
         while (n != 0) {
             int digit = n % 10;
