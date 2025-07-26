@@ -92,7 +92,7 @@ public class Graph2 {
         System.out.println();
     }
 
-    public static void bellmanFord(ArrayList<Edge>[] graph, int src) { // Bellman Ford Algorithm
+    public static void bellmanFord(ArrayList<Edge>[] graph, int src) { // bellman ford algorithm 
         int[] dist = new int[graph.length];
         for (int i = 0; i < dist.length; i++) {
             if (i != src) {
