@@ -52,8 +52,8 @@ public class Demo {
       System.out.println(ct);
    }
 
-   public static void RemoveDuplicates() {
-      String str4 = "happy"; // remove dulicates 
+   public static void RemoveDuplicates() { // remove duplicates from string 
+      String str4 = "happy"; 
       for (int i = 0; i < str4.length(); i++) {
          boolean flag = true;
          for (int j = 0; j < i; j++) {
