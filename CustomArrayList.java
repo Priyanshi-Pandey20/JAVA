@@ -58,7 +58,7 @@ public class CustomArrayList {
       return maxWater;
    }
 
-   public static int StoreWater(ArrayList<Integer> height) { // optimal approach
+   public static int StoreWater(ArrayList<Integer> height) { // optimal approach 
       int maxWater = 0;
       int lp = 0;
       int rp = height.size() - 1;
