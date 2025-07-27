@@ -136,7 +136,7 @@ public class DynamicProgramming2 {
         return dp[i][j];
     }
 
-    public static int mcmTab(int[] arr) { // matrix chain multiplication using tabulation
+    public static int mcmTab(int[] arr) { // mcm using tabulation 
         int n = arr.length;
         int[][] dp = new int[n][n];
 
