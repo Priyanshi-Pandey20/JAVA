@@ -185,7 +185,7 @@ public class DynamicProgramming2 {
 
     }
 
-    public static int minarrayJumps(int[] arr) { // min array jumps problem
+    public static int minarrayJumps(int[] arr) { // min array jump pblm 
         int n = arr.length;
         int[] dp = new int[n];
         Arrays.fill(dp, -1);
