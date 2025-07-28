@@ -157,7 +157,7 @@ public class Arrays {
     }
 
     public static void TwoSum() {
-        int[] arr = { 1, 2, 3, 4, 5 }; // 2 sum problem 
+        int[] arr = { 1, 2, 3, 4, 5 }; //  2 sum pblm 
         int target = 5;
         boolean flag = false;
         int[] arr1 = { 0, 0, 0, 0, 0 };
