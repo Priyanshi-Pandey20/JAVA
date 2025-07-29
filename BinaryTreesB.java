@@ -353,7 +353,7 @@ public class BinaryTreesB {
         return max + 1;
     }
 
-    public static int TransformToSumTree(Node root) { // transform the tree to sum tree
+    public static int TransformToSumTree(Node root) { // transform the tree to sum tree 
         if (root == null) {
             return 0;
         }
