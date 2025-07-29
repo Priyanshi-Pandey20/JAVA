@@ -103,7 +103,7 @@ public class HeapB {
         }
     }
 
-    static class Pair implements Comparable<Pair> { // sliding window problem
+    static class Pair implements Comparable<Pair> { // sliding window pblm 
         int val;
         int idx;
 
