@@ -438,7 +438,7 @@ public class BinaryTreesB {
         inOrder(root.right);
     }
 
-    static class Result { // maximum path sum
+    static class Result { // maximum path sum 
         int maxSum;
 
     }
