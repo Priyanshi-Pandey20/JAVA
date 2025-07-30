@@ -37,7 +37,7 @@ class Recursion {
 
     }
 
-    public static boolean isSorted(int arr[], int i) { ///check if array is sorted or not
+    public static boolean isSorted(int arr[], int i) { ///check if array is sorted or not 
         if (i == arr.length - 1)
             return true;
         if (arr[i] > arr[i + 1]) {
