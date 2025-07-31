@@ -342,7 +342,7 @@ public class StackB {
 
     }
 
-    public static int TrappingRainWater(int[] height) { // trapping rainwater problem
+    public static int TrappingRainWater(int[] height) { // trapping rainwater pblm 
         Stack<Integer> stack = new Stack<>();
         int n = height.length;
 
