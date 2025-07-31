@@ -301,7 +301,7 @@ public class StackB {
 
     }
 
-    public static void LargestRectangleInHistogram(int[] arr) { // O(n) largest area in histogram
+    public static void LargestRectangleInHistogram(int[] arr) { // O(n) largest area of histogram 
         int maxArea = 0;
         int[] nsr = new int[arr.length];
         int[] nsl = new int[arr.length];
