@@ -210,7 +210,7 @@ public class StackB {
         }
     }
 
-    public static void stockSpan(int[] stocks, int[] span) { // stock span problem
+    public static void stockSpan(int[] stocks, int[] span) { // stock span pblm 
         Stack<Integer> s = new Stack<>();
         span[0] = 1;
         s.push(0);
