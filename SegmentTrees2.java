@@ -1,5 +1,5 @@
 public class SegmentTrees2 {
-    static int Cst(int ss, int se, int si, int[] arr, int[] tree) {
+    static int Cst(int ss, int se, int si, int[] arr, int[] tree) { // cst 
         if (ss == se) {
             tree[si] = arr[ss];
             return tree[si];
