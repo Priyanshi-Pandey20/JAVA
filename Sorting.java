@@ -129,7 +129,7 @@ public class Sorting {
         }
     }
 
-    public static int SearchInRoatedArray(int[] nums, int tar, int si, int ei) { // using recursion
+    public static int SearchInRoatedArray(int[] nums, int tar, int si, int ei) { // using recursion 
         if (si > ei) {
             return -1;
         }
