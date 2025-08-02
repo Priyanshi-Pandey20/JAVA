@@ -372,7 +372,7 @@ public class LinkedList {
 
     }
 
-    public void Print() {
+    public void Print() { // print the ll 
         Node temp = head;
         while (temp != null) {
             System.out.print(temp.data + "->");
