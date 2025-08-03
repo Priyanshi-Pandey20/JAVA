@@ -76,7 +76,7 @@ public class Sorting {
 
     }
 
-    public static void BubbleSort(int[] arr) { // Bubble Sort O(n^2)
+    public static void BubbleSort(int[] arr) { //bubble sort O(n^2)
         for (int turn = 0; turn < arr.length; turn++) {
             for (int j = 0; j < arr.length - 1 - turn; j++) {
                 if (arr[j] > arr[j + 1]) {
