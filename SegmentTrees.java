@@ -56,7 +56,7 @@ public class SegmentTrees {
         }
     }
 
-    public static int getSumUtil(int i, int si, int sj, int qi, int qj) {
+    public static int getSumUtil(int i, int si, int sj, int qi, int qj) { // sum of numbers in range 
         if (qj <= si || qi >= sj) {
             return 0;
         } else if (si >= qi && sj <= qj) {
