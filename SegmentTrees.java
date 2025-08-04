@@ -43,7 +43,7 @@ public class SegmentTrees {
         return getSumRec(qs, qe, ss, mid, 2 * si + 1, tree) + getSumRec(qs, qe, mid + 1, se, 2 * si + 2, tree);
     }
 
-    static void updateRec(int ss, int se, int i, int si, int diff, int[] tree) { // update 
+    static void updateRec(int ss, int se, int i, int si, int diff, int[] tree) { // update
         if (i < ss || i > se) {
             return;
         }
@@ -64,19 +64,34 @@ public class SegmentTrees {
         } else {
             int mid = (si + sj) / 2;
             int left = getSumUtil(2 * i + 1, si, mid, qi, qj);
-            int right = getSumUtil(2 * i + 2, mid+1, sj, qi, qj);
+            int right = getSumUtil(2 * i + 2, mid + 1, sj, qi, qj);
             return left + right;
         }
     }
 
     public static int getSum(int[] arr, int qi, int qj) {
         int n = arr.length;
-        return getSumUtil(0, 0, n-1, qi, qj);
+        return getSumUtil(0, 0, n - 1, qi, qj);
     }
+
+     public static void buildTree(int[] arr, int i, int start, int end) { // build segment tree
+        if (start == end) {
+            tree[i] = arr[start];
+            return ;
+        }
+
+        int mid = (start + end) / 2;
+        buildST(arr, 2 * i + 1, start, mid);
+        buildST(arr, 2 * i + 2, mid + 1, end);
+        tree[i] = Math.max(tree[2 * i + 1] , tree[2 * i + 2]);
+        
+
+    }
+   
 
     public static void main(String[] args) {
 
-        int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8 };
+        int[] arr = { 6, 8, -1, 2, 17, 1, 3, 2, 4 };
         int n = arr.length;
         init(n);
         System.out.println(buildST(arr, 0, 0, n - 1));
