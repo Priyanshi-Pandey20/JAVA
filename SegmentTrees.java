@@ -57,7 +57,7 @@ public class SegmentTrees {
     }
 
     public static int getSumUtil(int i, int si, int sj, int qi, int qj) {
-        if (qi <= si || qi >= sj) {
+        if (qj <= si || qi >= sj) {
             return 0;
         } else if (si >= qi && sj <= qj) {
             return tree[i];
@@ -88,6 +88,6 @@ public class SegmentTrees {
 
         System.out.println(getSumRec(0, 2, 0, 3, 0, tree));
 
-        getSum(arr, 2, 5);
+        System.out.println(getSum(arr, 2, 5));
     }
 }
