@@ -69,10 +69,10 @@ public class SegmentTrees {
         }
     }
 
-    // public static int getSum(int[] arr, int qi, int qj) {
-    //     int n = arr.length;
-    //     return getSumUtil(0, 0, , qi, qj);
-    // }
+    public static int getSum(int[] arr, int qi, int qj) {
+        int n = arr.length;
+        return getSumUtil(0, 0, n-1, qi, qj);
+    }
 
     public static void main(String[] args) {
 
