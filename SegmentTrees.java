@@ -43,7 +43,7 @@ public class SegmentTrees {
         return getSumRec(qs, qe, ss, mid, 2 * si + 1, tree) + getSumRec(qs, qe, mid + 1, se, 2 * si + 2, tree);
     }
 
-    static void updateRec(int ss, int se, int i, int si, int diff, int[] tree) {
+    static void updateRec(int ss, int se, int i, int si, int diff, int[] tree) { // update 
         if (i < ss || i > se) {
             return;
         }
@@ -56,7 +56,7 @@ public class SegmentTrees {
         }
     }
 
-    public static int getSumUtil(int i, int si, int sj, int qi, int qj) { // sum of numbers in range 
+    public static int getSumUtil(int i, int si, int sj, int qi, int qj) { // sum of numbers in range ,
         if (qj <= si || qi >= sj) {
             return 0;
         } else if (si >= qi && sj <= qj) {
