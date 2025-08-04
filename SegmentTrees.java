@@ -64,7 +64,7 @@ public class SegmentTrees {
         } else {
             int mid = (si + sj) / 2;
             int left = getSumUtil(2 * i + 1, si, mid, qi, qj);
-            int right = getSumUtil(2 * i + 2, si, sj, qi, qj);
+            int right = getSumUtil(2 * i + 2, mid+1, sj, qi, qj);
             return left + right;
         }
     }
@@ -88,6 +88,6 @@ public class SegmentTrees {
 
         System.out.println(getSumRec(0, 2, 0, 3, 0, tree));
 
-       // getSum(arr, 2, 5);
+        getSum(arr, 2, 5);
     }
 }
