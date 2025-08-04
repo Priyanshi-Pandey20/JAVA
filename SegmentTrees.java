@@ -86,12 +86,12 @@ public class SegmentTrees {
         tree[i] = Math.max(tree[2 * i + 1] , tree[2 * i + 2]);
     }
 
-    public static int getMax(int[] arr,int qi,int qj){
+    public static int getMax(int[] arr,int qi,int qj){ // get the max element
         int n = arr.length;
         return getMaxUtil(0,0,n-1,qi,qj);
     }
 
-    public static int getMaxUtil(int i ,int si,int sj,int qi,int qj){
+    public static int getMaxUtil(int i ,int si,int sj,int qi,int qj){ 
          if(si > qj || sj<qi){
             return Integer.MIN_VALUE;
          }
@@ -104,6 +104,26 @@ public class SegmentTrees {
             int rightAns = getMaxUtil(2*i+2, mid+1, sj, qi, qj);
             return Math.max(leftAns,rightAns);
          }
+    }
+
+    public static void update(int[] arr,int idx,int newVal){ // update the value in segment tree
+        arr[idx] = newVal;
+        int n = arr.length;
+        updateUtil(0, 0, n-1, idx, newVal);
+    }
+
+    public static void updateUtil(int i,int si,int sj,int idx,int newVal){
+        if(idx< si || idx > sj){
+            return ;
+        }
+
+        tree[i] = Math.max(tree[i], newVal);
+        if(si!=sj){
+        int mid = (si +sj)/2;
+
+        updateUtil(2*i+1, si, mid, idx, newVal);
+        updateUtil(2*i+2,mid+1, sj, idx, newVal);
+        }
     }
 
    
@@ -121,6 +141,10 @@ public class SegmentTrees {
 
         int max = getMax(arr, 2, 5);
         System.out.println(max);
+        update(arr, 2, 20);
+         int max1= getMax(arr, 2, 5);
+        System.out.println(max1);
+
 
       
 
