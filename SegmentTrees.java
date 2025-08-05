@@ -112,7 +112,7 @@ public class SegmentTrees {
         updateUtil(0, 0, n-1, idx, newVal);
     }
 
-    public static void updateUtil(int i,int si,int sj,int idx,int newVal){
+    public static void updateUtil(int i,int si,int sj,int idx,int newVal){ // main update function 
         if(idx< si || idx > sj){
             return ;
         }
