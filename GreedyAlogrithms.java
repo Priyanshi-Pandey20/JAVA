@@ -84,7 +84,7 @@ public class GreedyAlogrithms {
 
   }
 
-  public static void FractionalKnapsack(int[] val, int[] weight, int W) { // Fractional Knapsack problem
+  public static void FractionalKnapsack(int[] val, int[] weight, int W) { // fractionalknapsack pblm 
     double[][] ratio = new double[val.length][2];
     for (int i = 0; i < val.length; i++) {
       ratio[i][0] = i;
