@@ -91,7 +91,7 @@ public class SegmentTrees {
         return getMaxUtil(0,0,n-1,qi,qj);
     }
 
-    public static int getMaxUtil(int i ,int si,int sj,int qi,int qj){ 
+    public static int getMaxUtil(int i ,int si,int sj,int qi,int qj){  // max main function 
          if(si > qj || sj<qi){
             return Integer.MIN_VALUE;
          }
