@@ -119,7 +119,7 @@ public class GreedyAlogrithms {
     System.out.println("min absolute value : " + minDiff);
   }
 
-  public static void ChainPairs(int[][] pairs) { // O(nlogn) max length of the chain
+  public static void ChainPairs(int[][] pairs) { // O(nlogn) max length of chair pblm 
     Arrays.sort(pairs, Comparator.comparingDouble(o -> o[1]));
 
     int chainLen = 1;
