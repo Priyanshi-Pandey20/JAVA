@@ -176,7 +176,7 @@ public class GreedyAlogrithms {
       jobs.add(new Job(i, jobsInfo[i][0], jobsInfo[i][1]));
     }
 
-    Collections.sort(jobs, (obj1, obj2) -> obj2.profit - obj1.profit);// to sort objects in descending order
+    Collections.sort(jobs, (obj1, obj2) -> obj2.profit - obj1.profit);// to sort the object in desecending order 
 
     ArrayList<Integer> seq = new ArrayList<>();
     int time = 0;
