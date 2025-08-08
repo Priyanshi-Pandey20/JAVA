@@ -263,7 +263,7 @@ public class LinkedList {
         return slow;
     }
 
-    private Node merge(Node head1, Node head2) { // sort ll using merge sort
+    private Node merge(Node head1, Node head2) { // sort linked list using merge sort 
         Node mergedLL = new Node(-1);
         Node temp = mergedLL;
 
