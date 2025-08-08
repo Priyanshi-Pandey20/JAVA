@@ -36,7 +36,7 @@ public class Patterns {
 
         System.out.println();
 
-        for (int i = 5; i >= 1; i--) { // lower pyramid
+        for (int i = 5; i >= 1; i--) { // lower pyramid 
             for (int j = 5; j >= i; j--) {
                 System.out.print(" ");
             }
