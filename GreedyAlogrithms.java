@@ -156,7 +156,7 @@ public class GreedyAlogrithms {
     }
   }
 
-  static class Job {// job sequencing pblm 
+  static class Job {// job sequencing problem 
     int deadline;
     int profit;
     int id;
