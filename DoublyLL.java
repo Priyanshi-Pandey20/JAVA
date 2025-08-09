@@ -62,7 +62,7 @@ public class DoublyLL {
         tail = newNode;
     }
 
-    public int RemoveLast() {   // remove last node
+    public int RemoveLast() {   // remove last node from ll 
         if (head == null) {
             System.out.println("Dll is empty");
             return -1;
