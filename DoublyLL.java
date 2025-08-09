@@ -28,7 +28,7 @@ public class DoublyLL {
         head = newNode;
     }
 
-    public int RemoveFirst() { // remove first node
+    public int RemoveFirst() { // remove first node from ll  
         if (head == null) {
             System.out.println("Dll is empty");
             return -1;
