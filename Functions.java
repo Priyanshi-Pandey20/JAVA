@@ -213,7 +213,7 @@ public class Functions {
         return fb;
     }
 
-    public static void SortString(String[] str) {
+    public static void SortString(String[] str) { // sort strings 
 
         for (int i = 0; i < str.length - 1; i++) {
             for (int j = 0; j < str.length - i - 1; j++) {
