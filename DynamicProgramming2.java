@@ -58,7 +58,7 @@ public class DynamicProgramming2 {
         return dp[n] = ans;
     }
 
-    public static int catalnTab(int n) { // catane number using tabulation
+    public static int catalnTab(int n) { // catane number using tabulation 
         int[] dp = new int[n + 1];
         dp[0] = 1;
         dp[1] = 1;
