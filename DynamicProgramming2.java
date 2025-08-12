@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 public class DynamicProgramming2 {
 
-    public static boolean wildcardMatching(String s, String p) { // wildcard problem 
+    public static boolean wildcardMatching(String s, String p) { // wildcard pblm 
         int n = s.length();
         int m = p.length();
 
