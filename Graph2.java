@@ -164,7 +164,7 @@ public class Graph2 {
 
     }
 
-    static class Info { // cheapest flights with K spots
+    static class Info{  // cheapest flights with k spots 
         int v;
         int cost;
         int stops;
