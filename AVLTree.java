@@ -12,7 +12,7 @@ public class AVLTree {
 
     public static Node root;
 
-    public static int height(Node root) { // heigth function 
+    public static int height(Node root) { // height function 
 
         if (root == null) {
             return 0;
