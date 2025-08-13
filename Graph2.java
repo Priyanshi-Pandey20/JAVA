@@ -264,7 +264,7 @@ public class Graph2 {
     static int[] par = new int[n];
     static int[] rank = new int[n];
 
-    public static void init() {
+    public static void init() { // init 
         for (int i = 0; i < n; i++) {
             par[i] = i;
         }
