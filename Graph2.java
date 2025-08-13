@@ -235,7 +235,7 @@ public class Graph2 {
         }
     }
 
-    public static int connectCities(int[][] cities) {
+    public static int connectCities(int[][] cities) { // connect citites 
         PriorityQueue<Edge1> pq = new PriorityQueue<>();
 
         boolean[] vis = new boolean[cities.length];
