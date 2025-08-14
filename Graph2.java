@@ -353,7 +353,7 @@ public class Graph2 {
         }
     }
 
-    public static void KruskalMST(ArrayList<Edge2> edges, int V) {
+    public static void KruskalMST(ArrayList<Edge2> edges, int V) { // kruskal Mst 
         init1();
         Collections.sort(edges);
         int mstCost = 0;
