@@ -337,7 +337,7 @@ public class Graph2 {
         return find1(par[x]);
     }
 
-    public static void union1(int a, int b) {
+    public static void union1(int a, int b) { // union 
         int parA = find(a);
         int parB = find(b);
 
