@@ -86,7 +86,7 @@ public class DynamicProgramming2 {
         return dp[n];
     }
 
-    public static int mountainRanges(int n) { // count the mountains and valley
+    public static int mountainRanges(int n) { // count the mountains and valley 
         int dp[] = new int[n + 1];
         dp[0] = 1;
         dp[1] = 1;
