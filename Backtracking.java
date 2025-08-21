@@ -181,7 +181,7 @@ public class Backtracking {
         }
     }
 
-    public static void printSolution(int sol[][]) { // rat in a maze problem 
+    public static void printSolution(int sol[][]) { // rat in a maze pblm 
         for (int i = 0; i < sol.length; i++) {
             for (int j = 0; j < sol.length; j++) {
                 System.out.print(" " + sol[i][j] + " ");
