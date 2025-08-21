@@ -156,7 +156,7 @@ public class Arrays {
         System.out.println(max);
     }
 
-    public static void TwoSum() {
+    public static void TwoSum() { // two sum 
         int[] arr = { 1, 2, 3, 4, 5 }; //  2 sum pblm 
         int target = 5;
         boolean flag = false;
