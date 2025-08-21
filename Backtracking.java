@@ -270,7 +270,7 @@ public class Backtracking {
         }
     }
 
-    public static boolean solveKT() {
+    public static boolean solveKT() { // solve kt 
         int[][] sol = new int[8][8];
         for (int x = 0; x < N; x++)
             for (int y = 0; y < N; y++)
