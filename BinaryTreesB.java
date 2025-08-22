@@ -443,7 +443,7 @@ public class BinaryTreesB {
 
     }
 
-    public static int maxSum(Node root, Result result) {
+    public static int maxSum(Node root, Result result) { // max sum 
         if (root == null) {
             return 0;
         }
