@@ -13,7 +13,7 @@ public class CustomArrayList {
       }
    }
 
-   public static void MaximumNoInArrayList() { // find max element in array
+   public static void MaximumNoInArrayList() { // find max element in array pblm 
       ArrayList<Integer> list = new ArrayList();
       list.add(1);
       list.add(2);
