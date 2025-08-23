@@ -31,7 +31,7 @@ public class CustomArrayList {
 
    }
 
-   public static void SwapTwoNo(ArrayList<Integer> list, int idx1, int idx2) { // swap two no.
+   public static void SwapTwoNo(ArrayList<Integer> list, int idx1, int idx2) { // swap two no.pblm 
       int temp = list.get(idx1);
       list.set(idx1, list.get(idx2));
       list.set(idx2, temp);
