@@ -94,7 +94,7 @@ public class CustomArrayList {
       return false;
    }
 
-   public static boolean TwoSum2(ArrayList<Integer> list, int target) { // two sum for rotated list
+   public static boolean TwoSum2(ArrayList<Integer> list, int target) { // two sum for rotated list pblm 
       int bp = -1;
       int n = list.size();
       for (int i = 0; i < list.size(); i++) {
