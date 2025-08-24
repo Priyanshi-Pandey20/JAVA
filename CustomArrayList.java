@@ -45,7 +45,7 @@ public class CustomArrayList {
       System.out.println(list1);
    }
 
-   public static int storeWater(ArrayList<Integer> height) { // O(n^2) brute force approach
+   public static int storeWater(ArrayList<Integer> height) { // O(n^2) store water brute force approach 
       int maxWater = 0;
       for (int i = 0; i < height.size(); i++) {
          for (int j = i + 1; j < height.size(); j++) {
