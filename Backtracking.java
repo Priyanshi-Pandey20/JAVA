@@ -244,7 +244,7 @@ public class Backtracking {
         bfs(0, len, new StringBuilder(), D);
     }
 
-    public static void bfs(int pos, int len, StringBuilder sb, String D) { // bfs 
+    public static void bfs(int pos, int len, StringBuilder sb, String D) { // bfs pblm
         if (pos == len) {
             System.out.println(sb.toString());
         } else {
