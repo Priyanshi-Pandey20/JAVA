@@ -292,7 +292,7 @@ public class Backtracking {
 
     }
 
-    public static boolean solveKTUtil(int x, int y, int movei, int sol[][], int[] xMove, int[] yMove) { // solve kt util
+    public static boolean solveKTUtil(int x, int y, int movei, int sol[][], int[] xMove, int[] yMove) { // solve kt util pblm 
         int k, next_x, next_y;
         if (movei == N * N)
             return true;
