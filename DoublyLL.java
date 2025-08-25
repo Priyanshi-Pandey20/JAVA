@@ -5,7 +5,7 @@ public class DoublyLL {
         Node next;
         Node prev;
 
-        public Node(int data) {
+        public Node(int data) { // node 
             this.data = data;
             this.next = null;
             this.prev = null;
