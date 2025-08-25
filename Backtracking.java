@@ -257,7 +257,7 @@ public class Backtracking {
 
     static int N = 8;
 
-    public static boolean IsSafe(int x, int y, int sol[][]) {
+    public static boolean IsSafe(int x, int y, int sol[][]) { // is safe 
         return (x >= 0 && x < N && y >= 0 && y < N && sol[x][y] == -1);
     }
 
