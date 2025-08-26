@@ -21,7 +21,7 @@ public class AVLTree {
 
     }
 
-    public static Node rightRotate(Node y) { // right rotate
+    public static Node rightRotate(Node y) { // right rotate method 
         Node x = y.left;
         Node T2 = x.right;
 
