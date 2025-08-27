@@ -6,7 +6,7 @@ public class CircularLL {
 
     };
 
-    static Node addToEmpty(Node tail, int data) { // add node to empty ll
+    static Node addToEmpty(Node tail, int data) { // add node to empty linked list 
         if (tail != null)
             return tail;
         Node newNode = new Node();
