@@ -85,7 +85,7 @@ public class AVLTree {
 
     }
 
-    public static void preorder(Node root) {
+    public static void preorder(Node root) { // preorder
         if (root == null) {
             return;
         }
