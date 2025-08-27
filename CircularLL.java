@@ -29,7 +29,7 @@ public class CircularLL {
         return tail;
     }
 
-    static Node addEnd(Node tail, int data) { // add node at last
+    static Node addEnd(Node tail, int data) { // add node at last in the linked list
         if (tail == null) {
             return addToEmpty(tail, data);
         }
