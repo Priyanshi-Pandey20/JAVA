@@ -114,7 +114,7 @@ public class CircularLL {
         tail = addFront(tail, 2);
         tail = addAfter(tail, 10, 2);
         traverse(tail);
-        deleteNode(tail, 8);
+        //deleteNode(tail, 8);
         traverse(tail);
     }
 }
