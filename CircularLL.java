@@ -42,7 +42,7 @@ public class CircularLL {
 
     }
 
-    static Node addAfter(Node tail, int data, int item) { // add a node after given data
+    static Node addAfter(Node tail, int data, int item) { // add a node after given data in ll
         if (tail == null) {
             return null;
         }
