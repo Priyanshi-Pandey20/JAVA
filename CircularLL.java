@@ -65,7 +65,7 @@ public class CircularLL {
 
     }
 
-    static Node deleteNode(Node tail,int key){  // delete  node
+    static Node deleteNode(Node tail,int key){  // delete  node from linked list 
         if( tail== null){
             return null;
         }
