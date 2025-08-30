@@ -71,7 +71,7 @@ public class Demo {
    }
 
    public static void ReverseString() {
-      String str = "coding";// revere a string
+      String str = "coding";// reverse the str pblm
       String rev = "";
       for (int i = str.length() - 1; i >= 0; i--) {
          rev = rev + str.charAt(i);
