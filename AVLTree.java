@@ -45,7 +45,7 @@ public class AVLTree {
         return y;
     }
 
-    public static int getBalance(Node root) { // get balance 
+    public static int getBalance(Node root) { // get balance  function
         if (root == null) {
             return 0;
         }
