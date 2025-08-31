@@ -1,6 +1,6 @@
 import java.util.*;
 public class AVLTree {
-    static class Node {
+    static class Node { // node 
         int data, height;
         Node left, right;
 
@@ -21,7 +21,7 @@ public class AVLTree {
 
     }
 
-    public static Node rightRotate(Node y) { // right rotate method 
+    public static Node rightRotate(Node y) { // right rotate method  
         Node x = y.left;
         Node T2 = x.right;
 
