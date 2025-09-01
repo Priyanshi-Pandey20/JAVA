@@ -168,7 +168,7 @@ public class GreedyAlogrithms {
     }
   }
 
-  public static void JobSequencing(int[][] jobsInfo) {
+  public static void JobSequencing(int[][] jobsInfo) { // job sequencing
 
     ArrayList<Job> jobs = new ArrayList<>();
 
