@@ -135,7 +135,7 @@ public class GreedyAlogrithms {
 
   }
 
-  public static void IndianCoin(Integer[] coins, int amount) { // keeping adding coins
+  public static void IndianCoin(Integer[] coins, int amount) { //keeping adding coins pblm
     Arrays.sort(coins, Comparator.reverseOrder());
     int countOfCoins = 0;
 
