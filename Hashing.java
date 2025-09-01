@@ -93,7 +93,7 @@ public class Hashing {
             }
         }
 
-        public V remove(K key) { // O(1)
+        public V remove(K key) { // O(1) remove function
 
             int bi = hashFunction(key);
             int di = SearchLL(key, bi);
