@@ -128,7 +128,7 @@ public class Hashing2 {
         return map.isEmpty();
     }
 
-    public static void findUnionNIntersection(int[] arr1, int[] arr2) { // find union and intersection of 2 arrays
+    public static void findUnionNIntersection(int[] arr1, int[] arr2) { // find union and intersection of 2 arrays pblm
 
         HashSet<Integer> set = new HashSet<>();
         for (int i = 0; i < arr1.length; i++) {
