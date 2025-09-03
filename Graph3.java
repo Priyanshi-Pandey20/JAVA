@@ -60,7 +60,7 @@ public class Graph3 {
 
     }
 
-    public static void kosaraju(ArrayList<Edge>[] graph, int V) { // kosaraju algorithm
+    public static void kosaraju(ArrayList<Edge>[] graph, int V) { // kosaraju algorithm pblm
         Stack<Integer> st = new Stack<>();
         boolean[] vis = new boolean[V];
 
