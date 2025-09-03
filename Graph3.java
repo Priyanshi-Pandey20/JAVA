@@ -116,7 +116,7 @@ public class Graph3 {
         }
     }
 
-    public static void tarjanBridge(ArrayList<Edge>[] graph, int V) { // tarjan bridge 
+    public static void tarjanBridge(ArrayList<Edge>[] graph, int V) { // tarjan bridge pblm
         int[] dt = new int[V];
         int[] low = new int[V];
         int time = 0;
