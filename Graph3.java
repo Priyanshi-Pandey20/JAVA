@@ -130,7 +130,7 @@ public class Graph3 {
 
     }
 
-    public static void dfs1(ArrayList<Edge>[] graph, int curr, int par, int dt[], int low[], boolean[] vis, int time,   // find articulation points using tarjan's
+    public static void dfs1(ArrayList<Edge>[] graph, int curr, int par, int dt[], int low[], boolean[] vis, int time,   // find articulation points using tarjan's pblm 
             boolean[] ap) {
 
         vis[curr] = true;
