@@ -194,7 +194,7 @@ public class GreedyAlogrithms {
 
   }
 
-  public static void ChocolaProblem(Integer[] costVer, Integer[] costHor) { // divide the choclate into min cost
+  public static void ChocolaProblem(Integer[] costVer, Integer[] costHor) { // divide the choclate into min cost pblm 
 
     Arrays.sort(costVer, Collections.reverseOrder());
     Arrays.sort(costHor, Collections.reverseOrder());

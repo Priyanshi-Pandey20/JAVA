@@ -13,7 +13,7 @@ public class Graph3 {
         }
     }
 
-    static void createGraph(ArrayList<Edge>[] graph) { // create graph
+    static void createGraph(ArrayList<Edge>[] graph) { // create graph 
         for (int i = 0; i < graph.length; i++) {
             graph[i] = new ArrayList<>();
         }
