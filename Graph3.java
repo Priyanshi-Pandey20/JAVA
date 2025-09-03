@@ -159,7 +159,7 @@ public class Graph3 {
         }
     }
 
-    public static void getAP(ArrayList<Edge>[] graph, int V) { // get Ap 
+    public static void getAP(ArrayList<Edge>[] graph, int V) { // get Ap  pblm 
         int[] dt = new int[V];
         int[] low = new int[V];
 
