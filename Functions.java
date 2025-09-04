@@ -200,7 +200,7 @@ public class Functions {
         }
     }
 
-    public static int Fibbonacci(int n) { // fibbonacci  problem 
+    public static int Fibbonacci(int n) { // fibbonacci pblm
         if (n == 0) {
             return 0;
         }
