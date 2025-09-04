@@ -231,7 +231,7 @@ public class Functions {
 
     }
 
-    public static void ConvertStringToSmall(String[] str) { // convert string to small 
+    public static void ConvertStringToSmall(String[] str) { // convert string to small pblm  
 
         for (int i = 0; i < str.length; i++) {
             String small = "";
