@@ -125,7 +125,7 @@ public class Functions {
         System.out.println(sum);
     }
 
-    public static void CountAllDigits(int n) { // count all digits 
+    public static void CountAllDigits(int n) { // count all digits pblm 
         int count = 0;
         while (n != 0) {
             n /= 10;
