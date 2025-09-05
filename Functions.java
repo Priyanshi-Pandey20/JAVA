@@ -145,7 +145,7 @@ public class Functions {
         System.out.println(rev);
     }
 
-    public static void Palindrome(int n) {// palindrome
+    public static void Palindrome(int n) {// palindrome pblm 
         int original = n;
         int rev = 0;
         while (n != 0) {
