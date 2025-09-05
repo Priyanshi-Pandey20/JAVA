@@ -161,7 +161,7 @@ public class Functions {
 
     }
 
-    public static void PrintPrimeNoAlternatively() { // print prime no alternatively 
+    public static void PrintPrimeNoAlternatively() { // print prime no alternatively  pblm 
         int count = 0;
         for (int n = 2; n <= 100; n++) {
             boolean isPrime = true;
