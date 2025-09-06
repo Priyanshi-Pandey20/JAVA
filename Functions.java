@@ -78,7 +78,7 @@ public class Functions {
         }
     }
 
-    public static void ReverseNaturalNo(int n) { // reverse natural no.
+    public static void ReverseNaturalNo(int n) { // reverse natural no.pblm 
         for (int i = n; i >= 0; i--) {
             System.out.print(i);
         }
