@@ -36,7 +36,7 @@ public class Functions {
         return min;
     }
 
-    public static void printCopies(int[] arr1) { // copy one array to other
+    public static void printCopies(int[] arr1) { // copy one array to other pblm 
         int[] arr2 = new int[5];
         for (int i = 0; i < arr1.length; i++) {
             arr2[i] = arr1[i];
