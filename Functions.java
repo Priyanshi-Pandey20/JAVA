@@ -84,7 +84,7 @@ public class Functions {
         }
     }
 
-    public static void PrintEvenNo(int n) { // print even no. 
+    public static void PrintEvenNo(int n) { // print even no. pblm 
         for (int i = 0; i < n; i++) {
             if (i % 2 == 0) {
                 System.out.println("even no." + i);
