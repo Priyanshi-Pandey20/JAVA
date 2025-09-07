@@ -26,7 +26,7 @@ public class Functions {
 
     static int a = 12;
 
-    public static int SmallestNo(int[] arr) { // print smallest no in array 
+    public static int SmallestNo(int[] arr) { // print smallest no in array pblm 
         int min = Integer.MAX_VALUE;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] < min) {
