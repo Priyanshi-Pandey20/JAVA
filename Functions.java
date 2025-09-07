@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Functions {
-    public static int sum(int a, int b) { // print the sum of digits
+    public static int sum(int a, int b) { // print the sum of digits pblm 
 
         int sum = a + b;
         System.out.println(sum);
