@@ -72,7 +72,7 @@ public class Functions {
 
     }
 
-    public static void NaturalNo(int n) { // print natural no. 
+    public static void NaturalNo(int n) { // print natural no. pblm 
         for (int i = 0; i <= n; i++) {
             System.out.println(i);
         }
