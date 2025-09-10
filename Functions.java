@@ -93,7 +93,7 @@ public class Functions {
         }
     }
 
-    public static void SumOfNaturalNo(int n) { // print sum of natural no.
+    public static void SumOfNaturalNo(int n) { // print sum of natural no. pblm
         int sum = 0;
         for (int i = 0; i <= n; i++) {
             sum += i;
