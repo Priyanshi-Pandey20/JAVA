@@ -102,7 +102,7 @@ public class Functions {
         System.out.println(sum);
     }
 
-    public static void ProductOfNaturalNo(int n) { // print product of natural no.
+    public static void ProductOfNaturalNo(int n) { // print product of natural no. pblm 
         int product = 1;
         for (int i = 1; i <= n; i++) {
             product *= i;
