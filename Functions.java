@@ -116,7 +116,7 @@ public class Functions {
         }
     }
 
-    public static void SumOfDigits(int n) { // sum od digits 
+    public static void SumOfDigits(int n) { // sum od digits pblm 
         int sum = 0;
         while (n != 0) {
             sum += n % 10;
