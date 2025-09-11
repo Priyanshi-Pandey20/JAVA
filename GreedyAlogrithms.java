@@ -50,7 +50,7 @@ public class GreedyAlogrithms {
   }
 
   public static void ActivitySelectionNotSorted(int[] start, int[] end) { // maximum activities selection when ending is
-                                                                          // // unsorted
+                                                                          // // unsorted pblm 
     int activity[][] = new int[start.length][3];
     for (int i = 0; i < start.length; i++) {
       activity[i][0] = i;
