@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class GreedyAlogrithms {
 
-  public static String getSmallestString(int n, int k) { // lexicographically smallest string
+  public static String getSmallestString(int n, int k) { // lexicographically smallest string pblm 
     char[] res = new char[n];
     Arrays.fill(res, 'a');
     k -= n;
