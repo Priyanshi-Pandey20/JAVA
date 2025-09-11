@@ -183,7 +183,7 @@ public class Functions {
 
     }
 
-    public static void PrintPrimeNoInRange(int st, int end) { // print prime no in range 
+    public static void PrintPrimeNoInRange(int st, int end) { // print prime no in range pblm 
         for (int n = st; n <= end; n++) {
             boolean isPrime = true;
             for (int i = 2; i <= n / 2; i++) {
