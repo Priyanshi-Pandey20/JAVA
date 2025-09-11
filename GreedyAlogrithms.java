@@ -108,7 +108,7 @@ public class GreedyAlogrithms {
     System.out.println(finalVal);
   }
 
-  public static void MinAbsoluteDifferencePairs(int[] A, int[] B) { // O(nlogn) minimum absolute difference of pair
+  public static void MinAbsoluteDifferencePairs(int[] A, int[] B) { // O(nlogn) minimum absolute difference of pair pblm 
     Arrays.sort(A);
     Arrays.sort(B);
 
