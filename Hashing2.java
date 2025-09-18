@@ -190,7 +190,7 @@ public class Hashing2 {
 
     }
 
-    public static void subarraySumEqualToK(int[]arr,int k){   // subarray sum equal to k
+    public static void subarraySumEqualToK(int[]arr,int k){   // subarray sum equal to k pblm
         HashMap<Integer,Integer> map = new HashMap<>();
         map.put(0, 1);
 
