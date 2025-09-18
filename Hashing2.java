@@ -172,7 +172,7 @@ public class Hashing2 {
     }
 
 
-    public static void largestSubarraySum(int[] arr){ // find the largest subarray with 0 sum pblm 
+    public static void largestSubarraySum(int[] arr){ // fint the largest subarray sum
          HashMap <Integer,Integer> map = new HashMap<>();
 
         int sum =0;
