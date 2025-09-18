@@ -101,7 +101,7 @@ public class Hashing2 {
 
     }
 
-    public static boolean isAnagrams(String s, String t) { // check anagram
+    public static boolean isAnagrams(String s, String t) { // check anagram pblm
         if (s.length() != t.length()) {
             return false;
         }
