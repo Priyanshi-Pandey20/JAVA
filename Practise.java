@@ -95,7 +95,7 @@ public class Practise {
         System.out.println();
     }
 
-    public static void FrequencyCount() { // count the character frequency in string
+    public static void FrequencyCount() { // count the character frequency in string pblm 
         String str = "programming";
         char[] ch = str.toCharArray();
         HashMap<Character, Integer> map = new HashMap<>();
