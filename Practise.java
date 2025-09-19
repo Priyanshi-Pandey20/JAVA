@@ -107,7 +107,7 @@ public class Practise {
 
     }
 
-    public static void Count() { // count the string frequency in string
+    public static void Count() { // count the string frequency in string pblm 
         String str = "programming is fun and fun is programming";
         String[] words = str.split(" ");
         HashMap<String, Integer> wordCount = new HashMap<>();
