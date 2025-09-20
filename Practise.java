@@ -63,7 +63,7 @@ class sortByroll implements Comparator<Student1> {
 
 
 public class Practise {
-    public static void FindFirstDuplicate() {// find first duplicate
+    public static void FindFirstDuplicate() {// find first duplicate pblm 
         int[] arr = { 1, 2, 2, 42, 4, 5, 3, 53, 45, 3, 5 };
         HashSet<Integer> set = new HashSet<>();
         for (int i = 1; i < arr.length; i++) {
