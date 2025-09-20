@@ -28,7 +28,7 @@ class Student implements Comparable<Student> { //  sort acc. to age by making ob
 }
 
 
-class Student1 {  //  
+class Student1 {  //   student class
     int rollno;
     String name;
     int age;
