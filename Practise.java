@@ -76,7 +76,7 @@ public class Practise {
         System.out.println(set);
     }
 
-    public static void CountDuplicates() {// count the duplicates
+    public static void CountDuplicates() {// count the duplicates pblm 
         int[] arr = { 1, 2, 2, 42, 4, 5, 3, 53, 45, 3, 5 };
 
         HashSet<Integer> set2 = new HashSet<>();
