@@ -252,7 +252,7 @@ public class LinkedList {
         prev.next = null;
     }
 
-    private Node getMid(Node head) { // get mid node 
+    private Node getMid(Node head) { // get mid node  pblm
         Node slow = head;
         Node fast = head.next;
 
@@ -263,7 +263,7 @@ public class LinkedList {
         return slow;
     }
 
-    private Node merge(Node head1, Node head2) { // sort linked list using merge sort 
+    private Node merge(Node head1, Node head2) { // sort linked list using merge sort pblm
         Node mergedLL = new Node(-1);
         Node temp = mergedLL;
 
