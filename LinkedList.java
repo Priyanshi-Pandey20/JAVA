@@ -291,7 +291,7 @@ public class LinkedList {
         return mergedLL.next;
     }
 
-    public Node mergeSort(Node head) {
+    public Node mergeSort(Node head) { //merge sort
         if (head == null || head.next == null) {
             return head;
         }
