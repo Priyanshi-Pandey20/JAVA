@@ -210,7 +210,7 @@ public class LinkedList {
 
     }
 
-    public static boolean hasCycle() { // detch the cycle in linked list 
+    public static boolean hasCycle() { // detch the cycle in linked list  pblm
         Node slow = head;
         Node fast = head;
 
