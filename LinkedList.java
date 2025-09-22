@@ -306,7 +306,7 @@ public class LinkedList {
 
     }
 
-    public void ZigZagPattern() { // print ll in zig zag pattern (add from last) ll
+    public void ZigZagPattern() { // print ll in zig zag pattern (add from last) ll pblm
         Node slow = head;
         Node fast = head.next;
         while (fast != null && fast.next != null) {
