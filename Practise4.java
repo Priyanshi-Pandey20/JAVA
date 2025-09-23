@@ -56,7 +56,7 @@ public class Practise4 {
         List<Integer> evenList = list.stream().filter(n -> n % 2 == 0).map(n -> n * n).collect(Collectors.toList());
         System.out.println(evenList);
 
-        ArrayList<String> names = new ArrayList<>();
+        ArrayList<String> names = new ArrayList<>(); // add the names in list
         names.add("Ram");
         names.add("Shyam");
         names.add("Om");
