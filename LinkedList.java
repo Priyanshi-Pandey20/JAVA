@@ -225,7 +225,7 @@ public class LinkedList {
         return false;
     }
 
-    public void RemoveCycle() { // remove cycle in linked list 
+    public void RemoveCycle() { // remove cycle in linked list  pblm 
         Node slow = head;
         Node fast = head;
         boolean cycle = false;
