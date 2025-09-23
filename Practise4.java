@@ -66,7 +66,7 @@ public class Practise4 {
                 .collect(Collectors.toList());
         System.out.println(output);
 
-        ArrayList<Integer> list1 = new ArrayList<>();
+        ArrayList<Integer> list1 = new ArrayList<>();//check the divisiblity
         list1.add(1);
         list1.add(2);
         list1.add(3);
