@@ -94,7 +94,7 @@ public class Practise4 {
         System.out.println(tt);
 
 
-        ArrayList<String> list4 = new ArrayList<>();
+        ArrayList<String> list4 = new ArrayList<>(); // to lower case 
         list4.add("apple");
         list4.add("banana");
         list4.add("apricot");
