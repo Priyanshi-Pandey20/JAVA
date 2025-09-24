@@ -83,8 +83,8 @@ public class Practise4 {
 
         List<Integer> lengths = list2.stream().map(String:: length).collect(Collectors.toList());
         System.out.println(lengths);
-
-        ArrayList<Integer>list3 = new ArrayList<>();
+  
+        ArrayList<Integer>list3 = new ArrayList<>(); // check whether no. is greater or not
         list3.add(1000);
         list3.add(1500);
         list3.add(1000);
