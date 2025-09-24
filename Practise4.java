@@ -76,7 +76,7 @@ public class Practise4 {
         Integer oddSum = list1.stream().filter(n -> n%2 !=0).reduce(0, Integer:: sum);
         System.out.println(oddSum);
 
-        ArrayList<String> list2 = new ArrayList<>();
+        ArrayList<String> list2 = new ArrayList<>();   // use the map 
         list2.add("Java");
         list2.add("Stream");
         list2.add("Api");
