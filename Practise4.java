@@ -104,7 +104,7 @@ public class Practise4 {
         long ll = list4.stream().filter( s -> s.toLowerCase().startsWith("a")).map(String:: length).count();
         System.out.println(ll);
 
-        ArrayList<String>list5 = new ArrayList<>();
+        ArrayList<String>list5 = new ArrayList<>();  // to check the length of string greater than 4
         list5.add("John");
         list5.add("Ravi");
         list5.add("Abhishek");
