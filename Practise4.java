@@ -111,8 +111,8 @@ public class Practise4 {
         list5.add("Raj");
         String result =  list5.stream().filter(name-> name.length()>4).collect(Collectors.joining(","));
         System.out.println(result);
-
-        ArrayList<Integer> list6 = new ArrayList<>();
+ 
+        ArrayList<Integer> list6 = new ArrayList<>();  // check no. os divisible by 7 
         list6.add(10);
         list6.add(14);
         list6.add(22);
