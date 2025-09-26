@@ -54,7 +54,7 @@ public class Queue1 {
     }
   }
 
-  static class DequeB { // implement queue using deque
+  static class DequeB { // implement queue using deque pblm 
     Deque<Integer> deque = new LinkedList<>();
 
     public void add(int data) {
