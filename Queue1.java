@@ -70,7 +70,7 @@ public class Queue1 {
     }
   }
 
-  static class Queue { // Implementing queue using array
+  static class Queue { // Implementing queue using array pblm 
     static int[] arr;
     static int size;
     static int rear;
