@@ -13,7 +13,7 @@ public class Queue1 {
     }
   }
 
-  static class QueueLL { // Implmenting queue using LinkedList
+  static class QueueLL { // Implmenting queue using LinkedList pblm 
     static Node head = null;
     static Node tail = null;
 
