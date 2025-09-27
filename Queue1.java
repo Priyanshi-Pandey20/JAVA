@@ -81,7 +81,7 @@ public class Queue1 {
       rear = -1;
     }
 
-    public static boolean isEmpty() {
+    public static boolean isEmpty() {    // is Empty
       return rear == -1;
     }
 
