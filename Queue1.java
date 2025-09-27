@@ -151,7 +151,7 @@ public class Queue1 {
       arr[rear] = data;
     }
 
-    public static int remove() {  // remove 
+    public static int remove() {  // remove function
       if (isEmpty()) {
         System.out.println("empty queue");
         return -1;
