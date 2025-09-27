@@ -116,7 +116,7 @@ public class Queue1 {
     }
   }
 
-  static class CQueue { // implementing circular queue using array
+  static class CQueue { // implementing circular queue using array pblm 
     static int[] arr;
     static int size;
     static int rear;
