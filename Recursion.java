@@ -69,7 +69,7 @@ class Recursion {
         return total;
     }
 
-    public static void RemoveDuplicates(String str, int idx, StringBuilder newStr, boolean map[]) {// remove duplicates
+    public static void RemoveDuplicates(String str, int idx, StringBuilder newStr, boolean map[]) {// remove duplicates pblm 
         if (idx == str.length()) {
             System.err.println(newStr);
             return;
