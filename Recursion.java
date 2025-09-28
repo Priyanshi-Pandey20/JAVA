@@ -111,7 +111,7 @@ class Recursion {
         System.out.println("Move disk" + n + "from" + B + "to" + C);
     }
 
-    public static void BinaryString(int n, int lastidx, String str) { // print binary string 
+    public static void BinaryString(int n, int lastidx, String str) { // print binary string pblm
         if (n == 0) {
             System.out.println(str);
             return;

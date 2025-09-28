@@ -189,7 +189,7 @@ public class Queue1 {
       }
       if (q.isEmpty()) {
         System.out.println(-1 + " ");
-      } else {
+      } else {                                      
         System.out.println(q.peek() + " ");
       }
     }
