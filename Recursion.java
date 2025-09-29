@@ -47,7 +47,7 @@ class Recursion {
 
     }
 
-    public static int FirstOccurance(int[] arr1, int key, int i) { // find first occurance in array 
+    public static int FirstOccurance(int[] arr1, int key, int i) { // find first occurance in array  pblm 
         if (i == arr1.length - 1) {
             return -1;
         }
