@@ -5,7 +5,7 @@ class Recursion {
 
     public static int fact(int n) {  //  O(n) - time compelexicity ,space complexicity
                                     
-        if (n == 0) { // factorial of number 
+        if (n == 0) { // factorial of number pblm 
             return 1;
         }
 
