@@ -169,7 +169,7 @@ public class StackB {
         }
     }
 
-    public static void pushAtBottom(Stack<Integer> s, int data) { // push at the bottom
+    public static void pushAtBottom(Stack<Integer> s, int data) { // push at the bottom pblm 
         if (s.isEmpty()) {
             s.push(data);
             return;
