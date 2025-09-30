@@ -179,7 +179,7 @@ public class StackB {
         s.push(top);
     }
 
-    public static String reverseString(String str) { //reverse string 
+    public static String reverseString(String str) { //reverse string  pblm 
         Stack<Character> s = new Stack<>();
         int idx = 0;
 
