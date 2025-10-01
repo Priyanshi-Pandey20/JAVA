@@ -250,7 +250,7 @@ public class StackB {
 
     }
 
-    public static boolean ValidParentheses(String str) { // valid parentheses
+    public static boolean ValidParentheses(String str) { // valid parentheses pblm 
         Stack<Character> s = new Stack<>();
 
         for (int i = 0; i < str.length(); i++) {
