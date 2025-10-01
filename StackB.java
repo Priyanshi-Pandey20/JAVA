@@ -230,7 +230,7 @@ public class StackB {
         }
     }
 
-    public static void NextGreaterElement(int[] arr, Stack<Integer> s, int[] nextGreater) { // find the next greater element
+    public static void NextGreaterElement(int[] arr, Stack<Integer> s, int[] nextGreater) { // find the next greater element pblm
         for (int i = arr.length - 1; i >= 0; i--) {
             while (!s.isEmpty() && arr[s.peek()] <= arr[i]) {
                 s.pop();
