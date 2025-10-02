@@ -278,7 +278,7 @@ public class StackB {
 
     }
 
-    public static boolean DuplicateParentheses(String str) {// duplicate parentheses
+    public static boolean DuplicateParentheses(String str) {// duplicate parentheses pblm 
         Stack<Character> s = new Stack<>();
         for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
