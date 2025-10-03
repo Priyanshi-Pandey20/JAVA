@@ -24,7 +24,7 @@ public class TwoDArray {
             System.out.println(colSum);
         }
 
-        int[][] b = { { 7, 8, 9 }, { 2, 3, 1 } }; // max element in 2d array
+        int[][] b = { { 7, 8, 9 }, { 2, 3, 1 } }; // max element in 2d array pblm 
         int max = Integer.MIN_VALUE;
         for (int i = 0; i < b.length; i++) {
             for (int j = 0; j < b[i].length; j++) {
