@@ -36,7 +36,7 @@ public class TwoDArray {
         }
         System.out.println(max);
 
-        int[][] c = { { 7, 8, 9 }, { 2, 3, 1 } }; // min element in 2d array 
+        int[][] c = { { 7, 8, 9 }, { 2, 3, 1 } }; // min element in 2d array pblm 
         int min = Integer.MAX_VALUE;
         for (int i = 0; i < c.length; i++) {
             for (int j = 0; j < c[i].length; j++) {
