@@ -15,7 +15,7 @@ public class TwoDArray {
         }
         System.out.println();
 
-        int[][] s = { { 1, 2 }, { 6, 7 }, { 9, 10 } };// col sum
+        int[][] s = { { 1, 2 }, { 6, 7 }, { 9, 10 } };// col sum pblm 
         for (int i = 0; i < s[0].length; i++) {
             int colSum = 0;
             for (int j = 0; j < s.length; j++) {
