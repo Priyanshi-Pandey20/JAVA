@@ -82,7 +82,7 @@ class Trie {
 
     }
 
-    public static boolean startsWith(String prefix) { // check whether the given whole prefix is present in trie or not
+    public static boolean startsWith(String prefix) { // check whether the given whole prefix is present in trie or not pblm 
         Node curr = root;
 
         for (int i = 0; i < prefix.length(); i++) {
