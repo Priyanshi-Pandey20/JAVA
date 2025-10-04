@@ -39,7 +39,7 @@ class Trie {
         curr.isEnd = true;
     }
 
-    public static boolean search(String key) { // O(n) search the key in trie
+    public static boolean search(String key) { // O(n) search the key in trie pblm 
         Node curr = root;
         for (int level = 0; level < key.length(); level++) {
             int idx = key.charAt(level) - 'a';
