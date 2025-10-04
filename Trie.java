@@ -24,7 +24,7 @@ class Trie {
 
     public static Node root = new Node();
 
-    public static void insert(String word) { // insert node in trie 
+    public static void insert(String word) { // insert node in trie  pblm 
         Node curr = root;
         for (int level = 0; level < word.length(); level++) {
             int idx = word.charAt(level) - 'a';
