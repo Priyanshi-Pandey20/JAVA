@@ -95,7 +95,7 @@ class Trie {
         return true;
     }
 
-    public static int countUniqueSubtrings(Node root) { // count all the unique substrings in trie
+    public static int countUniqueSubtrings(Node root) { // count all the unique substrings in trie pblm 
         if (root == null) {
             return 0;
         }
