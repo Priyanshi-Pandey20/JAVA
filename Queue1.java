@@ -196,7 +196,7 @@ public class Queue1 {
     System.out.println();
   }
 
-  public static void interLeave(java.util.Queue<Integer> q) { // interLeave
+  public static void interLeave(java.util.Queue<Integer> q) { // interLeave pblm 
     java.util.Queue<Integer> firsthalf = new LinkedList<>();
     int size = q.size();
     for (int i = 0; i < size / 2; i++) {
