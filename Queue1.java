@@ -174,7 +174,7 @@ public class Queue1 {
     }
   }
 
-  public static void PrintFirstNonRepeating(String str) {// print first repeating element
+  public static void PrintFirstNonRepeating(String str) {// print first repeating element pblm 
     int[] freq = new int[26];
 
     java.util.Queue<Character> q = new LinkedList<>();
