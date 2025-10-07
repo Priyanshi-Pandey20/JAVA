@@ -218,7 +218,7 @@ public class Queue1 {
     }
   }
 
-  public static void GenerateBinaryNo(int n) { // generate binary number of given string
+  public static void GenerateBinaryNo(int n) { // generate binary number of given string pblm
     for (int i = 1; i <= n; i++) {
       String s = Integer.toBinaryString(i);
       System.out.println(s);
