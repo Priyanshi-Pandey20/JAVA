@@ -208,7 +208,7 @@ public class Queue1 {
     }
   }
 
-  public static void reverseQueue(java.util.Queue<Integer> q) { // reverse queue
+  public static void reverseQueue(java.util.Queue<Integer> q) { // reverse queue pblm 
     Stack<Integer> s = new Stack<>();
     while (!q.isEmpty()) {
       s.push(q.remove());
