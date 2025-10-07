@@ -227,7 +227,7 @@ public class Queue1 {
 
   }
 
-  public static int minCost(int[] arr, int n) { // minimum cost to find n ropes
+  public static int minCost(int[] arr, int n) { // minimum cost to find n ropes pblm 
     PriorityQueue<Integer> pq = new PriorityQueue<>();
     for (int i = 0; i < n; i++) {
       pq.add(arr[i]);
