@@ -34,7 +34,7 @@ public class Hashing {
             return Math.abs(hc) % buckets.length;
         }
 
-        private int SearchLL(K key, int bi) { // it search the node in ll
+        private int SearchLL(K key, int bi) { // it search the node in ll pblm
             LinkedList<Node> ll = buckets[bi];
             int di = 0;
 
@@ -93,7 +93,7 @@ public class Hashing {
             }
         }
 
-        public V remove(K key) { // O(1) remove function
+        public V remove(K key) { // O(1) remove function 
 
             int bi = hashFunction(key);
             int di = SearchLL(key, bi);
