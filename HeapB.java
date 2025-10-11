@@ -49,7 +49,7 @@ public class HeapB {
             }
         }
 
-        public int remove() { // remove the node frome heap
+        public int remove() { // remove the node frome heap pblm
             int temp = arr.get(0);
             int data = arr.get(0);
             arr.set(0, arr.get(arr.size() - 1));
