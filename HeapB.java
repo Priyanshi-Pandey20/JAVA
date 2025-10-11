@@ -65,7 +65,7 @@ public class HeapB {
 
     }
 
-    static class Point implements Comparable<Point> { // nearest car 
+    static class Point implements Comparable<Point> { // nearest car pblm
         int x;
         int y;
         int disSq;
