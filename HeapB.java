@@ -84,7 +84,7 @@ public class HeapB {
         }
     }
 
-    static class Row implements Comparable<Row> { // weakest soliders
+    static class Row implements Comparable<Row> { // weakest soliders pblm 
         int soliders;
         int idx;
 
