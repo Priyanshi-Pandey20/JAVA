@@ -169,7 +169,7 @@ public class HeapB {
     }
 
     static PriorityQueue<Integer> min1;
-    /// kth largest element in stream of integer
+    /// kth largest element in stream of integer pblm
     static int p;
 
     static List<Integer> getAllKthNumbers(int[] arr) {
