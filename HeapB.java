@@ -119,7 +119,7 @@ public class HeapB {
         }
     }
 
-    static class Node implements Comparable<Node> { // path with minimum efforts
+    static class Node implements Comparable<Node> { // path with minimum efforts pblm 
         int row, col, effort;
 
         Node(int row, int col, int effort) {
