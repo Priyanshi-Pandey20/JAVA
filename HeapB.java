@@ -228,7 +228,7 @@ public class HeapB {
         }
     }
 
-    static class ListNodeComparator implements Comparator<ListNode> {
+    static class ListNodeComparator implements Comparator<ListNode> { // comparator
         public int compare(ListNode k1, ListNode k2) {
             if (k1.data > k2.data) {
                 return 1;
