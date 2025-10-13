@@ -218,7 +218,7 @@ public class HeapB {
         System.out.println(time - 1);
     }
 
-    static class ListNode { // merge k sorted list
+    static class ListNode { // merge k sorted list pblm
         int data;
         ListNode next;
 
