@@ -192,7 +192,7 @@ public class HeapB {
         return list;
     }
 
-    public static void minTime(int[] arr, int n, int k) { // min time required to fill n slots
+    public static void minTime(int[] arr, int n, int k) { // min time required to fill n slots pblm 
         Queue<Integer> q = new LinkedList<>();
         boolean vis[] = new boolean[n + 1];
         int time = 0;
