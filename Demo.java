@@ -80,7 +80,7 @@ public class Demo {
    }
 
    public static void RepeatedString() {
-      String str8 = "hellooooo"; // print second repeated charater in string
+      String str8 = "hellooooo"; // print second repeated charater in string pblm
       String newStr = "";
 
       int count1 = 0;
