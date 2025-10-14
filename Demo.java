@@ -40,7 +40,7 @@ public class Demo {
    }
 
    public static void CountVowel() {
-      String str3 = "racecarjhdgahaha"; // count no. of vowels in string
+      String str3 = "racecarjhdgahaha"; // count no. of vowels in string pblm
 
       int ct = 0;
       for (int i = 0; i < str3.length(); i++) {
