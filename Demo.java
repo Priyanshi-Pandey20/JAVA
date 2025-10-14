@@ -52,7 +52,7 @@ public class Demo {
       System.out.println(ct);
    }
 
-   public static void RemoveDuplicates() { // remove duplicates from string 
+   public static void RemoveDuplicates() { // remove duplicates from string pblm
       String str4 = "happy"; 
       for (int i = 0; i < str4.length(); i++) {
          boolean flag = true;
