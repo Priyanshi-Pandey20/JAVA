@@ -119,7 +119,7 @@ public class CustomArrayList {
       return false;
    }
 
-   public static boolean MonotonicArrayList(ArrayList<Integer> list) { // monotonic array 
+   public static boolean MonotonicArrayList(ArrayList<Integer> list) { // monotonic array pblm
       for (int i = 0; i < list.size(); i++) {
          for (int j = i + 1; j < list.size(); j++) {
             while (i < j || list.get(i) == list.get(j)) {
