@@ -77,7 +77,7 @@ public class CustomArrayList {
       return maxWater;
    }
 
-   public static boolean TwoSum(ArrayList<Integer> list, int target) { // two sum for liner list 
+   public static boolean TwoSum(ArrayList<Integer> list, int target) { // two sum for liner list pblm
       int lp = 0;
       int rp = list.size() - 1;
       while (lp != rp) {
