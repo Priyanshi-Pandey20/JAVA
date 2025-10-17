@@ -81,7 +81,7 @@ public class DoublyLL {
 
     }
 
-    public void Reversedll() { // reverse dll
+    public void Reversedll() { // reverse dll pblm 
         Node curr = head;
         Node prev = null;
         Node next;
