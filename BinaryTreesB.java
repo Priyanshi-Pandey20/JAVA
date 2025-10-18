@@ -391,7 +391,7 @@ public class BinaryTreesB {
 
     }
 
-    public static Node mirror(Node root) { // create Mirror image if the tree
+    public static Node mirror(Node root) { // create Mirror image if the tree pblm 
         if (root == null) {
             return root;
         }
