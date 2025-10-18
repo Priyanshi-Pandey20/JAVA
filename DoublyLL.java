@@ -100,7 +100,7 @@ public class DoublyLL {
 
 
  
-    public void Print() { // print doubly linked list
+    public void Print() { // print doubly linked list pblm 
         Node temp = head;
         while (temp != null) {
             System.out.print(temp.data + "<->");
