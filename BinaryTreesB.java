@@ -415,7 +415,7 @@ public class BinaryTreesB {
         InOrder(root.right);
     }
 
-    public static Node DeleteLeaFNodes(Node root, int x) { // delete all the leaf nodes with a given target
+    public static Node DeleteLeaFNodes(Node root, int x) { // delete all the leaf nodes with a given target pblm 
         if (root == null) {
             return null;
         }
