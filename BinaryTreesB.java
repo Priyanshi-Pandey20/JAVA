@@ -458,7 +458,7 @@ public class BinaryTreesB {
 
     }
 
-    public static int findMaxSum(Node root) { // find max sum
+    public static int findMaxSum(Node root) { // find max sum pblm
         Result result = new Result();
         result.maxSum = Integer.MIN_VALUE;
         maxSum(root, result);
