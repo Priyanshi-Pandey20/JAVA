@@ -465,7 +465,7 @@ public class BinaryTreesB {
         return result.maxSum;
     }
 
-    public static int countLeafNodes(Node root) { // count all the leaf nodes
+    public static int countLeafNodes(Node root) { // count all the leaf nodes pblm 
         if (root == null)
             return 0;
 
