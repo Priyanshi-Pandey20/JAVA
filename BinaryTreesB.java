@@ -377,7 +377,7 @@ public class BinaryTreesB {
         preOrder(root.right);
     }
 
-    public static boolean IsUnivaluedTree(Node root) { // check whether all nodes contains same value
+    public static boolean IsUnivaluedTree(Node root) { // check whether all nodes contains same value pblm 
         if (root == null) {
             return true;
         }
