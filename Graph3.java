@@ -48,7 +48,7 @@ public class Graph3 {
         s.push(curr);
     }
 
-    public static void dfs(ArrayList<Edge>[] graph, int curr, boolean[] vis) { // dfs function
+    public static void dfs(ArrayList<Edge>[] graph, int curr, boolean[] vis) { // dfs function pblm
         vis[curr] = true;
         System.out.println(curr + " ");
         for (int i = 0; i < graph[curr].size(); i++) {
