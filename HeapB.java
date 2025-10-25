@@ -275,7 +275,7 @@ public class HeapB {
     }
 
     public static void main(String[] args) {
-        int[][] pts = { { 3, 3 }, { 5, -1 }, { -2, 4 } }; // nearest car main function
+        int[][] pts = { { 3, 3 }, { 5, -1 }, { -2, 4 } }; // nearest car main function pblm 
         int k = 2;
         PriorityQueue<Point> pq = new PriorityQueue<>();
         for (int i = 0; i < pts.length; i++) {
