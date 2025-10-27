@@ -305,7 +305,7 @@ public class HeapB {
         System.out.println(cost);
 
         int[][] army = { { 1, 0, 0, 0 }, { 1, 1, 1, 1 }, { 1, 0, 0, 0 }, { 1, 0, 0, 0 } }; // Weakest Soliders main
-                                                                                           // method
+                                                                                           // method pblm 
 
         int s = 2;
         PriorityQueue<Row> pq2 = new PriorityQueue<>();
