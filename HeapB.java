@@ -323,7 +323,7 @@ public class HeapB {
 
         }
 
-        int[] arr = { 1, 3, -1, -3, 5, 3, 6, 7 }; // sliding window problem main method O(nlogk)
+        int[] arr = { 1, 3, -1, -3, 5, 3, 6, 7 }; // sliding window problem main method O(nlogk) pblm
         int t = 3;
 
         int[] res = new int[arr.length - t + 1];
