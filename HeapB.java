@@ -351,7 +351,7 @@ public class HeapB {
         min1 = new PriorityQueue<>();
         p = 3;
         int[] arr2 = { 1, 2, 3, 4, 5, 6 };
-        List<Integer> res1 = getAllKthNumbers(arr2);
+        List<Integer> res1 = getAllKthNumbers(arr2);  // get all kth numbers
         for (int x : res1) {
             System.out.println(x);
 
