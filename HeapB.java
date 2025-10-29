@@ -344,7 +344,7 @@ public class HeapB {
         }
         System.out.println();
 
-        int[][] heights = { { 1, 2, 2 }, { 3, 8, 2 }, { 5, 3, 5 } };
+        int[][] heights = { { 1, 2, 2 }, { 3, 8, 2 }, { 5, 3, 5 } };  //minimum efforts path pblm 
         int total = minmumEfforstPath(heights);
         System.out.println(total);
 
