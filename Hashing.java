@@ -29,7 +29,7 @@ public class Hashing {
             }
         }
 
-        private int hashFunction(K key) { // it takes the objects anf return index
+        private int hashFunction(K key) { // it takes the objects anf return index pblm 
             int hc = key.hashCode();
             return Math.abs(hc) % buckets.length;
         }
