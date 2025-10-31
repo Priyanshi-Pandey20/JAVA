@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 public class Hashing {
 
-    static class HashMap<K, V> {   // implementing hashmap
+    static class HashMap<K, V> {   // implementing hashmap pblm
 
         private class Node {
             K key;
