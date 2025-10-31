@@ -66,7 +66,7 @@ public class Hashing2 {
         return result.toString();
     }
 
-    public static int[] TwoSum(int[] arr, int target) { // find the target sum by adding the elements in array
+    public static int[] TwoSum(int[] arr, int target) { // find the target sum by adding the elements in array pblm
 
         HashMap<Integer, Integer> m = new HashMap<>();
         int n = arr.length;
