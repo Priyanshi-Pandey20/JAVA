@@ -46,7 +46,7 @@ public class Hashing2 {
         return ans;
     }
 
-    public static String FrequencySort(String s) { // on the basis of frequency sort the characters
+    public static String FrequencySort(String s) { // on the basis of frequency sort the characters pblm
         Map<Character, Integer> frequencyMap = new HashMap<>();
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
