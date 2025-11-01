@@ -82,7 +82,7 @@ public class Hashing2 {
         return new int[] {};
     }
 
-    public static void majorityElement(int[] arr) { // find all elements that appear more then n/3 times
+    public static void majorityElement(int[] arr) { // find all elements that appear more then n/3 times pblm 
         HashMap<Integer, Integer> map = new HashMap<>();
 
         for (int i = 0; i < arr.length; i++) {
