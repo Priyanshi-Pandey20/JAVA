@@ -13,7 +13,7 @@ public class Hashing2 {
         }
     }
 
-    static class Pair { // bottom view of tree 
+    static class Pair { // bottom view of tree  pblm 
         int level;
         int data;
 
