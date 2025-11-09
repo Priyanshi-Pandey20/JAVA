@@ -178,7 +178,7 @@ public class Graph2 {
 
     }
 
-    public static int cheapestFlight(int n, int[][] flights, int src, int dest, int k) { // cheapest flights 
+    public static int cheapestFlight(int n, int[][] flights, int src, int dest, int k) { // cheapest flights pblm 
         ArrayList<Edge>[] graph = new ArrayList[n];
         createGraph1(flights, graph);
 
