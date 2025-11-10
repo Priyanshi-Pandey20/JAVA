@@ -217,7 +217,7 @@ public class Graph2 {
 
     }
 
-    static class Edge1 implements Comparable<Edge1> { // connect cities with minimum cost
+    static class Edge1 implements Comparable<Edge1> { // connect cities with minimum cost pblm 
 
         int dest;
         int cost;
