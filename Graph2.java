@@ -260,7 +260,7 @@ public class Graph2 {
 
     }
 
-    static int n = 7; // Disjoint set
+    static int n = 7; // Disjoint set pblm
     static int[] par = new int[n];
     static int[] rank = new int[n];
 
