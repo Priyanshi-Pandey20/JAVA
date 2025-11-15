@@ -277,7 +277,7 @@ public class Graph2 {
         return find(par[x]);
     }
 
-    public static void union(int a, int b) { // union 
+    public static void union(int a, int b) { // union pblm 
         int parA = find(a);
         int parB = find(b);
 
@@ -293,7 +293,7 @@ public class Graph2 {
         }
     }
 
-    static class Edge2 implements Comparable<Edge2> { // Kruskal's Algorithm
+    static class Edge2 implements Comparable<Edge2> { // Kruskal's Algorithm pblm 
         int src;
         int dest;
         int wt;
