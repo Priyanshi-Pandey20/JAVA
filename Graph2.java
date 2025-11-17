@@ -311,7 +311,7 @@ public class Graph2 {
 
     }
 
-    static void createGraph1(ArrayList<Edge2> edges) { // create graph 
+    static void createGraph1(ArrayList<Edge2> edges) { // create graph  pblm
         edges.add(new Edge2(0, 1, 10));
         edges.add(new Edge2(0, 2, 15));
         edges.add(new Edge2(0, 3, 30));
