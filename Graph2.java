@@ -386,7 +386,7 @@ public class Graph2 {
 
     }
 
-    public static int[][] floodFill(int[][] image, int sr, int sc, int color) { // flood fill 
+    public static int[][] floodFill(int[][] image, int sr, int sc, int color) { // flood fill  pblm 
         boolean[][] vis = new boolean[image.length][image[0].length];
         helper(image, sr, sc, color, vis, image[sr][sc]);
         return image;
