@@ -33,7 +33,7 @@ public class DynamicProgramming2 {
 
     }
 
-    public static int catalnRec(int n) { // catalane number using recursion
+    public static int catalnRec(int n) { // catalane number using recursion pblm 
         if (n == 0 || n == 1) {
             return 1;
         }
