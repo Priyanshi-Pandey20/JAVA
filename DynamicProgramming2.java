@@ -71,7 +71,7 @@ public class DynamicProgramming2 {
         return dp[n];
     }
 
-    public static int countBST(int n) { // unique binary search trees
+    public static int countBST(int n) { // unique binary search trees pblm 
         int[] dp = new int[n + 1];
         dp[0] = 1;
         dp[1] = 1;
