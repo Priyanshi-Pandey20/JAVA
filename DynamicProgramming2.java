@@ -86,7 +86,7 @@ public class DynamicProgramming2 {
         return dp[n];
     }
 
-    public static int mountainRanges(int n) { // count the mountains and valley 
+    public static int mountainRanges(int n) { // count the mountains and valley pblm 
         int dp[] = new int[n + 1];
         dp[0] = 1;
         dp[1] = 1;
@@ -101,7 +101,7 @@ public class DynamicProgramming2 {
         return dp[n];
     }
 
-    public static int mcm(int[] arr, int i, int j) { // matrix chain multiplication using recursion
+    public static int mcm(int[] arr, int i, int j) { // matrix chain multiplication using recursion pblm 
         if (i == j) {
             return 0;
         }
