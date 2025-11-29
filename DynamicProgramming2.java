@@ -116,7 +116,7 @@ public class DynamicProgramming2 {
         return ans;
     }
 
-    public static int mcmMem(int[] arr, int i, int j, int[][] dp) { // matrix chain multiplication using memoization
+    public static int mcmMem(int[] arr, int i, int j, int[][] dp) { // matrix chain multiplication using memoization pblm 
 
         if (i == j) {
             return 0;
