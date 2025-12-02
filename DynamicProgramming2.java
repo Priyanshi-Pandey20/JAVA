@@ -136,7 +136,7 @@ public class DynamicProgramming2 {
         return dp[i][j];
     }
 
-    public static int mcmTab(int[] arr) { // mcm using tabulation 
+    public static int mcmTab(int[] arr) { // mcm using tabulation  pblm 
         int n = arr.length;
         int[][] dp = new int[n][n];
 
