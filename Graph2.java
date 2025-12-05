@@ -373,7 +373,7 @@ public class Graph2 {
         System.out.println(mstCost);
     }
 
-    public static void helper(int[][] image, int sr, int sc, int color, boolean[][] vis, int orgCol) {  // Flood Fill
+    public static void helper(int[][] image, int sr, int sc, int color, boolean[][] vis, int orgCol) {  // Flood Fill pblm 
         if(sr < 0 || sc < 0 || sr >= image.length|| sc>= image[0].length|| vis[sr][sc] || image[sr][sc] != orgCol){
             return;
         }
