@@ -49,7 +49,7 @@ public class Hashing {
 
         }
 
-        private void rehash() { // rehash 
+        private void rehash() { // rehash  pblm 
             LinkedList<Node> oldBuck[] = buckets;
             buckets = new LinkedList[N * 2];
             N = 2 * N;
