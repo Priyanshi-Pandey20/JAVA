@@ -82,7 +82,7 @@ public class Hashing {
             }
         }
 
-        public boolean containsKey(K key) { // O(1)
+        public boolean containsKey(K key) { // O(1) time complexicity
             int bi = hashFunction(key);
             int di = SearchLL(key, bi);
 
