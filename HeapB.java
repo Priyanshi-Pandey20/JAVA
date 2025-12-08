@@ -287,7 +287,7 @@ public class HeapB {
             System.out.println(pq.remove().idx);
         }
 
-        int[] ropes = { 2, 3, 3, 4, 6 }; // Connect N ropes main function
+        int[] ropes = { 2, 3, 3, 4, 6 }; // Connect N ropes main function pblm 
         PriorityQueue<Integer> pq1 = new PriorityQueue<>();
         for (int i = 0; i < ropes.length; i++) {
             pq1.add(ropes[i]);
