@@ -154,7 +154,7 @@ interface Runable {
 }
 
 class Human implements Walkable, Runable {
-    public void walk() {
+    public void walk() { // walk 
         System.out.println("Walking");
     }
 
