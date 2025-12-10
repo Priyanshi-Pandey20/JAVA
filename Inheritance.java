@@ -149,7 +149,7 @@ interface Walkable {
     void walk();
 }
 
-interface Runable {
+interface Runable { // run 
     void run();
 }
 
