@@ -164,7 +164,7 @@ class Human implements Walkable, Runable {
 }
 
 interface A {
-    void display();
+    void display(); // display
 
 }
 
