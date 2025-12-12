@@ -183,7 +183,7 @@ interface Animal2 {
 }
 
 class Dog2 implements Animal2 {
-    public void makeSound() {
+    public void makeSound() { // make sound 
         System.out.println("Bark");
 
     }
