@@ -190,7 +190,7 @@ class Dog2 implements Animal2 {
 }
 
 interface Shape2 {
-    void area(int radius);
+    void area(int radius); // area
 }
 
 class Circle implements Shape2 {
