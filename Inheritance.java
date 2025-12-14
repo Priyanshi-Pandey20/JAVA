@@ -200,7 +200,8 @@ class Circle implements Shape2 {
 }
 
 interface Vehicle {
-    default void start() {
+    default void start() { // start
+        
         System.out.println("vehicle is starting");
     }
 }
