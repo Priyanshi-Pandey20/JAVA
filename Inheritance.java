@@ -179,7 +179,7 @@ class Demo implements A, B {
 }
 
 interface Animal2 {
-    void makeSound();
+    void makeSound(); // make sound 
 }
 
 class Dog2 implements Animal2 {
