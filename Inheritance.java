@@ -169,7 +169,7 @@ interface A {
 }
 
 interface B {
-    void display();
+    void display(); // display
 }
 
 class Demo implements A, B {
