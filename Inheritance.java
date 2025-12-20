@@ -4,7 +4,7 @@ class Employee { // single level Inheritance
     }
 }
 
-class Manager extends Employee {
+class Manager extends Employee { // attend meeting
     void attendMeeting() {
         System.out.println("Manager is attending a meeting");
     }
