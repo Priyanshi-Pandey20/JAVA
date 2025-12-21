@@ -17,7 +17,7 @@ class Person { // mutlilevel
 }
 
 class Student extends Person {
-    void displayClass() {
+    void displayClass() { // dislay class
         System.out.println("Class : 12th");
     }
 }
