@@ -23,7 +23,7 @@ class Student extends Person {
 }
 
 class Moniter extends Student {
-    void checkdispline() {
+    void checkdispline() { // checkdispline
         System.out.println("Moniter is checking discipline");
     }
 }
