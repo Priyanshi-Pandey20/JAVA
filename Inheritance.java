@@ -47,7 +47,7 @@ class GamingLaptop extends Laptop {
 }
 
 class Animal {
-    void eat() {
+    void eat() { //eat
         System.out.println("eats");
     }
 }
