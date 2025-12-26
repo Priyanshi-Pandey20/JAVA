@@ -53,7 +53,7 @@ class Animal {
 }
 
 class Dog extends Animal {
-    void bark() {
+    void bark() { //bark
         System.out.println("barkkk");
     }
 }
