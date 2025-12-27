@@ -59,7 +59,7 @@ class Dog extends Animal {
 }
 
 class Puppy extends Dog {
-    void cute() {
+    void cute() {// cute
         System.out.println("cute");
     }
 }
