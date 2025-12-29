@@ -71,7 +71,7 @@ class cat extends Animal {
 }
 
 class Add {// method overloading
-    void sum(int a, int b) {
+    void sum(int a, int b) {// sum
         System.out.println(a + b);
     }
 
