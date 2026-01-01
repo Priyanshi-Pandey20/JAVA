@@ -210,12 +210,12 @@ class Car implements Vehicle {
 
 }
 
-// public class Inheritance {
+public class Inheritance {
 
-//     public static void main(String[] args) {
+    public static void main(String[] args) {
 
-//         Car obj = new Car(); // object
-//         obj.start();
+        Car obj = new Car(); // object
+        obj.start();
 
-//     }
-// }
+    }
+}
