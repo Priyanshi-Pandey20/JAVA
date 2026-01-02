@@ -95,7 +95,7 @@ class Sum {
 
 }
 
-class Shape {
+class Shape { // shape class
     void area(double radius) { // area
 
         System.out.println(3.14 * radius * radius);
