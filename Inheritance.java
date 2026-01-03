@@ -101,7 +101,7 @@ class Shape { // shape class
         System.out.println(3.14 * radius * radius);
     }
 
-    void area(int l, int b) {
+    void area(int l, int b) { // area
         System.out.println(l * b);
     }
 
