@@ -115,7 +115,7 @@ class Shape { // shape class
 
 }
 
-class Book {
+class Book { // Book 
     void display(String title, String author) {
         System.out.println(title);
         System.out.println(author);
