@@ -1,6 +1,6 @@
 public class CircularLL {
 
-    static class Node {
+    static class Node {// Node 
         int data;
         Node next;
 
