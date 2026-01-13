@@ -1,6 +1,6 @@
 public class Demo {
 
-   public static boolean Palindrome(String str1) {// palindrome
+   public static boolean Palindrome(String str1) {// palindrome pblm
       for (int i = 0; i < str1.length(); i++) {
          int n = str1.length() / 2;
          if (str1.charAt(i) != str1.charAt(n - i - 1)) {
