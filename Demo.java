@@ -12,7 +12,7 @@ public class Demo {
 
    }
 
-   public static void ComapreString(String str, String str2) { // compare two string
+   public static void ComapreString(String str, String str2) { // compare two string pblm 
 
       for (int i = 0; i < str.length(); i++) {
          for (int j = i; j < str2.length(); j++) {
