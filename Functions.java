@@ -19,7 +19,7 @@ public class Functions {
 
     }
 
-    public static void print(int a) {
+    public static void print(int a) {// print function 
         a = 12;
         System.out.println(a);
     }
