@@ -60,7 +60,7 @@ public class Functions {
         for (int j = 1; j <= largest; j++) {
             sum += j;
         }
-        System.out.println(sum);
+        System.out.println(sum);//print the array
         int sum2 = 0;
         for (int k = 0; k < arr3.length; k++) {
             sum2 += arr3[k];
