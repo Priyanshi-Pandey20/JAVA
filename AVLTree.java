@@ -130,7 +130,7 @@ public class AVLTree {
                     root = temp;
 
             } else {
-                Node temp = getMinNode(root.left);
+                Node temp = getMinNode(root.left);//get min node function 
                 root.data = temp.data;
                 root.right = deleteNode(root.right, key);
             }
