@@ -132,7 +132,7 @@ public class AVLTree {
             } else {
                 Node temp = getMinNode(root.left);//get min node function 
                 root.data = temp.data;
-                root.right = deleteNode(root.right, key);//delete function 
+                root.right = deleteNode(root.right, key);
             }
 
         }
@@ -155,13 +155,13 @@ public class AVLTree {
 
         if (bf < -1 && getBalance(root.right) > 0) { // when bf is greater than 0 
             root.right = rightRotate(root.right);
-            return leftRotate(root);
+            return leftRotate(root); //left rotation
         }
 
         return root;
 
     }
-
+  //main function
     public static void main(String[] args) {
         root = insert(root, 10);
         root = insert(root, 20);
