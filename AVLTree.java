@@ -161,7 +161,7 @@ public class AVLTree {
         return root;
 
     }
-  //main function
+ 
     public static void main(String[] args) {
         root = insert(root, 10);
         root = insert(root, 20);
