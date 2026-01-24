@@ -17,7 +17,7 @@ class Transcation { // transcation class
 
 }
 
-class Account {
+class Account {// account function 
     private String name;
     private int accountNumber;
     private double balance;
