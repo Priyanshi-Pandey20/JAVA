@@ -107,8 +107,8 @@ class Account {// account function
 }
 
 public class BankAccount {
-    // static Scanner sc = new Scanner(System.in);
-    // static Account account;
+    static Scanner sc = new Scanner(System.in);
+    static Account account;
 
     public static void main(String[] args) {
 
