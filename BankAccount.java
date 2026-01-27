@@ -100,7 +100,7 @@ class Account {// account function
 
     }
 
-    public void checkBalance() {
+    public void checkBalance() {//check balance 
         System.out.println("Your account balance : " + balance);
     }
 
