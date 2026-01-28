@@ -84,7 +84,7 @@ class Account {// account function
 
     }
 
-    public void saveTranscationHistory() {   
+    public void saveTranscationHistory() { // save transcation history   
         try {
             FileWriter writer = new FileWriter("transaction_history.txt");
             for (Transcation t : transcations) {
