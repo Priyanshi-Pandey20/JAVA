@@ -50,7 +50,7 @@ class Account {// account function
 
     }
 
-    public void viewTranscation() {
+    public void viewTranscation() { // view Transcation
         if (transcations.isEmpty()) {
             System.out.println("No transcation record");
         } else {
