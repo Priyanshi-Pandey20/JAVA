@@ -3,7 +3,7 @@ import java.util.LinkedList;
 
 import javax.swing.tree.TreeNode;
 
-public class BinaryTreesB {
+public class BinaryTreesB {// binary tree class
     static class Node {
         int data;
         Node left;
