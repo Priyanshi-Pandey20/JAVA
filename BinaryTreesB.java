@@ -107,7 +107,7 @@ public class BinaryTreesB {// binary tree class
         return total;
     }
 
-    public static int SumOfNodes(Node root) { // sum of nodes
+    public static int SumOfNodes(Node root) { // sum of nodes pblm
         if (root == null) {
             return 0;
         }
