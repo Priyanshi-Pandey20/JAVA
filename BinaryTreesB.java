@@ -142,7 +142,7 @@ public class BinaryTreesB {// binary tree class
         }
     }
 
-    public static Info diameter(Node root) {
+    public static Info diameter(Node root) {  // diameter function 
         if (root == null) {
             return new Info(0, 0);
         }
