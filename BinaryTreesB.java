@@ -173,7 +173,7 @@ public class BinaryTreesB {// binary tree class
 
     }
 
-    public static boolean isSubtree(Node root, Node subRoot) {
+    public static boolean isSubtree(Node root, Node subRoot) { // issubtree function 
         if (root == null) {
             return false;
         }
