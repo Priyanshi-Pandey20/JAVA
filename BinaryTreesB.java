@@ -249,7 +249,7 @@ public class BinaryTreesB {// binary tree class
 
     }
 
-    public static boolean getPath(Node root, int n, ArrayList<Node> path) { // lowest common ancester
+    public static boolean getPath(Node root, int n, ArrayList<Node> path) { // lowest common ancester pblm 
         if (root == null) {
             return false;
         }
