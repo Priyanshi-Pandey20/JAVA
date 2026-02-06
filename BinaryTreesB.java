@@ -267,7 +267,7 @@ public class BinaryTreesB {// binary tree class
         return false;
     }
 
-    public static Node LowestCommonAncester(Node root, int n1, int n2) {
+    public static Node LowestCommonAncester(Node root, int n1, int n2) { // lowestcommon ancester
         ArrayList<Node> path1 = new ArrayList<>();
         ArrayList<Node> path2 = new ArrayList<>();
 
