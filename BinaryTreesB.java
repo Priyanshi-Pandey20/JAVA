@@ -285,7 +285,7 @@ public class BinaryTreesB {// binary tree class
 
     }
 
-    public static Node lca(Node root, int n1, int n2) { // O(n) lowest common ancester (optimized approach)
+    public static Node lca(Node root, int n1, int n2) { // O(n) lowest common ancester (optimized approach) pblm 
         if (root == null) {
             return null;
         }
