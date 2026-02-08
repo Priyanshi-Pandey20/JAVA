@@ -305,7 +305,7 @@ public class BinaryTreesB {// binary tree class
 
     }
 
-    public static int lcaDist(Node root, int n) { // minimum distance between two nodes
+    public static int lcaDist(Node root, int n) { // minimum distance between two nodes pblm 
         if (root == null) {
             return -1;
         }
