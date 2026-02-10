@@ -325,7 +325,7 @@ public class BinaryTreesB {// binary tree class
 
     }
 
-    public static int MinimumDistance(Node root, int n1, int n2) { // minimum distance
+    public static int MinimumDistance(Node root, int n1, int n2) { // minimum distance pblm
         Node lca = lca(root, n1, n2);
         int dis1 = lcaDist(lca, n1);
         int dis2 = lcaDist(lca, n2);
