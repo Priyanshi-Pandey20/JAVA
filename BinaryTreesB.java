@@ -333,7 +333,7 @@ public class BinaryTreesB {// binary tree class
         return dis1 + dis2;
     }
 
-    public static int KAncestor(Node root, int n, int k) { // kth ancester for node using distance
+    public static int KAncestor(Node root, int n, int k) { // kth ancester for node using distance pblm
         if (root == null) {
             return -1;
         }
