@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Arrays {
-    public static void MergeTwoArray() { // merge two array without using extra space
+    public static void MergeTwoArray() { // merge two array without using extra space pblm 
         int[] s = { 2, 3, 0, 0 };
         int[] p = { 4, 5 };
         int m = 2;
