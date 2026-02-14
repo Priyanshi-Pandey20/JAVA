@@ -28,7 +28,7 @@ public class Arrays {
         }
     }
 
-    public static void isEqual(int[] arr2, int[] arr3) { // check whether two arrays are equal or not
+    public static void isEqual(int[] arr2, int[] arr3) { // check whether two arrays are equal or not pblm
         boolean isEqual = true;
 
         if (arr2.length != arr3.length) {
