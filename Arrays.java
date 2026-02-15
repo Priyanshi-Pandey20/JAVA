@@ -48,7 +48,7 @@ public class Arrays {
     }
 
     public static void CommonElementInArray() {
-        int[] d = { 3, 6, 0, 1, 4 }; // find common elements in two array
+        int[] d = { 3, 6, 0, 1, 4 }; // find common elements in two array pblm 
         int[] e = { 13, 6, 7, 9, 2 };
         for (int i = 0; i < d.length; i++) {
             for (int j = 0; j < e.length; j++) {
