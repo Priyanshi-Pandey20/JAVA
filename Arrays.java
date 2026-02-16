@@ -62,7 +62,7 @@ public class Arrays {
     }
 
     public static void UniqueElement() {
-        int[] y = { 1, 2, 3, 2, 0 }; // search unique element in two array
+        int[] y = { 1, 2, 3, 2, 0 }; // search unique element in two array pblm
         int[] z = { 5, 9, 3, 2, 0 };
         boolean found = false;
         for (int i = 0; i < y.length; i++) {
