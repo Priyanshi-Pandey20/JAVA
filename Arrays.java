@@ -83,7 +83,7 @@ public class Arrays {
 
     public static void CopyArrayToOther() {
 
-        int[] o = { 1, 2, 3, 4, 5 }; // copy elements of one array into another
+        int[] o = { 1, 2, 3, 4, 5 }; // copy elements of one array into another pblm 
         int[] w = new int[5];
 
         for (int i = 0; i < o.length; i++) {
