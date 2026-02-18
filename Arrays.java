@@ -96,7 +96,7 @@ public class Arrays {
     }
 
     public static void CheckPrime() {
-        int[] arr = { 1, 2, 3, 3, 4, 56, 67, 7, 8, 9 }; // print the prime no. 
+        int[] arr = { 1, 2, 3, 3, 4, 56, 67, 7, 8, 9 }; // print the prime no. pblm
         for (int i = 0; i < arr.length; i++) {
             int n = arr[i];
             for (int j = 2; j < n / 2; i++) {
