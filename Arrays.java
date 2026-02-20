@@ -129,7 +129,7 @@ public class Arrays {
 
     }
 
-    public static void EvenOddSum(int[] arr) { // calculate even no. and odd no.sum
+    public static void EvenOddSum(int[] arr) { // calculate even no. and odd no.sum pblm 
         int evensum = 0;
         int oddsum = 0;
         for (int i = 0; i < arr.length; i++) {
