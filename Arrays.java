@@ -145,7 +145,7 @@ public class Arrays {
         System.out.println(oddsum);
     }
 
-    public static void FindMaximum(int[] arr3) {// calculate the maximum element in array
+    public static void FindMaximum(int[] arr3) {// calculate the maximum element in array pblm 
         int max = arr3[0];
         for (int j = 1; j < arr3.length; j++) {
             if (arr3[j] > max) {
