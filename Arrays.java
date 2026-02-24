@@ -195,7 +195,7 @@ public class Arrays {
         System.out.println(sum);
     }
 
-    public static void SumOfDigits() { // sum of digits
+    public static void SumOfDigits() { // sum of digits pblm 
         int a = 123;
         int original = a;
         int sum = 0;
