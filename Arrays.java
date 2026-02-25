@@ -209,7 +209,7 @@ public class Arrays {
         System.out.println(sum);
     }
 
-    public static void KadanesAlgorithm(int[] nums) { // maximum subarray sum
+    public static void KadanesAlgorithm(int[] nums) { // maximum subarray sum pblm 
         int maxSum = Integer.MIN_VALUE;
         int currSum = 0;
 
