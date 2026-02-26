@@ -252,7 +252,7 @@ public class Arrays {
         }
     }
 
-    public static void Occurences(int[] arr) { // Count the number of occurrences of an element
+    public static void Occurences(int[] arr) { // Count the number of occurrences of an element pblm 
         for (int i = 0; i < arr.length; i++) {
             int count = 0;
             boolean alreadyCounted = false;
