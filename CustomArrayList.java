@@ -37,7 +37,7 @@ public class CustomArrayList {
       list.set(idx2, temp);
    }
 
-   public static void ArrangeInAsending(ArrayList<Integer> list1) { // Arrange list in ascending and descending order
+   public static void ArrangeInAsending(ArrayList<Integer> list1) { // Arrange list in ascending and descending order pblm 
 
       Collections.sort(list1);
       System.out.println(list1);
