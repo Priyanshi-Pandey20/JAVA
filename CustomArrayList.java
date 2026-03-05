@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class CustomArrayList {
-   public static void ReverseArrayList() {
+   public static void ReverseArrayList() { // reverse arraylist
       ArrayList<Integer> list = new ArrayList();
       list.add(1);
       list.add(2);
