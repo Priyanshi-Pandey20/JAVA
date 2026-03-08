@@ -15,7 +15,7 @@ public class DynamicProgramming {
         return dp[n];
     }
 
-    public static int climbStairs(int n, int[] ways) { // climb stairs using memoization
+    public static int climbStairs(int n, int[] ways) { // climb stairs using memoization pblm 
         if (n == 0) {
             return 1;
         }
