@@ -30,7 +30,7 @@ public class DynamicProgramming {
         return ways[n];
     }
 
-    public static int climbStairsTab(int n) { // climb stairs problem using tabulation 
+    public static int climbStairsTab(int n) { // climb stairs problem using tabulation  pblm 
         int[] dp = new int[n + 1];
         dp[0] = 1;
 
