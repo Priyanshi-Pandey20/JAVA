@@ -67,7 +67,7 @@ public class DynamicProgramming {
 
     }
 
-    public static int knapsackTab(int[] wt, int[] val, int W) { // 0-1 knapsack using tabulation
+    public static int knapsackTab(int[] wt, int[] val, int W) { // 0-1 knapsack using tabulation pblm 
         int n = val.length;
         int dp[][] = new int[n + 1][W + 1];
 
