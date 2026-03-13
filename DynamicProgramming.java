@@ -130,7 +130,7 @@ public class DynamicProgramming {
 
     }
 
-    public static int unboundedKnapsack(int[] val, int[] wt, int W) { // unbounded knapsack
+    public static int unboundedKnapsack(int[] val, int[] wt, int W) { // unbounded knapsack pblm 
         int n = val.length;
         int dp[][] = new int[n + 1][W + 1];
 
