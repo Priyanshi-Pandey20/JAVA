@@ -153,7 +153,7 @@ public class DynamicProgramming {
         return dp[n][W];
     }
 
-    public static int coinChange(int[] coins, int sum) { // coin change problem
+    public static int coinChange(int[] coins, int sum) { // coin change problem 
         int n = coins.length;
         int dp[][] = new int[n + 1][sum + 1];
 
@@ -175,7 +175,7 @@ public class DynamicProgramming {
         return dp[n][sum];
     }
 
-    public static int rodCutting(int[] length, int[] price, int totRod) { // rod cutting problem
+    public static int rodCutting(int[] length, int[] price, int totRod) { // rod cutting pblm 
         int n = price.length;
         int[][] dp = new int[n + 1][totRod + 1];
 
