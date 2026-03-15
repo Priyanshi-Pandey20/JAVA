@@ -218,7 +218,7 @@ public class DynamicProgramming {
         }
     }
 
-    public static int longestCommonSubsequence2(String str1, String str2) { // lcs using tabulation
+    public static int longestCommonSubsequence2(String str1, String str2) { // lcs using tabulation pblm 
         int n = str1.length();
         int m = str2.length();
 
