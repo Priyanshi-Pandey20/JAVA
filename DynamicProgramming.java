@@ -245,7 +245,7 @@ public class DynamicProgramming {
         return dp[n][m];
     }
 
-    public static int longestCommonSubstring(String str1, String str2) { // longest common substring
+    public static int longestCommonSubstring(String str1, String str2) { // longest common substring pblm 
         int n = str1.length();
         int m = str2.length();
         int dp[][] = new int[n + 1][m + 1];
