@@ -271,7 +271,7 @@ public class DynamicProgramming {
 
     }
 
-    public static int lcs(int[] arr1, int[] arr2) { // longest increasing subsequence
+    public static int lcs(int[] arr1, int[] arr2) { // longest increasing subsequence pblm 
         int n = arr1.length;
         int m = arr2.length;
 
