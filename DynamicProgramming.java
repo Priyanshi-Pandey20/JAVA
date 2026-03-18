@@ -299,7 +299,7 @@ public class DynamicProgramming {
     }
 
     public static int LIS(int[] arr1) {
-        HashSet<Integer> set = new HashSet<>();
+        HashSet<Integer> set = new HashSet<>(); // hashsets
         for (int i = 0; i < arr1.length; i++) {
             set.add(arr1[i]);
         }
