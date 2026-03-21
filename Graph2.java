@@ -42,7 +42,7 @@ public class Graph2 {
         }
     }
 
-    static class Pair implements Comparable<Pair> { // Dijkstra Algorithm
+    static class Pair implements Comparable<Pair> { // Dijkstra Algorithm plm 
         int n;
         int path;
 
