@@ -57,7 +57,7 @@ public class Graph2 {
         }
     }
 
-    public static void dijkstra(ArrayList<Edge> graph[], int src) {
+    public static void dijkstra(ArrayList<Edge> graph[], int src) { 
         int dist[] = new int[graph.length];
 
         for (int i = 0; i < graph.length; i++) {
@@ -92,7 +92,7 @@ public class Graph2 {
         System.out.println();
     }
 
-    public static void bellmanFord(ArrayList<Edge>[] graph, int src) { // bellman ford algorithm 
+    public static void bellmanFord(ArrayList<Edge>[] graph, int src) { // bellman ford algorithm pblm 
         int[] dist = new int[graph.length];
         for (int i = 0; i < dist.length; i++) {
             if (i != src) {
