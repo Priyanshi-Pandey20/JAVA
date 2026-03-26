@@ -123,7 +123,7 @@ public class Graph2 {
         System.out.println();
     }
 
-    static class Pair1 implements Comparable<Pair1> { // Prims Algorithm
+    static class Pair1 implements Comparable<Pair1> { // Prims Algorithm pblm 
         int v;
         int cost;
 
