@@ -139,7 +139,7 @@ public class Graph2 {
 
     }
 
-    public static void prims(ArrayList<Edge> graph[]) {// prims 
+    public static void prims(ArrayList<Edge> graph[]) {// prims  pblm 
         boolean vis[] = new boolean[graph.length];
         PriorityQueue<Pair1> pq = new PriorityQueue<>();
 
