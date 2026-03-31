@@ -1,7 +1,7 @@
 import java.util.*;
 import java.util.LinkedList;
 
-public class Graph2 {
+public class Graph2 { //graph class
     static class Edge {
         int src;
         int dest;
