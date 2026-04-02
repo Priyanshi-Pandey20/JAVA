@@ -7,7 +7,7 @@ public class Graph2 { //graph class
         int dest;
         int wt;
 
-        public Edge(int s, int d, int w) {
+        public Edge(int s, int d, int w) { // edge class
             this.src = s;
             this.dest = d;
             this.wt = w;
