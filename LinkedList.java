@@ -1,8 +1,8 @@
 import java.util.*;
 
-public class LinkedList {
+public class LinkedList { //Linkedin class
 
-    public static class Node {
+    public static class Node { 
         int data;
         Node next;
 
