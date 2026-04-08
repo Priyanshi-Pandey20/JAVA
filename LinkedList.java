@@ -28,7 +28,7 @@ public class LinkedList { //Linkedin class
         head = newNode;
     }
 
-    public void addLast(int data) { // add node to last
+    public void addLast(int data) { // add node to last pblm 
         Node newNode = new Node(data);
         size++;
 
