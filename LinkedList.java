@@ -40,7 +40,7 @@ public class LinkedList { //Linkedin class
         tail = newNode;
     }
 
-    public void addMiddle(int idx, int data) { // add node in linked list
+    public void addMiddle(int idx, int data) { // add node in linked list pblm 
         if (idx == 0) {
             addFirst(data);
             return;
