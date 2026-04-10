@@ -57,7 +57,7 @@ public class LinkedList { //Linkedin class
         temp.next = newNode;
     }
 
-    public int RemoveFirst() { // remove first node
+    public int RemoveFirst() { // remove first node pblm 
         if (size == 0) {
             System.out.println("ll is empty");
             return Integer.MIN_VALUE;
