@@ -96,7 +96,7 @@ public class LinkedList { //Linkedin class
         return val;
     }
 
-    public int SearchInLL(int key) { // search key in ll
+    public int SearchInLL(int key) { // search key in ll pblm 
         int idx = 0;
         Node temp = head;
         while (temp != null) {
