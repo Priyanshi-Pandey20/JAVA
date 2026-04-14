@@ -111,7 +111,7 @@ public class LinkedList { //Linkedin class
         return -1;
     }
 
-    public int helper(Node head, int key) {
+    public int helper(Node head, int key) { // helper function
         if (head == null) {
             return -1;
         }
