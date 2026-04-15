@@ -127,7 +127,7 @@ public class LinkedList { //Linkedin class
         return idx + 1;
     }
 
-    public int RecursiveSearch(int key) { // search node using reursion
+    public int RecursiveSearch(int key) { // search node using reursion pblm 
         return helper(head, key);
     }
 
