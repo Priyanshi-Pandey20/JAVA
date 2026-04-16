@@ -144,7 +144,7 @@ public class LinkedList { //Linkedin class
         head = prev;
     }
 
-    public void RemoveNthNode(int n) { // remove nth node form last
+    public void RemoveNthNode(int n) { // remove nth node form last pblm 
         int size = 0;
         Node temp = head;
         while (temp != null) {
