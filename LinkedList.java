@@ -167,7 +167,7 @@ public class LinkedList { //Linkedin class
         return;
     }
 
-    public Node findMiddle(Node head) { // check ll is palindrome
+    public Node findMiddle(Node head) { // check ll is palindrome pblm 
         Node slow = head;
         Node fast = head;
 
