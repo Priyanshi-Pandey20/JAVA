@@ -179,7 +179,7 @@ public class LinkedList { //Linkedin class
         return slow;
     }
 
-    public boolean IsLLpalindrome() {
+    public boolean IsLLpalindrome() { //is palindrome
         if (head == null || head.next == null) {
             return true;
         }
