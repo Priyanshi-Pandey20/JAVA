@@ -372,7 +372,7 @@ public class LinkedList { //Linkedin class
 
     }
 
-    public void Print() { // print the ll 
+    public void Print() { // print the ll  pblm 
         Node temp = head;
         while (temp != null) {
             System.out.print(temp.data + "->");
