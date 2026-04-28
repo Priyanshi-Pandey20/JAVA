@@ -10,7 +10,7 @@ class Manager extends Employee { // attend meeting
     }
 }
 
-class Person { // mutlilevel
+class Person { // mutlilevel inheritance
     void displayName() {
         System.out.println("tina");
     }
