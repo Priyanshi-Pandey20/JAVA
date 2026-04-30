@@ -28,7 +28,7 @@ class Moniter extends Student {
     }
 }
 
-class Device {
+class Device { // device class
     void powerOn() {
         System.out.println("system is on");
     }
