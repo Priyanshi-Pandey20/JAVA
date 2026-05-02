@@ -34,7 +34,7 @@ class Device { // device class
     }
 }
 
-class Laptop extends Device {
+class Laptop extends Device { // laptop class 
     void boot() { // boot
         System.out.println("Laptop is booting");
     }
