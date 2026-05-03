@@ -40,7 +40,7 @@ class Laptop extends Device { // laptop class
     }
 }
 
-class GamingLaptop extends Laptop {
+class GamingLaptop extends Laptop { // gaming laptop class
     void startGame() { // start game
         System.out.println("Game is starting");
     }
