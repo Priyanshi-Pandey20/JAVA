@@ -52,7 +52,7 @@ class Animal { // animal class
     }
 }
 
-class Dog extends Animal {
+class Dog extends Animal { // Dog class
     void bark() { //bark
         System.out.println("barkkk");
     }
