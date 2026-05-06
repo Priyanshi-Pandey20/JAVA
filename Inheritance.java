@@ -58,13 +58,13 @@ class Dog extends Animal { // Dog class
     }
 }
 
-class Puppy extends Dog {
+class Puppy extends Dog { 
     void cute() {// cute
         System.out.println("cute");
     }
 }
 
-class cat extends Animal {
+class cat extends Animal { //cat class
     void sound() {// sound
         System.out.println("makes sound");
     }
