@@ -129,7 +129,7 @@ class Book { // Book
     }
 }
 
-interface Client {
+interface Client { // Client interface
     void print();
 
     void show();
