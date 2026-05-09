@@ -135,7 +135,7 @@ interface Client { // Client interface
     void show();
 }
 
-class Dev implements Client {
+class Dev implements Client { // Dev class
     public void print() {
         System.out.println("bill");
     }
