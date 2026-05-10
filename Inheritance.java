@@ -145,7 +145,7 @@ class Dev implements Client { // Dev class
     }
 }
 
-interface Walkable {
+interface Walkable { 
     void walk();
 }
 
@@ -153,7 +153,7 @@ interface Runable { // run
     void run();
 }
 
-class Human implements Walkable, Runable {
+class Human implements Walkable, Runable { // Human class
     public void walk() { // walk 
         System.out.println("Walking");
     }
