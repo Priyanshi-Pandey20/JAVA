@@ -172,7 +172,7 @@ interface B {
     void display(); // display
 }
 
-class Demo implements A, B {
+class Demo implements A, B { // Demo class
     public void display() { // display
         System.out.println("display");
     }
