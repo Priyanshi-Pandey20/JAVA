@@ -206,7 +206,7 @@ interface Vehicle {
     }
 }
 
-class Car implements Vehicle {
+class Car implements Vehicle { // Car class implements vehicle
 
 }
 
