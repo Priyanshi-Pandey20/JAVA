@@ -193,7 +193,7 @@ interface Shape2 {
     void area(int radius); // area
 }
 
-class Circle implements Shape2 {
+class Circle implements Shape2 { // circle class implememnts shape2
     public void area(int radius) { // area 
         System.out.println(3.14 * radius * radius);
     }
