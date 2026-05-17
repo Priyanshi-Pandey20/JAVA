@@ -75,7 +75,7 @@ class Add {// method overloading
         System.out.println(a + b);
     }
 
-    void sum(int a, int b, int c) {
+    void sum(int a, int b, int c) { // sum function
         System.out.println(a + b + c);
     }
 }
