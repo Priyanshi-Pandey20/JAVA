@@ -121,7 +121,7 @@ class Book { // Book
         System.out.println(author);
     }
 
-    void display(String title, String author, int price) {
+    void display(String title, String author, int price) { //display function
         System.out.println(title);
         System.out.println(author);
         System.out.println(price);
