@@ -140,7 +140,7 @@ class Dev implements Client { // Dev class
         System.out.println("bill");
     }
 
-    public void show() {
+    public void show() { // show function
         System.out.println("menu");
     }
 }
