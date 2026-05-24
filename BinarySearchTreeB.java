@@ -13,7 +13,7 @@ public class BinarySearchTreeB { //BST
 
     }
 
-    public static Node insert(Node root, int val) {
+    public static Node insert(Node root, int val) { // Node 
         if (root == null) {
             root = new Node(val);
             return root;
