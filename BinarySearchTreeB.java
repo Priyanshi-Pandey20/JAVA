@@ -74,7 +74,7 @@ public class BinarySearchTreeB { //BST
 
     }
 
-    public static Node findInorderSuccessor(Node root) {
+    public static Node findInorderSuccessor(Node root) { //inorder traversal
         while (root.left != null) {
             root = root.left;
         }
