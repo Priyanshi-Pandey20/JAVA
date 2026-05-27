@@ -147,7 +147,7 @@ public class BinarySearchTreeB { //BST
 
     }
 
-    public static void preorder(Node root) {
+    public static void preorder(Node root) { //preorder
         if (root == null) {
             return;
         }
