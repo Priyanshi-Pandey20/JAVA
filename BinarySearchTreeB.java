@@ -185,7 +185,7 @@ public class BinarySearchTreeB { //BST
         getInorder(root.right, inorder);
     }
 
-    public static Node createBST(ArrayList<Integer> inorder, int st, int end) {
+    public static Node createBST(ArrayList<Integer> inorder, int st, int end) { // createBST
         if (st > end) {
             return null;
         }
