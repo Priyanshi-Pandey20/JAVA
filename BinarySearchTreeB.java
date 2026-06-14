@@ -196,7 +196,7 @@ public class BinarySearchTreeB { //BST
         return root;
     }
 
-    public static Node convertBSTtoBalancedBST(Node root) {
+    public static Node convertBSTtoBalancedBST(Node root) { // convert bst
         ArrayList<Integer> inorder = new ArrayList<>();
         getInorder(root, inorder);
         root = createBST(inorder, 0, inorder.size() - 1);
