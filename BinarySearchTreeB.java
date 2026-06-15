@@ -224,7 +224,7 @@ public class BinarySearchTreeB { //BST
         if (root == null) {
             return new Info(true, 0, Integer.MAX_VALUE, Integer.MIN_VALUE);
         }
-        Info leftInfo = largestBST(root.left);
+        Info leftInfo = largestBST(root.left); // leftInfo
         Info rightInfo = largestBST(root.right);
         int size = leftInfo.size + rightInfo.size + 1;
         int min = Math.min(root.data, Math.min(leftInfo.min, rightInfo.min));
