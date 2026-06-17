@@ -69,8 +69,8 @@ public class Demo {
 
       }
    }
-
-   public static void ReverseString() {
+ 
+   public static void ReverseString() { // reverse function 
       String str = "coding";// reverse the str pblm
       String rev = "";
       for (int i = str.length() - 1; i >= 0; i--) {
