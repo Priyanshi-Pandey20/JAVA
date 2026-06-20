@@ -79,7 +79,7 @@ public class Demo {
       System.out.println(rev);
    }
 
-   public static void RepeatedString() {
+   public static void RepeatedString() { // reverse string 
       String str8 = "hellooooo"; // print second repeated charater in string pblm
       String newStr = "";
 
