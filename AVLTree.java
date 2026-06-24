@@ -94,7 +94,7 @@ public class AVLTree {
         preorder(root.right);
     }
 
-    public static Node getMinNode(Node root) { // deletion  in avl 
+    public static Node getMinNode(Node root) { // deletion  in avl pblm
         Node curr = root;
 
         while (curr.left != null)
@@ -130,7 +130,7 @@ public class AVLTree {
                     root = temp;
 
             } else {
-                Node temp = getMinNode(root.left);//get min node function 
+                Node temp = getMinNode(root.left);//get min node function pblm
                 root.data = temp.data;
                 root.right = deleteNode(root.right, key);
             }
