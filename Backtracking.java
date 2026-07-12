@@ -34,7 +34,7 @@ public class Backtracking {
         FindSubsets(str, i + 1, ans);
     }
 
-    public static void PermutationsOfString(String str, String ans) {// find all the permutations of a string
+    public static void PermutationsOfString(String str, String ans) {// find all the permutations of a string pblm 
         if (str.length() == 0) { // O(n*n!) -time
             System.out.println(ans);
             return;
