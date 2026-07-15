@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Backtracking {
 
-    public static void changeArr(int[] arr, int i, int val) { // O(n) traverse the array andbacktrack it
+    public static void changeArr(int[] arr, int i, int val) { // O(n) traverse the array andbacktrack it pblm 
         // base case
         if (i == arr.length) {
             printArr(arr);
