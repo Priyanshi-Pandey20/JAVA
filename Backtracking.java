@@ -144,7 +144,7 @@ public class Backtracking {
         return true;
     }
 
-    public static boolean solveSudoku(int[][] sudoku, int row, int col) { 
+    public static boolean solveSudoku(int[][] sudoku, int row, int col) {  // solve sudoku
 
         if (row == 9 && col == 0) {
             return true;
