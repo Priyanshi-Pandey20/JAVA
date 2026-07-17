@@ -194,7 +194,7 @@ public class Backtracking {
         return (x >= 0 && x < maze.length && y >= 0 && y < maze.length && maze[x][y] == 1);
     }
 
-    public static boolean solveMaze(int[][] maze) {
+    public static boolean solveMaze(int[][] maze) { //solve maze
         int N = maze.length;
         int[][] sol = new int[N][N];
         if (solveMazeUtil(maze, 0, 0, sol) == false) {
