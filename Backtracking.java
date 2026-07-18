@@ -205,7 +205,7 @@ public class Backtracking {
         return true;
     }
 
-    public static boolean solveMazeUtil(int[][] maze, int x, int y, int sol[][]) {
+    public static boolean solveMazeUtil(int[][] maze, int x, int y, int sol[][]) { // solve maze util 
         if (x == maze.length - 1 && y == maze.length - 1 && maze[x][y] == 1) {
             sol[x][y] = 1;
             return true;
