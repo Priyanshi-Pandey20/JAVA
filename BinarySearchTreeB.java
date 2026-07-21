@@ -241,7 +241,7 @@ public class BinarySearchTreeB { //BST
 
     }
 
-    public static int minDiffNode(Node root, int k) { // Find the kth closest element in BST
+    public static int minDiffNode(Node root, int k) { // Find the kth closest element in BST pblm 
         int closest = root.data;
         while (root != null) {
             if (Math.abs(root.data - k) < Math.abs(closest - k)) {
