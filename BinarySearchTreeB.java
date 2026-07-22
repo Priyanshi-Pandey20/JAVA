@@ -258,7 +258,7 @@ public class BinarySearchTreeB { //BST
         return closest;
     }
 
-    public static int findMin(Node root) { // Find minimum and maximum in BST
+    public static int findMin(Node root) { // Find minimum and maximum in BST pblm 
         if (root == null)
             return -1;
         while (root.left != null) {
