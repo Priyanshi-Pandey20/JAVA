@@ -268,7 +268,7 @@ public class BinarySearchTreeB { //BST
     }
 
    
-    public static int findMax(Node root) { // Function to find the maximum value
+    public static int findMax(Node root) { // Function to find the maximum value pblm
         if (root == null)
             return -1;
         while (root.right != null) {
