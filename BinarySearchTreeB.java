@@ -82,7 +82,7 @@ public class BinarySearchTreeB { //BST
 
     }
 
-    public static void printInRange(Node root, int k1, int k2) { // print all the numbers in a given range
+    public static void printInRange(Node root, int k1, int k2) { // print all the numbers in a given range pblm 
         if (root == null) {
             return;
         }
