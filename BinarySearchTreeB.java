@@ -52,7 +52,7 @@ public class BinarySearchTreeB { //BST
 
     }
 
-    public static Node DeleteNode(Node root, int val) { // delete node from tree
+    public static Node DeleteNode(Node root, int val) { // delete node from tree pblm
         if (root.data < val) {
             root.right = DeleteNode(root.right, val);
         } else if (root.data > val) {
