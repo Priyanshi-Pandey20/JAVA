@@ -38,7 +38,7 @@ public class BinarySearchTreeB { //BST
         inorder(root.right);
     }
 
-    public static boolean search(Node root, int key) { // search element in tree
+    public static boolean search(Node root, int key) { // search element in tree pblm 
         if (root == null) {
             return false;
         }
