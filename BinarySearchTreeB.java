@@ -2,7 +2,7 @@ import java.util.*;
 
 public class BinarySearchTreeB { //BST
 
-    static class Node {
+    static class Node {//node
         int data;
         Node left;
         Node right;
