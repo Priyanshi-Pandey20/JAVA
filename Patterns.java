@@ -10,7 +10,7 @@ public class Patterns {
 
         System.out.println();
 
-        for (int i = 1; i <= 5; i++) { // lower left inverted half traingle
+        for (int i = 1; i <= 5; i++) { // lower left inverted half traingle pblm
             for (int j = i; j >= 1; j--) {
                 System.out.print("*");
             }
