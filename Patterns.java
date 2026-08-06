@@ -62,7 +62,7 @@ public class Patterns {
             System.out.println();
         }
 
-        for (int i = 1; i <= 5; i++) { // aplhabets in upper half traingle
+        for (int i = 1; i <= 5; i++) { // aplhabets in upper half traingle pblm 
             char ch = 'A';
             for (int j = 1; j <= i; j++) {
                 System.out.print(ch + " ");
