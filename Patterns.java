@@ -73,7 +73,7 @@ public class Patterns {
 
         System.out.println();
 
-        for (int i = 1; i <= 5; i++) { // diamond
+        for (int i = 1; i <= 5; i++) { // diamond pblm
             for (int j = 5; j >= i; j--) {
                 System.out.print(" ");
             }
