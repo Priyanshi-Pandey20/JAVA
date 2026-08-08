@@ -19,7 +19,7 @@ public class Patterns {
 
         System.out.println();
 
-        for (int i = 1; i <= 5; i++) { // upper praymid
+        for (int i = 1; i <= 5; i++) { // upper praymid pblm 
             for (int j = 5; j >= i; j--) {
                 System.out.print(" ");
             }
