@@ -56,7 +56,7 @@ public class Practise1 {
                 System.out.println();
 
                 int p = scn.nextInt();
-                int sum = 0; // Q6  print the sum of n no. 
+                int sum = 0; // Q6  print the sum of n no. pblm 
                 for (int i = 0; i <= p; i++) {
                     sum = sum + i;
                 }
