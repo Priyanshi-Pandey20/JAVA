@@ -49,7 +49,7 @@ public class Practise1 {
             default:
                 System.out.println("Consonet");
 
-                int m = scn.nextInt(); // Q5 print no. 
+                int m = scn.nextInt(); // Q5 print no. pblm 
                 for (int i = 0; i <= m; i++) {
                     System.out.println(i);
                 }
