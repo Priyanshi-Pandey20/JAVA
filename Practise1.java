@@ -30,7 +30,7 @@ public class Practise1 {
             System.out.println("2nd no. is greater than 1st : " + b);
         }
 
-        char c = scn.next().charAt(0); // Q4  // vowel consonent 
+        char c = scn.next().charAt(0); // Q4  // vowel consonent pblm 
         switch (c) {
             case 'a':
             case 'e':
