@@ -83,7 +83,7 @@ public class Practise1 {
                     System.out.println("It is not divisible by 3");
                 }
 
-                int l = scn.nextInt(); // Q10
+                int l = scn.nextInt(); // Q10 pblm
                 int fact = 1;
                 for (int i = 1; i <= l; i++) {
                     fact = fact * i;
