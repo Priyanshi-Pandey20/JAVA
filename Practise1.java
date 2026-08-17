@@ -76,7 +76,7 @@ public class Practise1 {
                     System.out.println("Not divisible");
                 }
 
-                int q = scn.nextInt(); // Q9 
+                int q = scn.nextInt(); // Q9 pblm
                 if (q % 3 == 0) {
                     System.out.println("It is divisible by 3");
                 } else {
