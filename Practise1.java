@@ -90,7 +90,7 @@ public class Practise1 {
                 }
                 System.out.println(fact);
 
-                int y = scn.nextInt(); // Q11
+                int y = scn.nextInt(); // Q11 pblm
                 int i = 2;
                 boolean isPrime = true;
 
