@@ -111,7 +111,7 @@ public class Practise1 {
                     System.out.println("Not a prime no.");
                 }
 
-                int w = scn.nextInt(); // Q13
+                int w = scn.nextInt(); // Q13 pblm 
 
                 switch (w) {
                     case 1:
