@@ -102,7 +102,7 @@ public class Practise1 {
                     i++;
                 }
 
-                if (y <= 1) // Q12 pblm 
+                if (y <= 1) // Q12 pblm  // check whether it is prime or not 
                     isPrime = false;
 
                 if (isPrime) {
