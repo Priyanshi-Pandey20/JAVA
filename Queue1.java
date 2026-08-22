@@ -1,7 +1,7 @@
 import java.util.*;
 import java.util.LinkedList;
 
-public class Queue1 {
+public class Queue1 {// Queue class
   static class Node {
     int data;
     Node next;
