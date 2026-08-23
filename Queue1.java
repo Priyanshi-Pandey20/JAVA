@@ -31,7 +31,7 @@ public class Queue1 {// Queue class
       tail = newNode;
     }
 
-    public static int remove() {
+    public static int remove() { // remove function 
       if (isEmpty()) {
         System.out.println("empty queue");
         return -1;
