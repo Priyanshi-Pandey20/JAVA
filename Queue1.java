@@ -61,7 +61,7 @@ public class Queue1 {// Queue class
       deque.addLast(data);
     }
 
-    public int remove() {
+    public int remove() { // remove 
       return deque.removeFirst();
     }
 
