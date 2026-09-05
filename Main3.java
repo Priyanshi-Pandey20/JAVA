@@ -186,15 +186,48 @@ class Student{
 
 class Employee{
     int salary;
+    String name;
 
-    Employee(int salary){
-        this.salary = salary;
+    void display(){
+        System.out.println("Empolyee name: " + name);
+        System.out.println("Empolyee salary: " + salary);
+
+    }
+}
+
+class Developer extends Employee{
+      void display(){
+        System.out.println("Developer name: " + name);
+        System.out.println("Developer salary: " + salary);
+
+    }
+
+    void develop(){
+        System.out.println("Writing code....");
     }
 
 }
+class Manager extends Employee{
+        void display(){
+        System.out.println("Manager name: " + name);
+        System.out.println("Manager salary: " + salary);
 
+    }
+    void manage(){
+        System.out.println("Managing task...");
+    }
+}
 
+class Tester extends Employee{
+      void display(){
+        System.out.println("Tester name: " + name);
+        System.out.println("Tester salary: " + salary);
 
+    }
+    void test(){
+        System.out.println("Testing code....");
+    }
+}
 
 
 public class Main3 {
@@ -257,15 +290,34 @@ public class Main3 {
         student.display();
     }
 
-    ArrayList<Employee> emp = new ArrayList<>();
-   emp.add(new Employee(70000));
-   emp.add(new Employee(42000));
-   emp.add(new Employee(790000));
-   Collections.sort(emp,(e1,e2)-> Integer.compare(e1.salary, e2.salary));
+//     ArrayList<Employee> emp = new ArrayList<>();
+//    emp.add(new Employee(70000));
+//    emp.add(new Employee(42000));
+//    emp.add(new Employee(790000));
+//    Collections.sort(emp,(e1,e2)-> Integer.compare(e1.salary, e2.salary));
 
-   for(Employee e : emp){
-    System.out.println(e.salary);
-   }
+//    for(Employee e : emp){
+//     System.out.println(e.salary);
+//    }
+
+Developer d = new Developer();
+d.salary = 30000;
+d.name = "Priya";
+d.display();
+d.develop();
+
+Manager m = new Manager();
+m.name = "Rohan";
+m.salary = 90000;
+m.display();
+m.manage();
+
+Tester t = new Tester();
+t.name = "Hina";
+t.salary = 28000;
+t.display();
+
+t.test();
 
     
 
