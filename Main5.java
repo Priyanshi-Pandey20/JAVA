@@ -84,24 +84,138 @@ class Library{
     }
 }
 
+class Vehicle{
+    String number;
 
+    Vehicle(String number){
+        this.number = number;
+    }
+}
+class Car extends Vehicle{
+
+    Car(String number){
+        super(number);
+    }
+}
+class Bike extends Vehicle{
+
+    Bike(String number){
+        super(number);
+    }
+}
+
+class Truck extends Vehicle{
+    Truck(String number){
+        super(number);
+    }
+}
+
+class ParkingSpot{
+    int id;
+    Vehicle vehicle;
+
+    ParkingSpot(int id){
+        this.id = id;
+        this.vehicle = null;
+    }
+
+    boolean isAvailable(){
+        return vehicle == null;
+    }
+
+    void parkVehicle(Vehicle vehicle){
+        this.vehicle = vehicle;
+    }
+
+    void removeVehicle(){
+        this.vehicle = null;
+    }
+}
+
+class ParkingLot{
+  ArrayList<ParkingSpot> spots = new ArrayList<>();
+
+  void addSpot(ParkingSpot spot){
+    spots.add(spot);
+  }
+
+  void parkVehicle(Vehicle vehicle){
+    for(ParkingSpot spot: spots){
+        if(spot.isAvailable()){
+           spot.parkVehicle(vehicle);
+           System.out.println(spot.id + " " + vehicle.number);
+           return ;
+        }
+
+    }
+    System.out.println("Spot is not available");
+  }
+
+  void removeVehicle(String number){
+    for(ParkingSpot spot  :spots){
+        if(!spot.isAvailable()){
+            if(spot.vehicle.number.equals(number)){
+                spot.removeVehicle();
+                System.out.println("Spot id : " + spot.id);
+                return;
+            }
+        }
+    }
+    System.out.println("Vehicle not found");
+  }
+
+  void display(){
+    System.out.println("Parking lot");
+
+    for(ParkingSpot spot : spots){
+        if(spot.isAvailable()){
+            System.out.println("Spot is Empty" );
+        }
+        else{
+            System.out.println(spot.id + " " + spot.vehicle.number);
+        }
+
+    }
+
+}
+}
 
 public class Main5 {
     public static void main(String[] args){
 
-        Library library = new Library();
-        Book b1 = new Book(101,"Java","James" );
-        Book b2 = new Book(102,"DSA","George" );
+        // Library library = new Library();
+        // Book b1 = new Book(101,"Java","James" );
+        // Book b2 = new Book(102,"DSA","George" );
 
-        library.addBook(b1);
-        library.addBook(b2);
+        // library.addBook(b1); 
+        // library.addBook(b2);
 
-        library.displayDetail();
-        library.searchBook("Java");
-        library.borrowBook("Java");
-        library.displayDetail();
-        library.returnBook("Java");
-        library.displayDetail();
+        // library.displayDetail();
+        // library.searchBook("Java");
+        // library.borrowBook("Java");
+        // library.displayDetail();
+        // library.returnBook("Java");
+        // library.displayDetail();
+
+        ParkingLot lot = new ParkingLot();
+        lot.addSpot(new ParkingSpot(1));
+        lot.addSpot(new ParkingSpot(2));
+        lot.addSpot(new ParkingSpot(3));
+
+        Car c = new Car("ab123");
+        Bike b = new Bike("cd456");
+        Truck t = new Truck("ef789");
+
+        lot.parkVehicle(c);
+        lot.parkVehicle(b);
+        lot.parkVehicle(t);
+
+        lot.display();
+        lot.removeVehicle("ab123");
+        lot.display();
+    
+
+
         
 
     }

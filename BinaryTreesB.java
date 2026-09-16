@@ -368,7 +368,7 @@ public class BinaryTreesB {// binary tree class
 
     }
 
-    public static void preOrder(Node root) {//preorder
+    public static void preOrder(Node root) {//preorder traversal of tree
         if (root == null) {
             return;
         }
