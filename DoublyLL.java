@@ -16,7 +16,7 @@ public class DoublyLL {
     public static Node tail;
     public static int size;
 
-    public void addFirst(int data) { // add first node of the doubly ll
+    public void addFirst(int data) { // add first node of the doubly ll pblm
         Node newNode = new Node(data);
         size++;
         if (head == null) {
