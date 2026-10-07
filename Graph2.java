@@ -57,7 +57,7 @@ public class Graph2 { //graph class
         }
     }
 
-    public static void dijkstra(ArrayList<Edge> graph[], int src) { 
+    public static void dijkstra(ArrayList<Edge> graph[], int src) { //dijkstra function
         int dist[] = new int[graph.length];
 
         for (int i = 0; i < graph.length; i++) {
