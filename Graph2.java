@@ -270,7 +270,7 @@ public class Graph2 { //graph class
         }
     }
 
-    public static int find(int x) {
+    public static int find(int x) { // find 
         if (x == par[x]) {
             return x;
         }
