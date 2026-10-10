@@ -328,7 +328,7 @@ public class Backtracking {
         // System.out.println("solution is not possible");
         // }
 
-        int[][] sudoku = { { 0, 0, 8, 0, 0, 0, 0, 0, 0 },
+        int[][] sudoku = { { 0, 0, 8, 0, 0, 0, 0, 0, 0 },// sudoku
                 { 4, 9, 0, 1, 5, 7, 0, 0, 2 },
                 { 0, 0, 3, 0, 0, 4, 1, 9, 0 },
                 { 1, 8, 5, 0, 6, 0, 0, 2, 0 },
