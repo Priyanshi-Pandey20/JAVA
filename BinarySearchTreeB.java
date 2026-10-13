@@ -98,7 +98,7 @@ public class BinarySearchTreeB { //BST
 
     }
 
-    public static void printPath(ArrayList<Integer> path) { // print the path from root to leaf node
+    public static void printPath(ArrayList<Integer> path) { // print the path from root to leaf node pblm 
         for (int i = 0; i < path.size(); i++) {
             System.out.print(path.get(i) + "->");
         }
