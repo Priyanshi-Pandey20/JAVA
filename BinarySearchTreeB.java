@@ -119,7 +119,7 @@ public class BinarySearchTreeB { //BST
 
     }
 
-    public static boolean isValidBST(Node root, Node min, Node max) { // check whether the bst is valid
+    public static boolean isValidBST(Node root, Node min, Node max) { // check whether the bst is valid pblm 
 
         if (root == null) {
             return true;
