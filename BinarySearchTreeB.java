@@ -133,7 +133,7 @@ public class BinarySearchTreeB { //BST
 
     }
 
-    public static Node mirrorBST(Node root) { // invert BST
+    public static Node mirrorBST(Node root) { // invert BST pblm 
         if (root == null) {
             return null;
         }
