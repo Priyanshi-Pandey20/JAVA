@@ -167,7 +167,7 @@ public class BinarySearchTreeB { //BST
         return root;
     }
 
-    public static void preorder1(Node root) { //preorder1
+    public static void preorder1(Node root) { //preorder1 pblm 
         if (root == null) {
             return;
         }
