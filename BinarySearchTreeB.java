@@ -176,7 +176,7 @@ public class BinarySearchTreeB { //BST
         preorder1(root.right);
     }
 
-    public static void getInorder(Node root, ArrayList<Integer> inorder) {// Convert BST to balanced BST
+    public static void getInorder(Node root, ArrayList<Integer> inorder) {// Convert BST to balanced BST pblm 
         if (root == null) {
             return;
         }
