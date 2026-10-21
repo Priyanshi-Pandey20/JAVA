@@ -156,7 +156,7 @@ public class BinarySearchTreeB { //BST
         preorder(root.right);
     }
 
-    public static Node convertArrayToBST(int[] arr, int st, int end) { // convert sorted array to BST
+    public static Node convertArrayToBST(int[] arr, int st, int end) { // convert sorted array to BST pblm
         if (st > end) {
             return null;
         }
