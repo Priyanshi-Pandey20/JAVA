@@ -204,7 +204,7 @@ public class BinarySearchTreeB { //BST
 
     }
 
-    static class Info {
+    static class Info { // info class
         boolean isBST;
         int size;
         int min;
