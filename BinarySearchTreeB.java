@@ -210,7 +210,7 @@ public class BinarySearchTreeB { //BST
         int min;
         int max;
 
-        public Info(boolean isBST, int size, int min, int max) {
+        public Info(boolean isBST, int size, int min, int max) { // Info class
             this.isBST = isBST;
             this.size = size;
             this.min = min;
