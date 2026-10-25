@@ -220,7 +220,7 @@ public class BinarySearchTreeB { //BST
 
     public static int maxBST = 0;
 
-    public static Info largestBST(Node root) { // find the largest BST
+    public static Info largestBST(Node root) { // find the largest BST pblm 
         if (root == null) {
             return new Info(true, 0, Integer.MAX_VALUE, Integer.MIN_VALUE);
         }
