@@ -1,6 +1,6 @@
 import java.util.*;
 public class AVLTree {
-    static class Node { // node 
+    static class Node { // node  class
         int data, height;
         Node left, right;
 
