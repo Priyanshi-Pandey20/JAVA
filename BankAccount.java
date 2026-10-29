@@ -10,7 +10,7 @@ class Transcation { // transcation class
     String type;
     double amount;
 
-    Transcation(String type, double amount) { // transcation function 
+    Transcation(String type, double amount) { // transcation function pblm 
         this.type = type;
         this.amount = amount;
     }
