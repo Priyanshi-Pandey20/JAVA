@@ -30,7 +30,7 @@ class Account {// account function pblm
 
     ArrayList<Transcation> transcations = new ArrayList<>();
 
-    public void deposit(double amount) { // deposit function 
+    public void deposit(double amount) { // deposit function pblm
         if (amount > 0) {
             balance += amount;
             transcations.add(new Transcation("Deposit", amount));
