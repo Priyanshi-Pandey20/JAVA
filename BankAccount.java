@@ -106,7 +106,7 @@ class Account {// account function pblm
 
 }
 
-public class BankAccount {// Bank Account class 
+public class BankAccount {// Bank Account class pblm
     static Scanner sc = new Scanner(System.in);
     static Account account;
 
