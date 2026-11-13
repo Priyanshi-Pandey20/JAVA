@@ -235,7 +235,7 @@ public class Backtracking {
             { 'm', 'n', 'o' }, { 'p', 'q', 'r', 's' },
             { 't', 'u', 'v' }, { 'w', 'x', 'y', 'z' } };
 
-    public static void letterCombinations(String D) { // letter combination
+    public static void letterCombinations(String D) { // letter combination pblm 
         int len = D.length();
         if (len == 0) {
             System.out.println("");
