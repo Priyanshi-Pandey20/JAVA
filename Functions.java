@@ -248,7 +248,7 @@ public class Functions {
             System.out.println(s);
         }
     }
-        public static void AlternatingPositiveNegative(int[] arr) { // alternating postive negative elements
+        public static void AlternatingPositiveNegative(int[] arr) { // alternating postive negative elements pblm
         int n = arr.length;
         int[] temp = new int[n];
         int postIdx = 0;
