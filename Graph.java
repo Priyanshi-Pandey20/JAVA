@@ -11,7 +11,7 @@ class Pair {
 
 }
 
-public class Graph {
+public class Graph {// graph class
     static class Edge {
         int src;
         int dest;
