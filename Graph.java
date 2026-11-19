@@ -43,7 +43,7 @@ public class Graph {// graph class
 
     }
 
-    public static void bfs(ArrayList<Edge>[] graph) {// Breadth First Search Traversal
+    public static void bfs(ArrayList<Edge>[] graph) {// Breadth First Search Traversal pblm 
         boolean[] vis = new boolean[graph.length];
         for (int i = 0; i < graph.length; i++) {
             if (!vis[i]) {
