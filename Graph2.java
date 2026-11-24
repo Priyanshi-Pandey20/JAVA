@@ -406,7 +406,7 @@ public class Graph2 { //graph class
         int k = 1;
         System.out.println(cheapestFlight(n, flights, src, dest, k));
 
-        int[][] cities = {
+        int[][] cities = { // cities 
                 { 0, 1, 2, 3, 4 },
                 { 1, 0, 5, 0, 7 },
                 { 2, 5, 0, 6, 0 },
