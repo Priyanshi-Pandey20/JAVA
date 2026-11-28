@@ -184,7 +184,7 @@ class Student{
 
 }
 
-class Employee{
+class Employee{ // employee class
     int salary;
     String name;
 
